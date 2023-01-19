@@ -1,0 +1,1828 @@
+﻿
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o = 
+"urn:schemas-microsoft-com:office:office"><HEAD><title>寻路仪</title>
+<META content="text/html; charset=UTF-8" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 11.00.9600.18698"><LINK rel=stylesheet 
+href="_template.css">
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+document.write("<style>\n");
+document.write("body {overflow: hidden;}\n");
+document.write("#winchm_template_container {position: absolute;overflow: auto;top : 0px;right: 0px;bottom: 0px;left: 0px;}\n");
+document.write("</style>\n");
+}
+
+</script>
+<style>
+@media print
+{
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: auto;
+}
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: hidden;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+</style>
+</head>
+<body><script language="JavaScript" type="text/JavaScript">
+function syn(){
+if(parent.nav.tree){
+ if(parent.nav.tree.loaded){
+  parent.nav.tree.selectNode(615);
+ }else{
+  setTimeout("syn()",500);
+}
+  }else{
+  setTimeout("syn()",500);
+  }}
+if(parent!=self){
+  setTimeout("syn()",100);
+}else{
+  parent.location.href = "../index.htm?page=page_568.html";
+}
+originalOnload = window.onload;
+if(originalOnload==null){
+window.onload = function(){parent.contentLoaded = true;};
+}else{
+window.onload = function(){originalOnload();parent.contentLoaded = true;};
+}
+</script> 
+
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="page_567.html" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="template2/btn_prev_n.gif" border="0"></a><A href="page_569.html" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation">Help &gt; 
+装备/魔法物品 &gt; 魔法物品 &gt; 奇物 &gt; <A href="page_234.html">无位置</A> &gt; </div>
+	<div id="winchm_template_title">寻路仪</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content"><TABLE class=MsoNormalTable 
+style="BORDER-COLLAPSE: collapse; mso-yfti-tbllook: 1184; mso-table-layout-alt: fixed" 
+cellSpacing=0 cellPadding=0 width=560 border=0><TBODY>
+  <TR style="HEIGHT: 14.25pt; mso-yfti-irow: 1">
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 287.15pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #0099ff 1.5pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent" 
+    width=383>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan"><SPAN 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>寻路仪<SPAN 
+      lang=EN-US>(Wayfinder)</SPAN></SPAN><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 59.25pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent" 
+    width=79>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: right; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=right><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>500</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 19.6pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent" 
+    width=26>
+      <P class=MsoNormalCxSpMiddle 
+      style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt" 
+      align=left><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p>&nbsp;</o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #0099ff 1.5pt solid; WIDTH: 54pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent" 
+    width=72>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: center; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=center><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>CRB</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 14.25pt; mso-yfti-irow: 2">
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 287.15pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #0099ff 1.5pt solid; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=383>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>闪亮寻路仪<SPAN 
+      lang=EN-US>(Shining Wayfinder)</SPAN></SPAN><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 59.25pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=79>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: right; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=right><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>2,000</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 19.6pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=26>
+      <P class=MsoNormalCxSpMiddle 
+      style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt" 
+      align=left><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p>&nbsp;</o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #0099ff 1.5pt solid; WIDTH: 54pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt" 
+    width=72>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: center; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=center><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>CRB</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 14.25pt; mso-yfti-irow: 3">
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 287.15pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #0099ff 1.5pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=383>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>走私者寻路仪<SPAN 
+      lang=EN-US>(Smuggler's Wayfinder)</SPAN></SPAN><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 59.25pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=79>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: right; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=right><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>2,000</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 19.6pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=26>
+      <P class=MsoNormalCxSpMiddle 
+      style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt" 
+      align=left><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p>&nbsp;</o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #0099ff 1.5pt solid; WIDTH: 54pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent" 
+    width=72>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: center; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=center><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>CRB</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 14.25pt; mso-yfti-irow: 4">
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 287.15pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #0099ff 1.5pt solid; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=383>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>催眠寻路仪<SPAN 
+      lang=EN-US>(Hypnotic Wayfinder)</SPAN></SPAN><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 59.25pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=79>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: right; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=right><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>3,000</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 19.6pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=26>
+      <P class=MsoNormalCxSpMiddle 
+      style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt" 
+      align=left><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p>&nbsp;</o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #0099ff 1.5pt solid; WIDTH: 54pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt" 
+    width=72>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: center; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=center><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>CRB</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 14.25pt; mso-yfti-irow: 5">
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 287.15pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #0099ff 1.5pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=383>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>不倦寻路仪<SPAN 
+      lang=EN-US>(Tireless Wayfinder)</SPAN></SPAN><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 59.25pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=79>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: right; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=right><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>5,000</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 19.6pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=26>
+      <P class=MsoNormalCxSpMiddle 
+      style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt" 
+      align=left><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p>&nbsp;</o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #0099ff 1.5pt solid; WIDTH: 54pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent" 
+    width=72>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: center; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=center><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>CRB</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 14.25pt; mso-yfti-irow: 6">
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 287.15pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #0099ff 1.5pt solid; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=383>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>噪声寻路仪<SPAN 
+      lang=EN-US>(Noisemaker Wayfinder)</SPAN></SPAN><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 59.25pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=79>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: right; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=right><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>7,000</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 19.6pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=26>
+      <P class=MsoNormalCxSpMiddle 
+      style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt" 
+      align=left><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p>&nbsp;</o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #0099ff 1.5pt solid; WIDTH: 54pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt" 
+    width=72>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: center; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=center><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>CRB</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 14.25pt; mso-yfti-irow: 7">
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 287.15pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #0099ff 1.5pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=383>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>消失寻路仪<SPAN 
+      lang=EN-US>(Vanishing Wayfinder)</SPAN></SPAN><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 59.25pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=79>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: right; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=right><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>8,000</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 19.6pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=26>
+      <P class=MsoNormalCxSpMiddle 
+      style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt" 
+      align=left><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p>&nbsp;</o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #0099ff 1.5pt solid; WIDTH: 54pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent" 
+    width=72>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: center; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=center><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>CRB</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 14.25pt; mso-yfti-irow: 8">
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 287.15pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #0099ff 1.5pt solid; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=383>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>启示寻路仪<SPAN 
+      lang=EN-US>(Wayfinder Revelation)</SPAN></SPAN><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 59.25pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=79>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: right; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=right><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>8,000</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 19.6pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=26>
+      <P class=MsoNormalCxSpMiddle 
+      style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt" 
+      align=left><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p>&nbsp;</o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #0099ff 1.5pt solid; WIDTH: 54pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt" 
+    width=72>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: center; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=center><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>CRB</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 14.25pt; mso-yfti-irow: 9">
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 287.15pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #0099ff 1.5pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent" 
+    width=383>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>破咒寻路仪<SPAN 
+      lang=EN-US>(Wayfinder Revelation)</SPAN></SPAN><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 59.25pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent" 
+    width=79>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: right; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=right><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>8,000</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 19.6pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent" 
+    width=26>
+      <P class=MsoNormalCxSpMiddle 
+      style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt" 
+      align=left><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p>&nbsp;</o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #0099ff 1.5pt solid; WIDTH: 54pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent" 
+    width=72>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: center; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=center><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>CRB</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 14.25pt; mso-yfti-irow: 10">
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 287.15pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #0099ff 1.5pt solid; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=383>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>位面寻路仪<SPAN 
+      lang=EN-US>(Wayfinder of the Planes)</SPAN></SPAN><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 59.25pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=79>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: right; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=right><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>18,000</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 19.6pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=26>
+      <P class=MsoNormalCxSpMiddle 
+      style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt" 
+      align=left><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p>&nbsp;</o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #0099ff 1.5pt solid; WIDTH: 54pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=72>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: center; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=center><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>CRB</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 14.25pt; mso-yfti-irow: 11">
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 287.15pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #0099ff 1.5pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=383>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>乌木寻路仪<SPAN 
+      lang=EN-US>(Wayfinder, Ebon)</SPAN></SPAN><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 59.25pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=79>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: right; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=right><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>18,000</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 19.6pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=26>
+      <P class=MsoNormalCxSpMiddle 
+      style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt" 
+      align=left><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p>&nbsp;</o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #0099ff 1.5pt solid; WIDTH: 54pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=72>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: center; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=center><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>CRB</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 14.25pt; mso-yfti-irow: 12">
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 287.15pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #0099ff 1.5pt solid; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=383>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>测谎寻路仪<SPAN 
+      lang=EN-US>(Truthseeker Wayfinder)</SPAN></SPAN><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 59.25pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=79>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: right; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=right><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>39,000</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 19.6pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=26>
+      <P class=MsoNormalCxSpMiddle 
+      style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt" 
+      align=left><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p>&nbsp;</o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #0099ff 1.5pt solid; WIDTH: 54pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=72>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: center; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=center><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>CRB</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 14.25pt; mso-yfti-irow: 13">
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 287.15pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #0099ff 1.5pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=383>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>猎头者寻路仪<SPAN 
+      lang=EN-US>(Headhunter Wayfinder)</SPAN></SPAN><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 59.25pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=79>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: right; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=right><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>56,000</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 19.6pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=26>
+      <P class=MsoNormalCxSpMiddle 
+      style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt" 
+      align=left><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p>&nbsp;</o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #0099ff 1.5pt solid; WIDTH: 54pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=72>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: center; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=center><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>CRB</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 14.25pt; mso-yfti-irow: 14">
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 287.15pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #0099ff 1.5pt solid; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=383>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>睡眼寻路仪<SPAN 
+      lang=EN-US>(Wayfinder of Sleeping Eye)</SPAN></SPAN><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 59.25pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=79>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: right; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=right><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>70,000</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 19.6pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=26>
+      <P class=MsoNormalCxSpMiddle 
+      style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt" 
+      align=left><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p>&nbsp;</o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #0099ff 1.5pt solid; WIDTH: 54pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=72>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: center; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=center><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>CRB</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 14.25pt; mso-yfti-irow: 15">
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 287.15pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #0099ff 1.5pt solid; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=383>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>保险寻路仪<SPAN 
+      lang=EN-US>(Contingent Wayfinder)</SPAN></SPAN><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 59.25pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=79>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: right; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=right><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>132,000</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 19.6pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=26>
+      <P class=MsoNormalCxSpMiddle 
+      style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt" 
+      align=left><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p>&nbsp;</o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #0099ff 1.5pt solid; WIDTH: 54pt; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; BACKGROUND-COLOR: transparent; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=72>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: center; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=center><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>CRB</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 14.25pt; mso-yfti-irow: 16; mso-yfti-lastrow: yes">
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 287.15pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #0099ff 1.5pt solid; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=383>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=left><SPAN 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>道途寻路仪<SPAN 
+      lang=EN-US>(Wayfinder of Passage)</SPAN></SPAN><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 59.25pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=79>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: right; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=right><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>136,000</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #f0f0f0; WIDTH: 19.6pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=26>
+      <P class=MsoNormalCxSpMiddle 
+      style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; MARGIN: 0cm 0cm 0pt" 
+      align=left><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p>&nbsp;</o:p></SPAN></P></TD>
+    <TD 
+    style="BORDER-TOP: #f0f0f0; HEIGHT: 14.25pt; BORDER-RIGHT: #0099ff 1.5pt solid; WIDTH: 54pt; BACKGROUND: #ccffff; BORDER-BOTTOM: #0099ff 1.5pt solid; PADDING-BOTTOM: 0.75pt; PADDING-TOP: 0.75pt; PADDING-LEFT: 0.75pt; BORDER-LEFT: #f0f0f0; PADDING-RIGHT: 0.75pt; mso-border-top-alt: solid #0099FF 1.5pt" 
+    width=72>
+      <P class=MsoNormalCxSpMiddle 
+      style="VERTICAL-ALIGN: middle; LAYOUT-GRID-MODE: char; TEXT-ALIGN: center; MARGIN: 0cm 0cm 0pt; mso-pagination: widow-orphan" 
+      align=center><SPAN lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>CRB</SPAN><SPAN 
+      lang=EN-US 
+      style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: black; mso-bidi-font-family: 微软雅黑'><o:p></o:p></SPAN></P></TD></TR></TBODY></TABLE><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style='FONT-SIZE: 12pt; FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt; mso-fareast-language: ZH-CN; mso-ansi-language: EN-US; mso-bidi-language: AR-SA'><BR 
+style="PAGE-BREAK-BEFORE: always; mso-special-character: line-break" 
+clear=all></SPAN></B>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt'><o:p>&nbsp;</o:p></SPAN></B></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt'><o:p>&nbsp;</o:p></SPAN></B></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt'>寻路仪<SPAN 
+lang=EN-US>(Wayfinder)<BR></SPAN></SPAN></B><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>位置</SPAN></B><SPAN 
+class=bbcsize1><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #222222; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>：无；</SPAN></SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>价格</SPAN></B><SPAN 
+class=bbcsize1><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #222222; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>：<SPAN 
+lang=EN-US>500gp<BR></SPAN></SPAN></SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>施法者等级</SPAN></B><SPAN 
+class=bbcsize1><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #222222; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>：<SPAN 
+lang=EN-US>5</SPAN>级；</SPAN></SPAN><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>重量</SPAN></B><SPAN 
+class=bbcsize1><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #222222; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>：<SPAN 
+lang=EN-US>1</SPAN>磅<SPAN lang=EN-US><BR></SPAN></SPAN></SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>灵光</SPAN></B><SPAN 
+class=bbcsize1><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #222222; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>：微弱塑能系</SPAN></SPAN><SPAN 
+lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #222222; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'><BR></SPAN><SPAN 
+lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp; </SPAN>&nbsp;</SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>这件小型魔法装置是古阿兹兰特<SPAN 
+lang=EN-US>(ancient 
+Azlanti)</SPAN>的文物复制品，寻路仪是一个便携式罗盘，通常以白银为主体用黄金做内部构件。寻路仪是探索者协会成员的徽记，这件物品作为便利小道具的同时，还是一种身份的象征。通过命令词，你能够让寻路仪散发出光芒<SPAN 
+lang=EN-US>(</SPAN>如同光亮术一般<SPAN lang=EN-US>)</SPAN>。寻路仪还可以如同非魔法的指南针<SPAN 
+lang=EN-US>(compass</SPAN>；使用磁石<SPAN 
+lang=EN-US>)</SPAN>一般使用，使你在避免迷路的生存检定中获得<SPAN 
+lang=EN-US>+2</SPAN>环境加值。所有寻路仪内部都有一个小型凹槽，可以容纳单个艾恩石<SPAN lang=EN-US>(Ioun 
+Stone)</SPAN>。以此方式被纳入其中的艾恩石会如常赋予你它所带来的好处，就如同它正在你头顶环绕一般；依照艾恩石的种类不同，会在放入寻路仪后产生额外的力量<SPAN 
+lang=EN-US>(</SPAN>所谓的共振，见下文<SPAN lang=EN-US>)</SPAN>。</SPAN><SPAN 
+class=bbcsize1><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #222222; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'><BR></SPAN></SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造要求</SPAN></B><SPAN 
+class=bbcsize1><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #222222; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>：制造奇物<SPAN 
+lang=EN-US>(Craft Wondrous Item)</SPAN>，光亮术<SPAN 
+lang=EN-US>(light)<BR></SPAN></SPAN></SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造成本</SPAN></B><SPAN 
+class=bbcsize1><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #222222; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>：<SPAN 
+lang=EN-US>250gp</SPAN></SPAN></SPAN><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><o:p></o:p></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><o:p>&nbsp;</o:p></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt'>闪亮寻路仪<SPAN 
+lang=EN-US>(Shining Wayfinder)<o:p></o:p></SPAN></SPAN></B></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>位置</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：无；</SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>价格</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>2,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>施法者等级</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>3</SPAN>级；</SPAN><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>重量</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>1</SPAN>磅<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>灵光</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：微弱预言系<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>闪亮寻路仪是一个被打磨的极其光亮的银色装置，是银色十字军成员的最爱。除了寻路仪的一般功能之外<SPAN 
+lang=EN-US>(</SPAN>包括使用“光亮术”<SPAN 
+lang=EN-US>)</SPAN>，闪亮寻路仪还可以用于“侦测邪恶”——当使用此功能时，仪器内的指针不会指向北方，而是会指向<SPAN 
+lang=EN-US>60</SPAN>英尺之内的邪恶来源。每天一次，闪亮寻路仪还可以为持有的探索者附加“防护邪恶”法术效果。闪亮寻路仪只能被善良阵营的角色使用，如果邪恶阵营的生物将其拿在手中，指针会疯狂的乱转，如中立阵营的生物持有，指针会无力的停在那里，不会指向任何东西<SPAN 
+lang=EN-US>(</SPAN>包括正北方<SPAN lang=EN-US>)</SPAN>。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造要求</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：制造奇物<SPAN 
+lang=EN-US>(Craft Wondrous Item)</SPAN>，侦测邪恶<SPAN lang=EN-US>(Detect 
+Evil)</SPAN>，光亮术<SPAN lang=EN-US>(Light)</SPAN>，防护邪恶<SPAN lang=EN-US>(Protection 
+from Evil)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造成本</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>1,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><o:p>&nbsp;</o:p></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt'>走私者寻路仪<SPAN 
+lang=EN-US>(Smuggler's Wayfinder)<o:p></o:p></SPAN></SPAN></B></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>位置</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：无；</SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>价格</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>2,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>施法者等级</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>9</SPAN>级；</SPAN><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>重量</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>1</SPAN>磅<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>灵光</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：中等咒法系<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>这个破旧的寻路仪完全没有任何值得注意的特点。尽管它看起来极其普通，但是走私者寻路仪拥有使用者才会知道的额外特性。当说出正确的关键词后，此装置内部会产生一个小型次元空间，可以储存至多<SPAN 
+lang=EN-US>10</SPAN>磅，不大于<SPAN lang=EN-US>1</SPAN>立方英尺的物品。但是物品必须能够通过直径<SPAN 
+lang=EN-US>3</SPAN>英吋的仪器表面<SPAN lang=EN-US>(</SPAN>例如玻璃瓶、硬币、小首饰或卷起来的纸卷<SPAN 
+lang=EN-US>)</SPAN>。当次元空间打开时，此寻路仪的其他任何功能都会失效，包括艾恩石的共振效果。当次元空间关闭时，走私者寻路仪会显露出微弱塑能系灵光，与普通的寻路仪一般无二。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造要求</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：制造奇物<SPAN 
+lang=EN-US>(Craft Wondrous Item)</SPAN>，光亮术<SPAN 
+lang=EN-US>(Light)</SPAN>，伪造灵光<SPAN lang=EN-US>(Magic aura)</SPAN>，秘藏箱<SPAN 
+lang=EN-US>(Secret Chest)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造成本</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>1,000gp <o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><o:p>&nbsp;</o:p></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt'>催眠寻路仪<SPAN 
+lang=EN-US>(Hypnotic Wayfinder)<o:p></o:p></SPAN></SPAN></B></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>位置</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：无；</SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>价格</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>3,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>施法者等级</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>5</SPAN>级；</SPAN><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>重量</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>1</SPAN>磅<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>灵光</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：微弱幻术系<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>此寻路仪的外壳是一枚巨大的珍珠蚌，上面带有绿色和粉色相间的完美漩涡状图案。它还有一条大约<SPAN 
+lang=EN-US>8</SPAN>英吋长的银制细链，可以手持细链的一端，让此装置在空中像钟摆一样的来回晃动。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>除了寻路仪的一般功能之外<SPAN 
+lang=EN-US>(</SPAN>包括使用“光亮术”<SPAN 
+lang=EN-US>)</SPAN>，催眠寻路仪每天一次，可以对能看到它的意志薄弱的生物进行催眠。当像钟摆一样缓慢晃动此装置，催眠寻路仪的外壳会变得光芒四射且不断的变化色彩。此效果如同“催眠图纹”法术<SPAN 
+lang=EN-US>(</SPAN>通过<SPAN lang=EN-US>DC13</SPAN>的意志检定会无效<SPAN 
+lang=EN-US>)</SPAN>效果出现在寻路仪上，但是不会制造出任何可见光，只是在催眠寻路仪上出现颜色变幻多端的幻象。寻路仪持有者免疫此效果，就像无视觉能力的生物也会免疫一样。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>当此效果被激活后，使用者必须维持专注，否则效果会结束。所谓的结束，意思是此效果会在使用者手持细链摇晃保持专注<SPAN 
+lang=EN-US>(</SPAN>需要一个标准动作<SPAN lang=EN-US>)</SPAN>时一直持续，停止摇晃<SPAN 
+lang=EN-US>2</SPAN>轮之后效果消失。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造要求</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：制造奇物<SPAN 
+lang=EN-US>(Craft Wondrous Item)</SPAN>，催眠图纹<SPAN lang=EN-US>(Hypnotic 
+Pattern)</SPAN>，光亮术<SPAN lang=EN-US>(Light)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造成本</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>1,500gp <o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><o:p>&nbsp;</o:p></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt'>不倦寻路仪<SPAN 
+lang=EN-US>(Tireless Wayfinder)<o:p></o:p></SPAN></SPAN></B></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>位置</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：无；</SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>价格</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>5,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>施法者等级</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>5</SPAN>级；</SPAN><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>重量</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>1</SPAN>磅<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>灵光</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：微弱咒法系<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>不倦寻路仪拥有光滑的黄铜外壳和银质机芯。除了寻路仪的一般功能之外<SPAN 
+lang=EN-US>(</SPAN>包括使用“光亮术”<SPAN 
+lang=EN-US>)</SPAN>，不倦寻路仪还可以将疲乏状态带来的力量和敏捷减值减半，并且在对抗任何造成疲乏或力竭的效果时，所有豁免获得<SPAN 
+lang=EN-US>+2</SPAN>抗力加值。不倦寻路仪必须在持有者手中一周以上才能提供上述效果，如果离开角色身边长达<SPAN 
+lang=EN-US>1</SPAN>小时，效果会就失去。<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造要求</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：制造奇物<SPAN 
+lang=EN-US>(Craft Wondrous Item)</SPAN>，次级复原术<SPAN lang=EN-US>(Lesser 
+Restoration)</SPAN>，光亮术<SPAN lang=EN-US>(Light)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造成本</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>2,500gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><o:p>&nbsp;</o:p></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt'>噪声寻路仪<SPAN 
+lang=EN-US>(Noisemaker Wayfinder)<o:p></o:p></SPAN></SPAN></B></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>位置</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：无；</SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>价格</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>7,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>施法者等级</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>3</SPAN>级；</SPAN><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>重量</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>1</SPAN>磅<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>灵光</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：微弱防护系<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>这个寻路仪的外饰都是用金子做成的，而表面印有有白色和银色的公鸡图案。当使用者进入睡眠状态的话，公鸡图案的装饰会转变为新月图案。如果有体型从微型至大型的生物靠近持有者<SPAN 
+lang=EN-US>20</SPAN>英尺范围内且持有者正在带着这个魔法装置睡觉的话，只要闯入生物和持有者有效果线存在，噪声寻路仪会立刻像闹铃一样震动大响。此声音能穿透<SPAN 
+lang=EN-US>60</SPAN>尺范围扩散，如同警报术效果。一个生物说出命令词<SPAN 
+lang=EN-US>(</SPAN>有持有者在睡觉前指定<SPAN lang=EN-US>)</SPAN>的话不会触发警报。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>当寻路仪警报被触发后，会一直持续震动直到使用者按下这个装置侧面的特殊按钮。如果持有者陷入魔法效果造成的睡眠中<SPAN 
+lang=EN-US>(</SPAN>例如睡眠术的效果<SPAN 
+lang=EN-US>)</SPAN>，而有生物触发了警报，它的震动和噪声会给予持有者每回合一次额外的豁免检定机会来结束睡眠效果，并且每次检定还会获得<SPAN 
+lang=EN-US>+2</SPAN>环境加值。其他在范围内的正常睡眠的生物会被警报声惊醒，但是魔法睡眠效果不受噪声影响。噪声寻路仪的持有者可以通过拨动装置上的一个撞针来停止警报功能。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造要求</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：制造奇物<SPAN 
+lang=EN-US>(Craft Wondrous Item)</SPAN>，警报术<SPAN 
+lang=EN-US>(Alarm)</SPAN>，光亮术<SPAN 
+lang=EN-US>(Light)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造成本</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>3,500gp <o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><o:p>&nbsp;</o:p></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt'>消失寻路仪<SPAN 
+lang=EN-US>(Vanishing Wayfinder)<o:p></o:p></SPAN></SPAN></B></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>位置</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：无；</SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>价格</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>8,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>施法者等级</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>5</SPAN>级；</SPAN><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>重量</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>1</SPAN>磅<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>灵光</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：微弱幻术系<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>消失寻路仪由镶嵌了黄金和白银的象牙精心制做而成。除了寻路仪的一般功能之外<SPAN 
+lang=EN-US>(</SPAN>包括使用“光亮术”<SPAN 
+lang=EN-US>)</SPAN>，消失寻路仪的持有者还可以使用一个标准动作进入隐形状态<SPAN 
+lang=EN-US>(</SPAN>如同“隐形术”法术效果<SPAN lang=EN-US>)</SPAN>直到他解消或至多维持<SPAN 
+lang=EN-US>5</SPAN>分钟<SPAN lang=EN-US>/</SPAN>天。这些时间无需连续使用，但是每次最少耗费<SPAN 
+lang=EN-US>1</SPAN>分钟，即使是在满<SPAN lang=EN-US>1</SPAN>分钟之前他就因为攻击而结束隐形状态。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造要求</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：制造奇物<SPAN 
+lang=EN-US>(Craft Wondrous Item)</SPAN>，隐形术<SPAN 
+lang=EN-US>(Invisibility)</SPAN>，光亮术<SPAN 
+lang=EN-US>(Light)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造成本</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>4,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><o:p>&nbsp;</o:p></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt'>启示寻路仪<SPAN 
+lang=EN-US>(Wayfinder Revelation)<o:p></o:p></SPAN></SPAN></B></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>位置</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：无；</SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>价格</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>8,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>施法者等级</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>6</SPAN>级；</SPAN><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>重量</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>1</SPAN>磅<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>灵光</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：微弱预言和塑能系<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>启示寻路仪比起一般的寻路仪来显出更高水准的华丽设计并由贵重的金银制造而成。启示寻路仪提供的“光亮术”是普通效果的两倍，照亮两倍大的区域。每天一次，使用一个标准动作，你可以在启示寻路仪照亮的同时，你可以将这<SPAN 
+lang=EN-US>40</SPAN>英尺光照范围附加一个破除隐形效果<SPAN lang=EN-US>(</SPAN>与同名法术效果相同<SPAN 
+lang=EN-US>)</SPAN>。此效果同样会让使用者更加容易发现密道和暗门——在搜索位于此区域内的隐藏物体或秘门时，使用者的察觉技能检定获得<SPAN 
+lang=EN-US>+10</SPAN>加值。一旦启动，此效果会在持续<SPAN lang=EN-US>6</SPAN>轮后结束。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造要求</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：制造奇物<SPAN 
+lang=EN-US>(Craft Wondrous Item)</SPAN>，破除隐形<SPAN lang=EN-US>(Invisibility 
+Purge)</SPAN>，光亮术<SPAN lang=EN-US>(Light)</SPAN>，侦测秘门<SPAN lang=EN-US>(Detect 
+Secret Doors)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造成本</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>4,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><o:p>&nbsp;</o:p></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt'>破咒寻路仪<SPAN 
+lang=EN-US>(Wayfinder Revelation)<o:p></o:p></SPAN></SPAN></B></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>位置</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：无；</SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>价格</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>8,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>施法者等级</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>7</SPAN>级；</SPAN><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>重量</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>1</SPAN>磅<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>灵光</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：微弱防护系<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>破咒寻路仪的外观看起来是用黑色的精铁制成，上面没有任何的装饰。除了寻路仪的一般功能之外<SPAN 
+lang=EN-US>(</SPAN>包括使用“光亮术”<SPAN 
+lang=EN-US>)</SPAN>，破咒寻路仪每天还可以对一个物体或生物使用一次“解除魔法”效果。你必须使用破咒寻路仪碰触目标物体或生物——如果并非自愿生物则需要进行一次成功的近战接触攻击。如果持有者可以使用“侦测魔法”或是拥有类似能够看到魔法灵光的能力，他可以瞄准某个特定的灵光使用破咒寻路仪的解除魔法能力，否则破咒寻路仪会瞄准施法者等级最高的那个法术效果。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造要求</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：制造奇物<SPAN 
+lang=EN-US>(Craft Wondrous Item)</SPAN>，解除魔法<SPAN lang=EN-US>(Dispel 
+Magic)</SPAN>，光亮术<SPAN lang=EN-US>(Light)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造成本</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>4,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><o:p>&nbsp;</o:p></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt'>位面寻路仪<SPAN 
+lang=EN-US>(Wayfinder of the Planes)<o:p></o:p></SPAN></SPAN></B></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>位置</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：无；</SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>价格</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>18,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>施法者等级</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>6</SPAN>级；</SPAN><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>重量</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>1</SPAN>磅<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>灵光</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：中等防护系<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>此寻路仪用极其坚硬的魔法玻璃制成，因此可以看到其中复杂的机械核心。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>每天一次，此寻路仪的使用者可以选择下列一个阵营：混乱、邪恶、善良或守序。在之后的一小时之内，位面寻路仪会以自己为中心创造出一个魔法阵来对抗对应阵营的生物。一旦做出选择，魔法阵的效果在第二天之前都无法改变<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造要求</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：制造奇物<SPAN 
+lang=EN-US>(Craft Wondrous Item)</SPAN>，光亮术<SPAN 
+lang=EN-US>(Light)</SPAN>，反阵营法阵<SPAN lang=EN-US>(Magic Circle Against 
+Alignments)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造成本</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>9,000gp<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><o:p>&nbsp;</o:p></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt'>乌木寻路仪<SPAN 
+lang=EN-US>(Wayfinder, Ebon)<o:p></o:p></SPAN></SPAN></B></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>位置</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：无；</SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>价格</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>18,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>施法者等级</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>5</SPAN>级；</SPAN><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>重量</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>1</SPAN>磅<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>灵光</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：微弱塑能和变化系<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>颇受经常出入地城或黑暗区域探索者的喜爱，外观是由镶嵌了乌木的暗木制成。可以滑动面板露出其中的白金内框允许放置一到两块艾恩石。乌木寻路仪会给持有者提供<SPAN 
+lang=EN-US>60</SPAN>英尺范围的黑暗视觉能力。此外每天一次，可以通过命令以自己为中心制造出一片黑暗区域<SPAN 
+lang=EN-US>(</SPAN>效果如同“黑暗术”<SPAN lang=EN-US>)</SPAN>。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>当放入一枚艾恩石之后，“黑暗术”效果会无法使用。。放入两枚艾恩石之后，“黑暗视觉”效果也会无法使用。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造要求</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：制造奇物<SPAN 
+lang=EN-US>(Craft Wondrous Item)</SPAN>，黑暗视觉<SPAN 
+lang=EN-US>(Darkvision)</SPAN>，黑暗术<SPAN 
+lang=EN-US>(Darkness)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造成本</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>9,000gp <o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><o:p>&nbsp;</o:p></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt'>测谎寻路仪<SPAN 
+lang=EN-US>(Truthseeker Wayfinder)<o:p></o:p></SPAN></SPAN></B></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>位置</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：无；</SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>价格</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>39,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>施法者等级</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>7</SPAN>级；</SPAN><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>重量</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>1</SPAN>磅<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>灵光</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：中等预言系<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>此寻路仪是用抛光过的金子打造而成，并且在明亮的光线下会高度反光——更像镜子而非一般金属。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>测谎寻路仪允许使用释放真实领域<SPAN 
+lang=EN-US>(Zone of Truth)</SPAN>至多<SPAN lang=EN-US>7</SPAN>分钟<SPAN 
+lang=EN-US>/</SPAN>每日<SPAN lang=EN-US>(</SPAN>通过<SPAN 
+lang=EN-US>DC14</SPAN>的意志检定无效<SPAN 
+lang=EN-US>)</SPAN>。这些时间无需连续使用，但是每次使用会至少耗费<SPAN 
+lang=EN-US>1</SPAN>分钟时间。如果一个生物成功通过意志检定，那么他会免疫此效果<SPAN 
+lang=EN-US>24</SPAN>小时。在意志检定中失败的生物，在效果每次重新激活的时候会获得一次重新豁免的机会。每天一次，测谎寻路仪的使用者可以获得识破谎言<SPAN 
+lang=EN-US>(Discern Lies)</SPAN>效果持续<SPAN lang=EN-US>7</SPAN>轮<SPAN 
+lang=EN-US>(</SPAN>通过<SPAN lang=EN-US>DC16</SPAN>的意志检定无效<SPAN 
+lang=EN-US>)</SPAN>。当测谎寻路仪识别出目标生物在说谎时，它会用震动来提醒使用者，但不会被除了使用者之外的人察觉。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造要求</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：制造奇物<SPAN 
+lang=EN-US>(Craft Wondrous Item)</SPAN>，识破谎言<SPAN lang=EN-US>(Discern 
+Lies)</SPAN>，光亮术<SPAN lang=EN-US>(Light)</SPAN>，真实领域<SPAN lang=EN-US>(Zone of 
+Truth)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造成本</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>19,500gp<SPAN style="mso-spacerun: yes">&nbsp; 
+</SPAN><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><o:p>&nbsp;</o:p></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt'>猎头者寻路仪<SPAN 
+lang=EN-US>(Headhunter Wayfinder)<o:p></o:p></SPAN></SPAN></B></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>位置</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：无；</SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>价格</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>56,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>施法者等级</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>7</SPAN>级；</SPAN><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>重量</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>1</SPAN>磅<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>灵光</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：中等预言系<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>许多动物、魔法兽和其他一些生物的图样交织在一起，布满了这个寻路仪每一英吋金属表面，仿佛是一个各种狮子、各类鹰、格样龙和格式大象组成的迷宫。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>虽然猎头者寻路仪看起来和普通的寻路仪一样，但是它的指针并不是指向正北方。如果将某个生物身上的不论是一滴血、一根头发或是其他什么碎片放置于通常用于放置艾恩石的小格子里，寻路仪的指针就会指向目标生物的方向，如同一个以持用者为中心范围是<SPAN 
+lang=EN-US>680</SPAN>英尺的生物定位术<SPAN lang=EN-US>(Locate 
+Creature)</SPAN>效果。此效果没有持续时间，只要持有者放入样本且生物位于范围之内就会一直持续。如果目标生物超出效果范围，寻路仪的指针会缓慢的顺时针旋转。如同正常生物定位术效果，流动的水、假象术、回避侦测和变形术会愚弄或阻挡此效果。猎头者寻路仪无法正常安装艾恩石，也无法获得共振效果。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造要求</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：制造奇物<SPAN 
+lang=EN-US>(Craft Wondrous Item)</SPAN>，光亮术<SPAN 
+lang=EN-US>(Light)</SPAN>，生物定位术<SPAN lang=EN-US>(Locate 
+Creature)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造成本</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>28,000gp<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; 
+</SPAN><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><o:p>&nbsp;</o:p></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt'>睡眼寻路仪<SPAN 
+lang=EN-US>(Wayfinder of Sleeping Eye)<o:p></o:p></SPAN></SPAN></B></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>位置</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：无；</SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>价格</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>70,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>施法者等级</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>13</SPAN>级；</SPAN><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>重量</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>1</SPAN>磅<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>灵光</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：强烈幻术系<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>这件精工制造的寻路仪外观设计是一个由白金和秘银制成的半开半闭的眼睛。眼睛的瞳孔是一个放置艾恩石的插槽，当放置了艾恩石之后，你可以在睡觉或冥想的时候使用此寻路仪创造出一个与你自己一模一样部分真实的幻象。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>你可以控制此幻象就如同你自己的身体一般使用你所有的感知能力外加<SPAN 
+lang=EN-US>60</SPAN>英尺黑暗视觉通关幻象去感受的事物。你无需保持幻象处于你的视线内。幻象是虽然可见，但是会保持透明状，无法做任何“隐形仆从”不能进行的动作。当幻象被制造出来时拥有你<SPAN 
+lang=EN-US>40%</SPAN>的<SPAN lang=EN-US>HP</SPAN>，它的<SPAN 
+lang=EN-US>AC</SPAN>是<SPAN lang=EN-US>10+</SPAN>你的体型调整值<SPAN 
+lang=EN-US>+</SPAN>敏捷调整值。它使用你的意志豁免，但是会在强韧和反射豁免检定中自动失败。如果它的生命值降至<SPAN 
+lang=EN-US>0</SPAN>便会被摧毁，并同时对你造成<SPAN 
+lang=EN-US>2d4</SPAN>点魅力属性伤害。幻象可以被解除，而且无法进入任何能够防护召唤生物、你的阵营、幻象或虚体生物的区域。你可以使用自由动作停止此效果，并且此效果会在你醒来、身体受到攻击或经过<SPAN 
+lang=EN-US>8</SPAN>小时之后自动停止。停止此效果不会使你受到魅力属性伤害。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>使用此能力会汲取装置内艾恩石的魔力，使得艾恩石变灰失去效果<SPAN 
+lang=EN-US>24</SPAN>小时。一个变灰的艾恩石无法供给启动此装置效果的魔力。但是此装置还可以获得于此艾恩石共振的效果，即使艾恩石本身的效果无法生效。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造要求</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：制造奇物<SPAN 
+lang=EN-US>(Craft Wondrous Item)</SPAN>，奥法之眼<SPAN lang=EN-US>(Arcane 
+Eye)</SPAN>，阴影咒法术<SPAN lang=EN-US>(Shadow 
+Conjuration)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造成本</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>35,000gp <o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><o:p>&nbsp;</o:p></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt'>保险寻路仪<SPAN 
+lang=EN-US>(Contingent Wayfinder)<o:p></o:p></SPAN></SPAN></B></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>位置</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：无；</SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>价格</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>132,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>施法者等级</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>11</SPAN>级；</SPAN><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>重量</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>1</SPAN>磅<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>灵光</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：中等塑能系<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>这个寻路仪由精致的象牙构造而成。它的表面常常会浮现出持有者的头像，而且还能够在进行快速的变幻，就像两个生物在寻路仪的正面和背面快速穿梭一般。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>在平常放置艾恩石的插槽处被放置了一个固定的宝石，效果如同一枚次级储法戒指。在使用此寻路仪<SPAN 
+lang=EN-US>24</SPAN>小时之后，持有者可以设定一系列触发条件，让寻路仪将储存的最高级法术释放在持有者自己的身上，如同触发术的法术效果一般。举例而言，持用者可以将一个治疗中伤法术储存在寻路仪的宝石里，并规定如果她因为非致命伤害陷入无意识状态，便对自己释放此法术。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>一旦触发此效果，寻路仪需要<SPAN 
+lang=EN-US>1</SPAN>个月的时间来重启它的触发术效果，在这期间随时可以将新的法术储存进宝石中。如果至少一周的时间设定的条件没有被激活，那么使用者可以更改所设置的条件，但是宝石中所储存的法术无法更改直至其被使用为止。<SPAN 
+lang=EN-US>(</SPAN>根据<SPAN lang=EN-US>PFS</SPAN>规则，所有大于每天<SPAN 
+lang=EN-US>1</SPAN>次的间隔都改为每冒险<SPAN lang=EN-US>1</SPAN>次<SPAN 
+lang=EN-US>)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造要求</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：制造奇物<SPAN 
+lang=EN-US>(Craft Wondrous Item)</SPAN>，触发术<SPAN 
+lang=EN-US>(Contingency)</SPAN>，法术灌输<SPAN lang=EN-US>(Imbue with Spell 
+Ability)</SPAN>，光亮术<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造成本</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>66,000gp <o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><o:p>&nbsp;</o:p></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: #cc00cc; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-font-size: 10.5pt'>道途寻路仪<SPAN 
+lang=EN-US>(Wayfinder of Passage)<o:p></o:p></SPAN></SPAN></B></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>位置</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：无；</SPAN><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>价格</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>136,000gp<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>施法者等级</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>10</SPAN>级；</SPAN><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>重量</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>1</SPAN>磅<SPAN lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>灵光</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：中等各系<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>此寻路仪是一件极有艺术价值的宝物，由纯金打造，上面镶嵌了各式各样的微型猫眼石、红宝石、钻石和蓝宝石。内部拥有三个可以放置艾恩石的插槽。可以通过命令让其发出等同于“昼明术”程度的光芒。它还拥有下列能力，启动每个能力都需要不同的命令：<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><o:p>&nbsp;</o:p></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>* </SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>任意门<SPAN 
+lang=EN-US>(</SPAN>每天一次<SPAN lang=EN-US>)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>* </SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>羽落术<SPAN 
+lang=EN-US>(</SPAN>任意<SPAN lang=EN-US>)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>* </SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>敲击术<SPAN 
+lang=EN-US>(</SPAN>任意<SPAN lang=EN-US>)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>* </SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>抵抗能量<SPAN 
+lang=EN-US>(</SPAN>每天一次，<SPAN lang=EN-US>20</SPAN>点，持续<SPAN 
+lang=EN-US>24</SPAN>小时<SPAN lang=EN-US>)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><SPAN lang=EN-US 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'><SPAN 
+style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>当放入一枚艾恩石之后，“任意门”效果便无法使用。放入两枚艾恩石之后，“羽落术”和“抵抗能量”效果也会无法使用。放入三枚艾恩石之后，“昼明术”和“敲击术”效果也会无法使用。<SPAN 
+lang=EN-US><o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造要求</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：制造奇物<SPAN 
+lang=EN-US>(Craft Wondrous Item)</SPAN>，昼明术<SPAN 
+lang=EN-US>(Daylight)</SPAN>，任意门<SPAN lang=EN-US>(Dimension 
+Door)</SPAN>，羽落术<SPAN lang=EN-US>(Feather Fall)</SPAN>，敲击术<SPAN 
+lang=EN-US>(Knock)</SPAN>，抵抗能量<SPAN lang=EN-US>(Resist 
+Energy)<o:p></o:p></SPAN></SPAN></P>
+<P 
+style="LAYOUT-GRID-MODE: char; TEXT-ALIGN: left; mso-pagination: widow-orphan; mso-add-space: auto; mso-margin-top-alt: auto" 
+align=left><B style="mso-bidi-font-weight: normal"><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; COLOR: navy; mso-font-kerning: 0pt; mso-bidi-font-family: 微软雅黑; mso-bidi-language: AR'>制造成本</SPAN></B><SPAN 
+style='FONT-FAMILY: "微软雅黑","sans-serif"; mso-font-kerning: 0pt; mso-bidi-font-family: Arial; mso-bidi-font-size: 10.5pt'>：<SPAN 
+lang=EN-US>68,000gp<o:p></o:p></SPAN></SPAN></P></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2019. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body></HTML>

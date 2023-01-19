@@ -1,0 +1,103 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<title>Pathfinder</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function window_resize(){
+if(navigator.userAgent.indexOf("iPad")>-1||navigator.userAgent.indexOf("iPhone")>-1||navigator.userAgent.indexOf("iPod")>-1||navigator.userAgent.indexOf("Android")>-1){
+document.getElementById("Index").style.cssText = "height: auto; width: " + (window.innerWidth-20);
+document.getElementById("keyword").style.cssText = "width: " + (window.innerWidth-20);
+}else if(window.innerHeight){
+document.getElementById("Index").style.cssText = "height: " + (window.innerHeight- 95) + "; width: " + (window.innerWidth-20);
+document.getElementById("keyword").style.cssText = "width: " + (window.innerWidth-20);
+}else{
+document.getElementById("Index").style.cssText = "height: " + (document.body.offsetHeight - 90) + "; width: " + (document.body.offsetWidth - 20);
+document.getElementById("keyword").style.cssText = "width: " + (document.body.offsetWidth - 20);
+}
+}
+
+function keyword_change(k){
+	var i;
+	var str;
+	var found = false;
+	if(k.value!=""){
+		var re = new RegExp(k.value,"i");
+		var re1 = new RegExp(String.fromCharCode(160),"g");
+		for(i=0;i<document.getElementById("Index").options.length;i++){
+			str = document.getElementById("Index").options[i].text.replace(re1, " ");
+			 if(found == false && str.search(re) == 0){
+				document.getElementById("Index").options[i].selected = true;	
+				found = true;
+			 }
+		}
+	}
+}
+
+function writepage(list){
+if(list.length==1){
+	parent.content.location = list[0][1];	
+}else{
+	parent.content.document.write('<h' + 'tml><head><meta http-equiv="Content-Type" content="text/html; charset=Windows-1252"><style type="text/css"><!--div,body { font-family: Tahoma, Verdana; font-size: 12px; }--></style></h' + 'ead><bo' + 'dy>');
+	parent.content.document.write('<b>There are ' + list.length + ' topics for the keyword:</b><p>')
+	for(i=0;i<=list.length-1;i++){
+		parent.content.document.write((i + 1) + '. ' +'<a href="' + list[i][1] + '">' +  list[i][0] + '</a><p>');
+	}
+	parent.content.document.write('</body></html>');
+
+	parent.content.document.close();
+}
+return false;
+}
+
+function display_click(){
+	var i;
+	for(i=0;i<document.getElementById("Index").options.length;i++){
+		 if(document.getElementById("Index").options[i].selected){
+			eval(document.getElementById("Index").options[i].value);
+			break;
+		 }
+	}
+
+
+}
+
+function index_click(){
+	var i;
+	for(i=0;i<document.getElementById("Index").options.length;i++){
+		 if(document.getElementById("Index").options[i].selected){
+			document.getElementById("keyword").value = document.getElementById("Index").options[i].text;
+			break;
+		 }
+	}
+}
+
+</script>
+<script language="JavaScript" src="languages.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body bgcolor="#DCDBD6" leftmargin="5" topmargin="5" marginwidth="5" marginheight="5" onload="window_resize();document.getElementById('keyword').focus();" onresize="window_resize();">
+<form name="form1" method="post" action="">
+  <table width="100%" border="0">
+    <tr>
+      <td><span class="label"><script>document.write(strings['Type in the keyword to find:']);</script></span><br>
+        
+        <input name="keyword" type="text" class="label" id="keyword"  onMouseUp="keyword_change(this);" onKeyUp="keyword_change(this);"> 
+      </td>
+    </tr>
+    <tr> 
+      <td><select name="Index" size="20" class="label" id="Index" onclick="index_click();" ondblclick="display_click();">
+<option value="writepage([['研究规则','topics/page_735.html']]);">????</option><option value="writepage([['极限诡道','topics/page_344.html']]);">????????</option><option value="writepage([['混血深潜者','topics/page_813.html']]);">???????????H</option><option value="writepage([['书目翻译与缩写','topics/page_241.html']]);">?????????|PFS?????K</option><option value="writepage([['提灯王之光','topics/page_1079.html']]);">?????????b????</option><option value="writepage([['荒疫废土','topics/page_1205.html']]);">?????????O????</option><option value="writepage([['变体','topics/page_941.html']]);">???????~</option><option value="writepage([['魔宠手记','topics/page_560.html']]);">???????N?u???c</option><option value="writepage([['易容','topics/page_175.html']]);">?????[??</option><option value="writepage([['八种族','topics/page_386.html']]);">?????]?d</option><option value="writepage([['唬骗','topics/page_1040.html']]);">?????]?k???m?i?V?j</option><option value="writepage([['法术辨识【训】','topics/page_189.html']]);">?????i?V?j</option><option value="writepage([['阵营','topics/page_953.html']]);">?????M????</option><option value="writepage([['术士血统','topics/page_746.html']]);">?????N???G??</option><option value="writepage([['神裔能力变体','topics/page_827.html']]);">?????P?]?k???~</option><option value="writepage([['掌灯人','topics/page_796.html']]);">?????u??</option><option value="writepage([['第二章 玩家基本守则','topics/page_587.html']]);">???@?? ?x???????C?????z</option><option value="writepage([['环境规则','topics/page_284.html']]);">???~</option><option value="writepage([['水下的危险与特征','topics/page_1028.html']]);">???a?M???U?_?I</option><option value="writepage([['A','topics/page_913.html']]);">???b</option><option value="writepage([['贯雷','topics/page_1092.html']]);">???b?y</option><option value="writepage([['灰花匠','topics/page_787.html']]);">???C???k?v</option><option value="writepage([['酿酒师','topics/page_680.html']]);">???D??</option><option value="writepage([['半兽人','topics/page_17.html']]);">???F</option><option value="writepage([['【PFS】日常工作鉴定奖励','topics/page_5.html']]);">???g</option><option value="writepage([['先知','topics/page_87.html']]);">???h</option><option value="writepage([['进阶盔甲训练','topics/page_1095.html']]);">???i?Z????</option><option value="writepage([['此合集说明','topics/page_658.html']]);">???X??????</option><option value="writepage([['部件式盔甲','topics/page_493.html']]);">?@?????`???K??????</option><option value="writepage([['怪物进化','topics/page_1125.html']]);">?]?d?M???O</option><option value="writepage([['兜帽虔心','topics/page_1082.html']]);">?~?{???D?????q</option><option value="writepage([['战蜥人','topics/page_992.html']]);">?~?H</option><option value="writepage([['娜迦裔','topics/page_26.html']]);">?b???H</option><option value="writepage([['游泳和水下冒险','topics/page_1026.html']]);">?D?H</option><option value="writepage([['野蛮人','topics/page_503.html']]);">?f?P??</option><option value="writepage([['寻路仪附魔','topics/page_569.html']]);">?H??</option><option value="writepage([['沙华鱼人','topics/page_990.html']]);">?h?i?H</option><option value="writepage([['科技武器','topics/page_765.html']]);">?i?????~</option><option value="writepage([['魔裔能力变体','topics/page_831.html']]);">?I???P?H???S?x</option><option value="writepage([['造物与专业替换规则','topics/page_647.html']]);">?i?B????</option><option value="writepage([['【PFS】永远可用物品','topics/page_6.html']]);">?iPFS?j???`?u?@???w???y</option><option value="writepage([['统帅','topics/page_618.html']]);">?j?k?v</option><option value="writepage([['炼金援助(炼金术师)','topics/page_707.html']]);">?k?N</option><option value="writepage([['绯红十字军','topics/page_681.html']]);">?M??</option><option value="writepage([['枢动机(armature)构筑流程','topics/page_933.html']]);">?M??(????????)</option><option value="writepage([['圣武士','topics/page_423.html']]);">?M?N</option><option value="writepage([['迷纱幻者','topics/page_791.html']]);">?q???z???i?h</option><option value="writepage([['反圣骑士','topics/page_405.html']]);">?s??</option><option value="writepage([['道具/工具/坐骑','topics/page_210.html']]);">?S??????</option><option value="writepage([['出处速查表','topics/page_476.html']]);">?s??????????????</option><option value="writepage([['奇物','topics/page_641.html']]);">?S???Z??</option><option value="writepage([['科技护甲','topics/page_766.html']]);">?s?y?????????~</option><option value="writepage([['超魔咒字','topics/page_602.html']]);">?U???~?G?r?C??</option><option value="writepage([['游侠','topics/page_57.html']]);">?w?|??</option><option value="writepage([['1001个法术 (B)','topics/page_1052.html']]);">?Z?N????</option><option value="writepage([['法术','topics/Spell.html']]);">0.94x??chm????</option><option value="writepage([['种族亚种与种族特性替换一览','topics/page_934.html']]);">1001???k?N (Z)</option><option value="writepage([['守望者','topics/page_1120.html']]);">A</option><option value="writepage([['AMH-护甲大师工具箱','topics/page_1108.html']]);">AA-???N????</option><option value="writepage([['全专长列表','topics/page_202.html']]);">B1 ????????</option><option value="writepage([['精灵','topics/page_13.html']]);">Blood of the Coven</option><option value="writepage([['PotR-正义之路','topics/page_1171.html']]);">DA???N????</option><option value="writepage([['LotFW-第一世界的遗产','topics/page_1174.html']]);">Heroes of the Darklands</option><option value="writepage([['DH-屠龙者指南','topics/page_1154.html']]);">KoG-?????Q???????Y?H</option><option value="writepage([['TEoG-塔尔多，荣光余荡之地','topics/page_1143.html']]);">OLoP-?????????A?k?????a</option><option value="writepage([['DH-地城手册','topics/page_1151.html']]);">PotN?_???H??</option><option value="writepage([['MA 神话冒险','topics/page_622.html']]);">UI ???????D</option><option value="writepage([['UCa 极限战役','topics/page_200.html']]);">UM ?????]?k</option><option value="writepage([['版本更新纪录','topics/page_659.html']]);">版本更新纪录</option><option value="writepage([['中文','topics/page_997.html']]);">中文</option> 
+        </select></td>
+    </tr>
+    <tr> 
+      <td align="right"><script>document.write('<input name="display" type="submit" class="label" id="display" onClick="display_click(); return false;" value="' + strings['Display'] + '">')</script></td>
+    </tr>
+  </table>
+
+  </form>
+</body>
+</html>
