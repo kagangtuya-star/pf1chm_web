@@ -1,0 +1,696 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><head>
+<title>战斗修正（Combat Modifiers）</title>
+
+<META content="text/html; charset=UTF-8" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001">
+<STYLE>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:等线;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Roboto Regular";
+	panose-1:2 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:微软雅黑;
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"\@微软雅黑";
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:等线;}
+h4
+	{mso-style-link:"标题 4 字符";
+	margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:7.5pt;
+	margin-left:2.5pt;
+	text-indent:-2.5pt;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:#8C008C;}
+h5
+	{mso-style-link:"标题 5 字符";
+	margin-top:7.5pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:2.5pt;
+	text-indent:-2.5pt;
+	page-break-after:avoid;
+	layout-grid-mode:char;
+	background:#E9F0FB;
+	border:none;
+	padding:0cm;
+	font-size:15.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:#008C00;}
+h6
+	{mso-style-link:"标题 6 字符";
+	margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:1.5pt;
+	margin-left:2.5pt;
+	text-indent:-2.5pt;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:#005BEE;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:5.5pt;
+	text-indent:-5.5pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	font-weight:bold;}
+span.4
+	{mso-style-name:"标题 4 字符";
+	mso-style-link:"标题 4";
+	font-family:"微软雅黑",sans-serif;
+	color:#8C008C;
+	font-weight:bold;}
+span.5
+	{mso-style-name:"标题 5 字符";
+	mso-style-link:"标题 5";
+	font-family:"微软雅黑",sans-serif;
+	color:#008C00;
+	background:#E9F0FB;
+	font-weight:bold;}
+span.6
+	{mso-style-name:"标题 6 字符";
+	mso-style-link:"标题 6";
+	font-family:"微软雅黑",sans-serif;
+	color:#005BEE;
+	font-weight:bold;}
+span.Char
+	{mso-style-name:"表格文字 Char";
+	mso-style-link:表格文字;
+	font-family:"微软雅黑",sans-serif;}
+p.a, li.a, div.a
+	{mso-style-name:表格文字;
+	mso-style-link:"表格文字 Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;}
+span.Char0
+	{mso-style-name:"首行缩进 Char";
+	mso-style-link:首行缩进;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a0, li.a0, div.a0
+	{mso-style-name:首行缩进;
+	mso-style-link:"首行缩进 Char";
+	margin-top:1.5pt;
+	margin-right:0cm;
+	margin-bottom:1.5pt;
+	margin-left:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a0CxSpFirst, li.a0CxSpFirst, div.a0CxSpFirst
+	{mso-style-name:首行缩进CxSpFirst;
+	mso-style-link:"首行缩进 Char";
+	margin-top:1.5pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a0CxSpMiddle, li.a0CxSpMiddle, div.a0CxSpMiddle
+	{mso-style-name:首行缩进CxSpMiddle;
+	mso-style-link:"首行缩进 Char";
+	margin:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a0CxSpLast, li.a0CxSpLast, div.a0CxSpLast
+	{mso-style-name:首行缩进CxSpLast;
+	mso-style-link:"首行缩进 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:1.5pt;
+	margin-left:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a1, li.a1, div.a1
+	{mso-style-name:规则;
+	mso-style-link:"规则 字符";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:5.5pt;
+	text-indent:-5.5pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;}
+span.a2
+	{mso-style-name:"规则 字符";
+	mso-style-link:规则;
+	font-family:"微软雅黑",sans-serif;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection2
+	{page:WordSection2;}
+-->
+</STYLE>
+</HEAD>
+<body lang=ZH-CN style="TEXT-JUSTIFY-TRIM: punctuation; WORD-WRAP: break-word"><script language="JavaScript" type="text/JavaScript">
+function syn(){
+if(parent.nav.tree){
+ if(parent.nav.tree.loaded){
+  parent.nav.tree.selectNode(21);
+ }else{
+  setTimeout("syn()",500);
+}
+  }else{
+  setTimeout("syn()",500);
+  }}
+if(parent!=self){
+  setTimeout("syn()",100);
+}else{
+  parent.location.href = "../index.htm?page=rpage_0007.htm";
+}
+originalOnload = window.onload;
+if(originalOnload==null){
+window.onload = function(){parent.contentLoaded = true;};
+}else{
+window.onload = function(){originalOnload();parent.contentLoaded = true;};
+}
+</script> 
+
+<DIV class=WordSection1>
+<H4 style="MARGIN: 12pt 0cm 18pt 8pt; TEXT-INDENT: -8pt">战斗修正（<SPAN 
+lang=EN-US>Combat Modifiers</SPAN>）</H4>
+<P class=a0CxSpFirst 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">很多环境因素和特殊条件都会影响战斗中的攻击检定，其中一些状况会给予战斗者的攻击检定和<SPAN 
+lang=EN-US>AC</SPAN>以特定的加值和减值。</P>
+<P class=a0CxSpLast style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt"><SPAN 
+lang=EN-US></SPAN>&nbsp;</P>
+<P class=MsoCaption style="PAGE-BREAK-AFTER: avoid">表：攻击检定修正</P>
+<TABLE class=DND style="WIDTH: 394.3pt; BORDER-COLLAPSE: collapse" cellSpacing=0 
+cellPadding=0 width=526 border=0>
+  <TBODY>
+  <TR style="HEIGHT: 17pt">
+    <TD 
+    style="BORDER-TOP: medium none; HEIGHT: 17pt; BORDER-RIGHT: medium none; BACKGROUND: #d25f12; BORDER-BOTTOM: white 1.5pt solid; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: white">攻击方状态</SPAN></B></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; HEIGHT: 17pt; BORDER-RIGHT: medium none; BACKGROUND: #d25f12; BORDER-BOTTOM: white 1.5pt solid; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: white">近战攻击</SPAN></B></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; HEIGHT: 17pt; BORDER-RIGHT: medium none; BACKGROUND: #d25f12; BORDER-BOTTOM: white 1.5pt solid; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: white">远程攻击</SPAN></B></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">目眩（<SPAN 
+      lang=EN-US>Dazzled</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN 
+    lang=EN-US>1</SPAN></SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN 
+    lang=EN-US>1</SPAN></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">被纠缠（<SPAN 
+      lang=EN-US>Entangled</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN lang=EN-US>2</SPAN>（※<SPAN 
+      lang=EN-US>1</SPAN>）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN lang=EN-US>2</SPAN>（※<SPAN 
+      lang=EN-US>1</SPAN>）</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">夹击对手（<SPAN lang=EN-US>Flanking 
+      defender</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN lang=EN-US style="COLOR: black">+2</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">隐形（<SPAN 
+      lang=EN-US>Invisible</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN lang=EN-US style="COLOR: black">+2</SPAN><SPAN 
+      style="COLOR: black">（※<SPAN lang=EN-US>2</SPAN>）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN lang=EN-US style="COLOR: black">+2</SPAN><SPAN 
+      style="COLOR: black">（※<SPAN lang=EN-US>2</SPAN>）</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">居高临下（<SPAN lang=EN-US>On higher 
+      ground</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN lang=EN-US style="COLOR: black">+1</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN lang=EN-US style="COLOR: black">+0</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">俯卧（<SPAN 
+      lang=EN-US>Prone</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN 
+    lang=EN-US>4</SPAN></SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–（※<SPAN 
+      lang=EN-US>3</SPAN>）</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">战栗或惊惧（<SPAN lang=EN-US>Shaken or 
+      frightened</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN 
+    lang=EN-US>2</SPAN></SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN 
+    lang=EN-US>2</SPAN></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">挤在狭窄空间（<SPAN lang=EN-US>Squeezing 
+      through a space</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN 
+    lang=EN-US>4</SPAN></SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN 
+    lang=EN-US>4</SPAN></SPAN></P></TD></TR>
+  <TR style="HEIGHT: 17pt">
+    <TD 
+    style="HEIGHT: 17pt; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt" 
+    colSpan=3>
+      <P class=a1><SPAN style="COLOR: black">※<SPAN 
+      lang=EN-US>1</SPAN>被纠缠生物敏捷属性承受<SPAN 
+      lang=EN-US>-4</SPAN>减值，这可能影响他的攻击检定。</SPAN></P>
+      <P class=a1><SPAN style="COLOR: black">※<SPAN lang=EN-US>2</SPAN>目标的<SPAN 
+      lang=EN-US>AC</SPAN>失去敏捷加值。</SPAN></P>
+      <P class=a1><SPAN style="COLOR: black">※<SPAN 
+      lang=EN-US>3</SPAN>大多数远程武器无法在使用者俯卧时攻击；不过俯卧使用弩、火器和手里剑则无减值。</SPAN></P></TD></TR></TBODY></TABLE>
+<P class=a0 style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt"><SPAN 
+lang=EN-US></SPAN>&nbsp;</P>
+<P class=MsoCaption style="PAGE-BREAK-AFTER: avoid">表：防御等级修正</P>
+<TABLE class=DND style="WIDTH: 394.3pt; BORDER-COLLAPSE: collapse" cellSpacing=0 
+cellPadding=0 width=526 border=0>
+  <TBODY>
+  <TR style="HEIGHT: 17pt">
+    <TD 
+    style="BORDER-TOP: medium none; HEIGHT: 17pt; BORDER-RIGHT: medium none; BACKGROUND: #d25f12; BORDER-BOTTOM: white 1.5pt solid; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: white">防御方状态</SPAN></B></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; HEIGHT: 17pt; BORDER-RIGHT: medium none; BACKGROUND: #d25f12; BORDER-BOTTOM: white 1.5pt solid; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: white">对近战<SPAN 
+      lang=EN-US>AC</SPAN></SPAN></B></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; HEIGHT: 17pt; BORDER-RIGHT: medium none; BACKGROUND: #d25f12; BORDER-BOTTOM: white 1.5pt solid; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: white">对远程<SPAN 
+      lang=EN-US>AC</SPAN></SPAN></B></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">拥有掩护（<SPAN lang=EN-US>Behind 
+      cover</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN lang=EN-US style="COLOR: black">+4</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN lang=EN-US style="COLOR: black">+4</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">目盲（<SPAN 
+      lang=EN-US>Blinded</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN lang=EN-US>2</SPAN>（※<SPAN 
+      lang=EN-US>1</SPAN>）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN lang=EN-US>2</SPAN>（※<SPAN 
+      lang=EN-US>1</SPAN>）</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">拥有隐蔽或隐形（<SPAN 
+      lang=EN-US>Concealed or invisible</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt" 
+    colSpan=2>
+      <P class=a><SPAN style="COLOR: black">见隐蔽</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">畏缩（<SPAN 
+      lang=EN-US>Cowering</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN lang=EN-US>2</SPAN>（※<SPAN 
+      lang=EN-US>1</SPAN>）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN lang=EN-US>2</SPAN>（※<SPAN 
+      lang=EN-US>1</SPAN>）</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">被纠缠（<SPAN 
+      lang=EN-US>Entangled</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN lang=EN-US style="COLOR: black">+0</SPAN><SPAN 
+      style="COLOR: black">（※<SPAN lang=EN-US>2</SPAN>）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN lang=EN-US style="COLOR: black">+0</SPAN><SPAN 
+      style="COLOR: black">（※<SPAN lang=EN-US>2</SPAN>）</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">措手不及（<SPAN 
+      lang=EN-US>Flat-footed</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN lang=EN-US style="COLOR: black">+0</SPAN><SPAN 
+      style="COLOR: black">（※<SPAN lang=EN-US>1</SPAN>）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN lang=EN-US style="COLOR: black">+0</SPAN><SPAN 
+      style="COLOR: black">（※<SPAN lang=EN-US>1</SPAN>）</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">擒抱他人而攻击方未擒抱他人（<SPAN 
+      lang=EN-US>Grappling, but attacker is not</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN lang=EN-US style="COLOR: black">+0</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN lang=EN-US style="COLOR: black">+0</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">无助（<SPAN 
+      lang=EN-US>Helpless</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN lang=EN-US>4</SPAN>（※<SPAN 
+      lang=EN-US>3</SPAN>）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN lang=EN-US style="COLOR: black">+0</SPAN><SPAN 
+      style="COLOR: black">（※<SPAN lang=EN-US>3</SPAN>）</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">跪倒或坐下（<SPAN lang=EN-US>Kneeling 
+      or sitting</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN 
+    lang=EN-US>2</SPAN></SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN lang=EN-US style="COLOR: black">+2</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">被压制（<SPAN 
+      lang=EN-US>Pinned</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN lang=EN-US>4</SPAN>（※<SPAN 
+      lang=EN-US>3</SPAN>）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN lang=EN-US style="COLOR: black">+0</SPAN><SPAN 
+      style="COLOR: black">（※<SPAN lang=EN-US>3</SPAN>）</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">俯卧（<SPAN 
+      lang=EN-US>Prone</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN 
+    lang=EN-US>4</SPAN></SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN lang=EN-US style="COLOR: black">+4</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">挤在狭窄空间（<SPAN lang=EN-US>Squeezing 
+      through a space</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN 
+    lang=EN-US>4</SPAN></SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN 
+    lang=EN-US>4</SPAN></SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><B><SPAN style="COLOR: black">被震慑（<SPAN 
+      lang=EN-US>Stunned</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN lang=EN-US>2</SPAN>（※<SPAN 
+      lang=EN-US>1</SPAN>）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a><SPAN style="COLOR: black">–<SPAN lang=EN-US>2</SPAN>（※<SPAN 
+      lang=EN-US>1</SPAN>）</SPAN></P></TD></TR>
+  <TR style="HEIGHT: 17pt">
+    <TD 
+    style="HEIGHT: 17pt; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt" 
+    colSpan=3>
+      <P class=a1><SPAN style="COLOR: black">※<SPAN lang=EN-US>1</SPAN>防御方的<SPAN 
+      lang=EN-US>AC</SPAN>失去敏捷加值。</SPAN></P>
+      <P class=a1><B><SPAN style="COLOR: black">※<SPAN 
+      lang=EN-US>2</SPAN>被纠缠生物敏捷属性承受<SPAN lang=EN-US>-4</SPAN>减值。</SPAN></B></P>
+      <P class=a1><B><SPAN style="COLOR: black">※<SPAN 
+      lang=EN-US>3</SPAN>防御方的<SPAN 
+  lang=EN-US>AC</SPAN>失去敏捷加值。</SPAN></B></P></TD></TR></TBODY></TABLE>
+<P class=a0 style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt"><SPAN 
+lang=EN-US></SPAN>&nbsp;</P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: #e9f0fb 1pt solid; BACKGROUND: #e9f0fb; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 2pt; BORDER-LEFT: #e9f0fb 1pt solid; PADDING-RIGHT: 2pt">
+<H5 
+style="BACKGROUND: #e9f0fb; MARGIN: 18pt 0cm 12pt 7.5pt; TEXT-INDENT: -7.5pt">掩蔽（<SPAN 
+lang=EN-US>Cover</SPAN>）</H5></DIV>
+<P class=a0CxSpFirst 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">在确定你的目标是否对于你的远程攻击具有掩蔽时，你需要选择你所在方格的一个角并画出一条攻击线连接你攻击目标方格的任何一个角。如果这条效果线经过的格子中或边线上有任何可以为目标提供掩护的遮挡物，或是穿过的格子有任何生物占据，那么你攻击目标视为具有掩蔽（<SPAN 
+lang=EN-US>+4AC</SPAN>）。</P>
+<P class=a0CxSpLast 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">在进行近战攻击时，如果你所在方格的任何一角和你邻接的目标所在方格的任一角之间有墙壁（即使是矮墙）阻隔，，那么目标视为具有掩蔽。当你在对一个并非邻接你的目标发动攻击时（比如使用触及武器攻击），那么使用远程攻击的判定标准决定目标是否具有掩蔽。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">低矮的障碍物与掩蔽（<SPAN lang=EN-US>Low Obstacles and 
+Cover</SPAN>）</SPAN></H6>
+<P class=a0 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">一个低矮的障碍物（比如高度不超过你身高一半的矮墙）可以提供掩蔽，不过仅对处于它周围<SPAN 
+lang=EN-US>30</SPAN>尺（<SPAN 
+lang=EN-US>6</SPAN>格）内的生物有效。如果攻击方与该障碍物的距离比防御方更近，那么他可以忽视掩蔽。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">掩蔽与藉机攻击（<SPAN lang=EN-US>Cover and Attacks of 
+Opportunity</SPAN>）</SPAN></H6>
+<P class=a0 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">你无法向对你拥有掩蔽的目标发动藉机攻击。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">掩蔽和反射豁免（<SPAN lang=EN-US>Cover and Reflex 
+Saves</SPAN>）</SPAN></H6>
+<P class=a0 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">如果你拥有掩蔽，那么你在抵抗源点位于掩蔽物另一侧的爆发型攻击效果时，反射豁免检定<SPAN 
+lang=EN-US>+2</SPAN>。注意，可以弥散并包裹掩蔽物的效果无视此加值。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">掩蔽和隐匿检定（<SPAN lang=EN-US>Cover and Stealth 
+Checks</SPAN>）</SPAN></H6>
+<P class=a0 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">你需要在拥有掩蔽的情况下才能使用隐匿技能。如果没有掩蔽，你需要利用隐蔽（<SPAN 
+lang=EN-US>Concealment</SPAN>，见下）才能进行隐匿技能检定。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">软掩蔽（<SPAN lang=EN-US>Soft Cover</SPAN>）</SPAN></H6>
+<P class=a0 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">任何生物，甚至包括敌人都可能在你受到远程攻击时提供掩蔽，使你<SPAN 
+lang=EN-US>AC +4</SPAN>。不过，软掩蔽不提供反射豁免加值，你也不能使用软掩蔽展开隐匿。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">大型生物和掩蔽（<SPAN lang=EN-US>Big Creatures and 
+Cover</SPAN>）</SPAN></H6>
+<P class=a0 style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">拥有超过<SPAN 
+lang=EN-US>5</SPAN>尺（<SPAN 
+lang=EN-US>1</SPAN>格）占据范围的生物在近战攻击时，掩蔽物的决定方法和更小的生物略有不同。这些生物可以选择自己所占据的任何一格作为起点，来判断对方是否拥有掩蔽。同样，在对这些生物发动近战攻击时，你可以选择任何一个它所占据的方格作为终点，来判断它是否对你拥有掩蔽。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">部分掩蔽（<SPAN lang=EN-US>Partial Cover</SPAN>）</SPAN></H6>
+<P class=a0 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">如果生物拥有掩蔽，但是它身体的一半以上处于可见状态，那么它从掩蔽中只能得到<SPAN 
+lang=EN-US>AC +2</SPAN>和反射豁免检定<SPAN lang=EN-US>+1</SPAN>。生物获得的掩蔽是否为部分掩蔽由<SPAN 
+lang=EN-US>GM</SPAN>裁定。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">全掩蔽（<SPAN lang=EN-US>Total Cover</SPAN>）</SPAN></H6>
+<P class=a0 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">如果你和目标之间不存在效果线（意即你无法在避开坚实屏障的前提下画出与目标之间的连接线），那么目标视为对你全掩蔽。你无法对具有全掩蔽的目标发动攻击。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">强化掩蔽（<SPAN lang=EN-US>Improved Cover</SPAN>）</SPAN></H6>
+<P class=a0 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">一些情况下，你的目标可能会找到非常良好的掩蔽物（比如带箭垛的护墙），这些增强的掩蔽可以为它们提供更高的<SPAN 
+lang=EN-US>AC</SPAN>和反射豁免加值。强化掩蔽使目标从掩蔽中获得的<SPAN 
+lang=EN-US>AC</SPAN>和反射豁免加值翻倍（<SPAN lang=EN-US>AC +8</SPAN>，反射豁免<SPAN 
+lang=EN-US>+4</SPAN>）。除此之外，拥有强化掩蔽的生物还能在对抗任何需要反射豁免检定的效果时，视为拥有【精通反射闪避】能力，并且在强化掩蔽下隐匿技能检定<SPAN 
+lang=EN-US>+10</SPAN>。</P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: #e9f0fb 1pt solid; BACKGROUND: #e9f0fb; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 2pt; BORDER-LEFT: #e9f0fb 1pt solid; PADDING-RIGHT: 2pt">
+<H5 
+style="BACKGROUND: #e9f0fb; MARGIN: 18pt 0cm 12pt 7.5pt; TEXT-INDENT: -7.5pt">隐蔽（<SPAN 
+lang=EN-US>Concealment</SPAN>）</H5></DIV>
+<P class=a0CxSpFirst 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">在确定目标是否对于你的远程攻击具有隐蔽时，你需要选择你所在方格的一个角，并画出一条攻击线连接你攻击目标方格的任意一个角。如果这条效果线经过的格子中或边线上有任何可以为目标提供隐蔽的效果，那么你攻击目标视为具有隐蔽。</P>
+<P class=a0CxSpMiddle 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">在进行近战攻击时，目标生物只有整个占据范围完全处于隐蔽的效果影响下才能视作拥有隐蔽。当你在对并非邻接你的目标发动攻击时，那么使用远程攻击的判定标准决定目标是否具有隐蔽。</P>
+<P class=a0CxSpLast 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">除此之外，一些魔法效果会使得受其影响的生物对于所有攻击都视为拥有隐蔽，而并不需要一定有隐蔽物的存在。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">隐蔽失手率（<SPAN lang=EN-US>Concealment Miss 
+Chance</SPAN>）</SPAN></H6>
+<P class=a0 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">对于拥有隐蔽的生物，攻击方对其发动的成功攻击需要额外承受<SPAN 
+lang=EN-US>20%</SPAN>的失手率。在发动攻击时，攻击者正常进行攻击检定，如果命中则防御方必须进行<SPAN 
+lang=EN-US>d%</SPAN>检定来尝试回避攻击。复数的隐蔽效果并不叠加，取其高者。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">隐蔽与隐匿检定（<SPAN lang=EN-US>Concealment and Stealth 
+Checks</SPAN>）</SPAN></H6>
+<P class=a0 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">你也可以利用隐蔽使用隐匿技能。如果没有隐蔽，那么你会需要利用掩蔽来进行隐匿技能检定。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">全隐蔽（<SPAN lang=EN-US>Total 
+Concealment</SPAN>）</SPAN></H6>
+<P class=a0 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">如果你能以一条效果线连接目标，但目标不在你的视线内，那么他对你视为全隐蔽。你无法攻击拥有全隐蔽的目标，不过你可以尝试攻击目标可能存在的方格。对于拥有全隐蔽生物的攻击需要承受<SPAN 
+lang=EN-US>50%</SPAN>的失手率（而非对通常隐蔽效果的<SPAN 
+lang=EN-US>20%</SPAN>）。你无法对拥有全隐蔽的目标进行藉机攻击，即使你知道对方所存在的方格位置。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">忽视隐蔽效果（<SPAN lang=EN-US>Ignoring 
+Concealment</SPAN>）</SPAN></H6>
+<P class=a0 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">隐蔽并非绝对有效。如果对方拥有黑暗视觉，那么昏暗或黑暗的环境无法提供有效隐蔽。在相同的光源条件下，拥有昏暗视觉的生物可以清晰地看到比普通生物更远的距离；拥有隐形的生物视为拥有全隐蔽，但即便是依赖视觉观察的生物仍可以利用察觉技能判断其位置。隐形生物移动时隐匿技能检定拥有<SPAN 
+lang=EN-US>+20</SPAN>加值，而在静止时为<SPAN 
+lang=EN-US>+40</SPAN>（虽然对手不一定能看到你，不过他们依然可以利用其它类型的感官、以及你行动的蛛丝马迹估测你所存在的位置）。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">隐蔽程度变化（<SPAN lang=EN-US>Varying Degrees of 
+Concealment</SPAN>）</SPAN></H6>
+<P class=a0 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">一些特殊条件也可能会对正常的隐蔽造成增强或削弱，并同时调整其需要承受的失手率。</P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: #e9f0fb 1pt solid; BACKGROUND: #e9f0fb; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 2pt; BORDER-LEFT: #e9f0fb 1pt solid; PADDING-RIGHT: 2pt">
+<H5 
+style="BACKGROUND: #e9f0fb; MARGIN: 18pt 0cm 12pt 7.5pt; TEXT-INDENT: -7.5pt">夹击（<SPAN 
+lang=EN-US>Flanking</SPAN>）</H5></DIV>
+<P class=a0CxSpFirst 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">在对目标进行近战攻击时，如果你的对手正被另一个敌对它的角色或生物在你的正对角威胁，那么你的攻击检定拥有<SPAN 
+lang=EN-US>+2</SPAN>夹击加值。如果你不确定两个角色是否正在夹击另一个目标，将这两个角色的方格中心连出一条线。如果这条线穿过了目标生物占据的方格（要求穿过对边），那么就可以确定目标受到夹击。</P>
+<P class=a0CxSpMiddle 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">特殊情况：如果进行夹击的攻击方占据超过<SPAN 
+lang=EN-US>1</SPAN>格，那么他在任何一个所占据的方格达到夹击条件时，攻击检定都可以获得夹击加值。</P>
+<P class=a0CxSpLast 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">只有另一个威胁到夹击目标的角色，才能帮助你对该目标的攻击获得夹击加值。只有<SPAN 
+lang=EN-US>0</SPAN>尺触及的生物无法夹击任何敌人。</P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: #e9f0fb 1pt solid; BACKGROUND: #e9f0fb; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 2pt; BORDER-LEFT: #e9f0fb 1pt solid; PADDING-RIGHT: 2pt">
+<H5 
+style="BACKGROUND: #e9f0fb; MARGIN: 18pt 0cm 12pt 7.5pt; TEXT-INDENT: -7.5pt">无助的目标（<SPAN 
+lang=EN-US>Helpless Defenders</SPAN>）</H5></DIV>
+<P class=a0 style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">如果一个目标被束缚（<SPAN 
+lang=EN-US>bound</SPAN>）、睡眠（<SPAN lang=EN-US>sleeping</SPAN>）、麻痹（<SPAN 
+lang=EN-US>paralyzed</SPAN>）或失去意识（<SPAN 
+lang=EN-US>unconscious</SPAN>），除非你手下留情，否则它对你视为无助。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">正常攻击</SPAN></H6>
+<P class=a0 style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">无助的目标在对抗近战攻击时<SPAN 
+lang=EN-US>AC -4</SPAN>。除此之外，无助的角色视为只有敏捷属性为<SPAN 
+lang=EN-US>0</SPAN>，所以他在对抗所有的远程和近战攻击时<SPAN lang=EN-US>AC</SPAN>还会受到额外<SPAN 
+lang=EN-US>-5</SPAN>减值（总计对近战<SPAN lang=EN-US>-9</SPAN>，对远程<SPAN 
+lang=EN-US>-5</SPAN>）。无助的角色同时也视为处于措手不及状态。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">致命一击（<SPAN lang=EN-US>Coup de Grace, 
+CDG</SPAN>）</SPAN></H6>
+<P class=a0CxSpFirst 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">以一个整轮动作，你可以用近战武器发动致命一击终结一个无助对手的性命。你也可以使用弓或弩发动<SPAN 
+lang=EN-US>CDG</SPAN>，不过前提是目标需要处于邻接你的位置。<SPAN 
+lang=EN-US>CDG</SPAN>会自动命中目标且造成重击。如果目标在受到了这次攻击之后依然生存，那么他还要再进行一次<SPAN 
+lang=EN-US>DC</SPAN>为“<SPAN 
+lang=EN-US>10+CDG</SPAN>伤害”的强韧豁免检定，如果检定失败就会立刻死亡。盗贼能在进行<SPAN 
+lang=EN-US>CDG</SPAN>时加上自己的偷袭伤害。</P>
+<P class=a0CxSpLast style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">进行<SPAN 
+lang=EN-US>CDG</SPAN>会导致威胁着你的敌人对你进行藉机攻击。你无法对免疫重击的生物发动<SPAN 
+lang=EN-US>CDG</SPAN>。你可以对拥有全隐蔽的生物发动<SPAN 
+lang=EN-US>CDG</SPAN>，不过这样做需要消耗两个连续的整轮动作（先花<SPAN 
+lang=EN-US>1</SPAN>轮找到目标现在所处的方格，再用第二个动作进行致命一击）。</P></DIV><SPAN lang=EN-US 
+style='FONT-SIZE: 11pt; FONT-FAMILY: "微软雅黑",sans-serif'><BR 
+style="PAGE-BREAK-BEFORE: always" clear=all></SPAN>
+<DIV class=WordSection2 style="LAYOUT-GRID:  15.6pt none">
+<P class=MsoNormal><SPAN lang=EN-US></SPAN>&nbsp;</P></DIV></BODY></HTML>

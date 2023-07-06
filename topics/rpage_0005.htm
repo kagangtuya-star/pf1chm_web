@@ -1,0 +1,571 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+<head>
+<title>移动，位置和距离（Movement, Position, And Distance）</title>
+
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:等线;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Roboto Regular";
+	panose-1:2 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:微软雅黑;
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"\@微软雅黑";
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:等线;}
+h4
+	{mso-style-link:"标题 4 字符";
+	margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:7.5pt;
+	margin-left:2.5pt;
+	text-indent:-2.5pt;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:#8C008C;}
+h5
+	{mso-style-link:"标题 5 字符";
+	margin-top:7.5pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:2.5pt;
+	text-indent:-2.5pt;
+	page-break-after:avoid;
+	layout-grid-mode:char;
+	background:#E9F0FB;
+	border:none;
+	padding:0cm;
+	font-size:15.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:#008C00;}
+h6
+	{mso-style-link:"标题 6 字符";
+	margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:1.5pt;
+	margin-left:2.5pt;
+	text-indent:-2.5pt;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:#005BEE;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:5.5pt;
+	text-indent:-5.5pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	font-weight:bold;}
+span.4
+	{mso-style-name:"标题 4 字符";
+	mso-style-link:"标题 4";
+	font-family:"微软雅黑",sans-serif;
+	color:#8C008C;
+	font-weight:bold;}
+span.5
+	{mso-style-name:"标题 5 字符";
+	mso-style-link:"标题 5";
+	font-family:"微软雅黑",sans-serif;
+	color:#008C00;
+	background:#E9F0FB;
+	font-weight:bold;}
+span.6
+	{mso-style-name:"标题 6 字符";
+	mso-style-link:"标题 6";
+	font-family:"微软雅黑",sans-serif;
+	color:#005BEE;
+	font-weight:bold;}
+span.Char
+	{mso-style-name:"表格文字 Char";
+	mso-style-link:表格文字;
+	font-family:"微软雅黑",sans-serif;}
+p.a, li.a, div.a
+	{mso-style-name:表格文字;
+	mso-style-link:"表格文字 Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;}
+span.Char0
+	{mso-style-name:"首行缩进 Char";
+	mso-style-link:首行缩进;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a0, li.a0, div.a0
+	{mso-style-name:首行缩进;
+	mso-style-link:"首行缩进 Char";
+	margin-top:1.5pt;
+	margin-right:0cm;
+	margin-bottom:1.5pt;
+	margin-left:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a0CxSpFirst, li.a0CxSpFirst, div.a0CxSpFirst
+	{mso-style-name:首行缩进CxSpFirst;
+	mso-style-link:"首行缩进 Char";
+	margin-top:1.5pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a0CxSpMiddle, li.a0CxSpMiddle, div.a0CxSpMiddle
+	{mso-style-name:首行缩进CxSpMiddle;
+	mso-style-link:"首行缩进 Char";
+	margin:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a0CxSpLast, li.a0CxSpLast, div.a0CxSpLast
+	{mso-style-name:首行缩进CxSpLast;
+	mso-style-link:"首行缩进 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:1.5pt;
+	margin-left:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a1, li.a1, div.a1
+	{mso-style-name:规则;
+	mso-style-link:"规则 字符";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:5.5pt;
+	text-indent:-5.5pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;}
+span.a2
+	{mso-style-name:"规则 字符";
+	mso-style-link:规则;
+	font-family:"微软雅黑",sans-serif;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection2
+	{page:WordSection2;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN style='word-wrap:break-word;text-justify-trim:punctuation'><script language="JavaScript" type="text/JavaScript">
+function syn(){
+if(parent.nav.tree){
+ if(parent.nav.tree.loaded){
+  parent.nav.tree.selectNode(19);
+ }else{
+  setTimeout("syn()",500);
+}
+  }else{
+  setTimeout("syn()",500);
+  }}
+if(parent!=self){
+  setTimeout("syn()",100);
+}else{
+  parent.location.href = "../index.htm?page=rpage_0005.htm";
+}
+originalOnload = window.onload;
+if(originalOnload==null){
+window.onload = function(){parent.contentLoaded = true;};
+}else{
+window.onload = function(){originalOnload();parent.contentLoaded = true;};
+}
+</script> 
+
+
+<div class=WordSection1>
+
+<h4 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:
+8.0pt;text-indent:-8.0pt'>移动，位置和距离（<span lang=EN-US>Movement, Position, And
+Distance</span>）</h4>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>每一个角色的微缩棋子（<span lang=EN-US>Miniature</span>）代表一个游戏场景内<span
+lang=EN-US>6</span>英尺身高的人，每个图上的方格则代表一个<span lang=EN-US>5x5</span>尺的地块。</p>
+
+<div style='border-top:none;border-left:solid #E9F0FB 1.0pt;border-bottom:none;
+border-right:solid #E9F0FB 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;background:#E9F0FB'>
+
+<h5 style='margin-top:18.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+7.5pt;text-indent:-7.5pt;background:#E9F0FB'>战术移动（<span lang=EN-US>Tactical
+Movement</span>）</h5>
+
+</div>
+
+<p class=a0CxSpFirst style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>你角色的速度取决于他的种族和穿戴的护甲（见下表）。你不穿甲时的速度等同于你的基本陆地速度。</p>
+
+<p class=a0CxSpLast style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoCaption style='page-break-after:avoid'>表：战术移动速度</p>
+
+<table class=DND border=0 cellspacing=0 cellpadding=0 width=526
+ style='width:394.3pt;border-collapse:collapse'>
+ <tr style='height:17.0pt'>
+  <td style='border:none;border-bottom:solid white 1.5pt;background:#D25F12;
+  padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+  <p class=a><b><span style='color:white'>种族</span></b></p>
+  </td>
+  <td style='border:none;border-bottom:solid white 1.5pt;background:#D25F12;
+  padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+  <p class=a><b><span style='color:white'>无甲或轻甲</span></b></p>
+  </td>
+  <td style='border:none;border-bottom:solid white 1.5pt;background:#D25F12;
+  padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+  <p class=a><b><span style='color:white'>中甲或重甲</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a><b><span style='color:black'>人类，精灵，半精灵，半兽人；</span></b></p>
+  <p class=a><b><span style='color:black'>神裔，猫族，吸血裔，卓尔，窃影鬼，地精，大地精，狗头人，兽人，天狗，魔裔，</span></b></p>
+  <p class=a><b><span style='color:black'>火元素裔，土元素裔，风元素裔，水元素裔；</span></b></p>
+  <p class=a><b><span style='color:black'>替换儿，半鱼人，树蛙人，狐妖，娜迦裔，轮回者，鸮形人，巨灵裔，灵猴族，蝮血裔</span></b></p>
+  </td>
+  <td style='background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a><span lang=EN-US style='color:black'>30</span><span
+  style='color:black'>尺</span></p>
+  <p class=a><span style='color:black'>（<span lang=EN-US>6</span>格）</span></p>
+  </td>
+  <td style='background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a><span lang=EN-US style='color:black'>20</span><span
+  style='color:black'>尺</span></p>
+  <p class=a><span style='color:black'>（<span lang=EN-US>4</span>格）</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='background:#ECF1F9;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a><b><span style='color:black'>矮人；</span></b></p>
+  <p class=a><b><span style='color:black'>灰矮人</span></b></p>
+  </td>
+  <td style='background:#ECF1F9;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a><span lang=EN-US style='color:black'>20</span><span
+  style='color:black'>尺</span></p>
+  <p class=a><span style='color:black'>（<span lang=EN-US>4</span>格）</span></p>
+  </td>
+  <td style='background:#ECF1F9;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a><span lang=EN-US style='color:black'>20</span><span
+  style='color:black'>尺</span></p>
+  <p class=a><span style='color:black'>（<span lang=EN-US>4</span>格）</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a><b><span style='color:black'>半身人，侏儒；</span></b></p>
+  <p class=a><b><span style='color:black'>鼠族；</span></b></p>
+  <p class=a><b><span style='color:black'>地底侏儒，剪影人</span></b></p>
+  </td>
+  <td style='background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a><span lang=EN-US style='color:black'>20</span><span
+  style='color:black'>尺</span></p>
+  <p class=a><span style='color:black'>（<span lang=EN-US>4</span>格）</span></p>
+  </td>
+  <td style='background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a><span lang=EN-US style='color:black'>15</span><span
+  style='color:black'>尺</span></p>
+  <p class=a><span style='color:black'>（<span lang=EN-US>3</span>格）</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='background:#ECF1F9;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a><b><span style='color:black'>人鱼</span></b></p>
+  </td>
+  <td style='background:#ECF1F9;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a><span lang=EN-US style='color:black'>5</span><span
+  style='color:black'>尺</span></p>
+  <p class=a><span style='color:black'>（<span lang=EN-US>1</span>格）</span></p>
+  </td>
+  <td style='background:#ECF1F9;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a><span lang=EN-US style='color:black'>5</span><span
+  style='color:black'>尺</span></p>
+  <p class=a><span style='color:black'>（<span lang=EN-US>1</span>格）</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>负重（<span lang=EN-US>Encumbrance</span>）</span></h6>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>角色背负数量巨大的财宝、装备或是他倒下的战友时，只能用比通常情况更慢的速度移动（见负重，移动和探险规则章节）。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>阻碍移动（<span lang=EN-US>Hampered
+Movement</span>）</span></h6>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>困难地形、障碍物或受限的能见度也会阻碍角色的移动。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>在战斗中移动</span></h6>
+
+<p class=a0CxSpFirst style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>通常情况下，你可以在本轮中以你的移动速度进行移动后，再进行其他的行动（如一个移动动作或一个标准动作）。如果你只进行移动（即你将你的两个动作全部用来移动），你可以移动相当于你的双倍速度的距离。</p>
+
+<p class=a0CxSpLast style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>如果你用整轮动作奔跑，那么你可以移动相当于你的<span
+lang=EN-US>4</span>倍速度的距离（在穿戴重甲时为<span lang=EN-US>3</span>倍）。如果你在该轮内已经进行过整轮动作，那么你唯一可以进行的移动是<span
+lang=EN-US>5</span>尺快步。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>移动速度加值</span></h6>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>野蛮人在移动速度上拥有<span lang=EN-US>10</span>尺的额外加值（前提是他没有穿戴重甲）。经验丰富的武僧角色也可以获得更高的速度加值（前提是他没有穿戴任何护甲）。另外，很多法术和魔法物品也可以增加角色的移动速度。所有的移动速度修正应该应用于角色负重或穿甲的减值之前，但是同类型的速度加值无法叠加。</p>
+
+<div style='border-top:none;border-left:solid #E9F0FB 1.0pt;border-bottom:none;
+border-right:solid #E9F0FB 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;background:#E9F0FB'>
+
+<h5 style='margin-top:18.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+7.5pt;text-indent:-7.5pt;background:#E9F0FB'>测定距离（<span lang=EN-US>Measuring
+Distance</span>）</h5>
+
+</div>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>通常情况下，我们以<span lang=EN-US>5</span>尺距离为<span
+lang=EN-US>1</span>个方格来计算距离。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>对角格</span></h6>
+
+<p class=a0CxSpFirst style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>在计算距离时，你附近的第一个对角格视为<span lang=EN-US>1</span>格距离，第二个对角格视则为<span
+lang=EN-US>2</span>格距离；第三个对角格视为<span lang=EN-US>1</span>格距离，第四个对角格视为<span
+lang=EN-US>2</span>格距离，以此类推。</p>
+
+<p class=a0CxSpMiddle style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>你无法通过对角格穿过一个拐角（即使是进行<span lang=EN-US>5</span>尺快步也不行）。你可以通过对角格穿过一个生物，甚至是穿过一个敌人。</p>
+
+<p class=a0CxSpLast style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>你也可以利用对角格跨越一些障碍物，比如说地面上的坑洞。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>距离你最近的生物</span></h6>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>当决定距离你相同的多个生物之间哪个比较近的时候，你可以通过投骰来随机确定。</p>
+
+<div style='border-top:none;border-left:solid #E9F0FB 1.0pt;border-bottom:none;
+border-right:solid #E9F0FB 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;background:#E9F0FB'>
+
+<h5 style='margin-top:18.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+7.5pt;text-indent:-7.5pt;background:#E9F0FB'>穿越方格的移动（<span lang=EN-US>Moving
+Through a Square</span>）</h5>
+
+</div>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>大多数情况下，你可以毫无阻碍的穿过一个未被占据的方格。不过，困难地形及一些法术和能力可能会阻碍你的移动，即使是在开阔地上。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>同伴</span></h6>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>除非你进行冲锋移动，否则你可以自由穿过被一个同伴所占据的方格。当你穿过一个被同伴占据的方格时，他并不会给你提供掩蔽（<span
+lang=EN-US>Cover</span>）。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>敌人</span></h6>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>除非该敌人处于无助（<span lang=EN-US>Helpless</span>）状态，你无法穿越一个被敌人占据的方格；你可以毫无减值地穿过一个无助状态的敌人。有一些体型极其巨大的敌人，即使在无助状态下也足以成为阻碍你正常移动的障碍物——当你跨越它们占据的方格时，每个方格的距离视为你需要移动<span
+lang=EN-US>2</span>格。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>结束移动</span></h6>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>你无法在另一个生物占据的方格中结束你的移动，除非该生物处于无助状态。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>闯越（<span lang=EN-US>Overrun</span>）</span></h6>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>在你的移动过程中，你可以尝试用闯越战技穿过一个敌人占据的方格（见战技详述）。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>翻滚（<span lang=EN-US>Tumbling</span>）</span></h6>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>接受过特技训练的角色，可以尝试利用特技技能检定穿过被敌人占据的方格（见技能详述）。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>体型极小的生物</span></h6>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>一个超小型、微型或超微型的生物可以移入或穿越一个被占据的方格，不过这样做会触发敌人的藉机攻击。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>被体型差三级的生物所占据的方格</span></h6>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>任何生物都可以穿越被一个体型至少比自己的体型大三级的生物所占据的方格。同理，一个足够大的生物可以穿越体型至少比自己小三级的生物所占据的方格。穿过被其他生物所占据的方格会触发藉机攻击。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>例外情形</span></h6>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>一些生物不适用于以上列出的情况。例如，一个可以完全覆盖满自己所占据方格的生物就无法以任何方式被穿越（例：泥怪），即使是通过特技技能检定和类似方法也不行。</p>
+
+<div style='border-top:none;border-left:solid #E9F0FB 1.0pt;border-bottom:none;
+border-right:solid #E9F0FB 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;background:#E9F0FB'>
+
+<h5 style='margin-top:18.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+7.5pt;text-indent:-7.5pt;background:#E9F0FB'>地形和障碍物（<span lang=EN-US>Terrain
+and Obstacles</span>）</h5>
+
+</div>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>纠结的植被、破碎的岩石，很多非正常情况的地形都足以影响通过生物的移动能力。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>困难地形（<span lang=EN-US>Difficult
+Terrain</span>）</span></h6>
+
+<p class=a0CxSpFirst style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>一些困难地形，如极其茂密的植被、碎石地面和阶梯可以影响生物的移动。在困难地形中，生物需要花费移动<span
+lang=EN-US>2</span>格的速度才能移动<span lang=EN-US>1</span>格的距离。在困难地形内移动一个对角格需要花费移动<span
+lang=EN-US>3</span>格的速度。你无法通过奔跑或冲锋跨越困难地形。</p>
+
+<p class=a0CxSpMiddle style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>如果你所占据的区域中有多种地形，那么你的移动力视为你处于其中最为困难的地形上。</p>
+
+<p class=a0CxSpLast style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>拥有飞行移动能力或是虚体特性的生物不受困难地形的影响。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>障碍物（<span lang=EN-US>Obstacles</span>）</span></h6>
+
+<p class=a0CxSpFirst style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>和困难地形类似，障碍物的存在也会影响生物的移动。如果障碍物没有完全堵塞方格，每一个存在障碍物的方格、或是方格间的障碍物都会视为<span
+lang=EN-US>2</span>格移动距离。你必须为穿越这些格子付出额外的移动力。如果你的速度不足以穿越有障碍物阻碍的方格并抵达对面，那么你无法通过它们。有一些障碍物也可能需要通过技能检定来进行翻越。</p>
+
+<p class=a0CxSpMiddle style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>另外，有一些障碍物足以完全挡住你的移动路线，你无法穿过这些障碍物。</p>
+
+<p class=a0CxSpLast style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>拥有飞行移动能力或是虚体特性的生物不受大多数障碍物的影响。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>挤过狭窄空间（<span lang=EN-US>Squeezing</span>）</span></h6>
+
+<p class=a0CxSpFirst style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>有一些情况下，你可能需要挤进一个大小不足以让你完全伸展肢体的空间里。你最多可以挤入一个宽度相当于你正常占据范围一半的空间。在狭窄空间中移动<span
+lang=EN-US>1</span>格通常会耗费你<span lang=EN-US>2</span>格的速度。挤在狭窄空间内时，你的攻击检定和<span
+lang=EN-US>AC</span>都需要承受<span lang=EN-US>-4</span>减值。</p>
+
+<p class=a0CxSpMiddle style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>当一个大型生物（通常占据<span lang=EN-US>4</span>格空间）挤入宽度只有<span
+lang=EN-US>1</span>格的空间时，它的微缩棋子将改为横向中分，以线型占据<span lang=EN-US>2</span>格。更大的生物在挤入狭窄空间时也需要利用类似的中分法来调整占据。</p>
+
+<p class=a0CxSpMiddle style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>一个生物可以在狭窄空间内挤过另一个生物，但无法停留在另一个生物占据的方格内。</p>
+
+<p class=a0CxSpLast style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>如果你需要挤过一个宽度小于你正常占据一半的空间时，你需要为此通过一个脱逃技能检定。在利用脱逃技能挤过狭窄空间时，你无法进行攻击，<span
+lang=EN-US>AC</span>承受<span lang=EN-US>-4</span>减值并失去敏捷加值。</p>
+
+<div style='border-top:none;border-left:solid #E9F0FB 1.0pt;border-bottom:none;
+border-right:solid #E9F0FB 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;background:#E9F0FB'>
+
+<h5 style='margin-top:18.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+7.5pt;text-indent:-7.5pt;background:#E9F0FB'>特殊移动规则（<span lang=EN-US>Special
+Movement Rules</span>）</h5>
+
+</div>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>以下的规则涵盖了一些可能出现的特殊移动情况。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>在违规方格中结束移动</span></h6>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>有些情况下，一个生物可能会被移动到他本来无法结束移动的方格中。如果出现此情况，那么这个角色应该停留在他最后一个移动到的正常方格内，或被移动到最接近他原本停留方格的正常方格内（如果后者距离更近的话）。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>消耗双倍移动速度</span></h6>
+
+<p class=a0CxSpFirst style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>当你在会对移动造成阻碍的方格内移动时，你通常需要消耗双倍移动速度来进行移动。举例而言，在困难地形内移动<span
+lang=EN-US>1</span>格需要消耗你<span lang=EN-US>2</span>格的移动速度，在困难地形中进行<span
+lang=EN-US>1</span>个对角格移动则需要消耗你<span lang=EN-US>3</span>格的移动速度（如同你在正常地形内移动<span
+lang=EN-US>2</span>个对角格）。</p>
+
+<p class=a0CxSpLast style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>如果环境对移动翻倍的效果应用<span lang=EN-US>2</span>次，则你需要耗费<span
+lang=EN-US>4</span>格移动速度来移动<span lang=EN-US>1</span>格（或耗费<span lang=EN-US>6</span>格移动速度来移动<span
+lang=EN-US>1</span>个对角格）；如果环境对移动翻倍的效果应用<span lang=EN-US>3</span>次，则你需要耗费<span
+lang=EN-US>8</span>格移动（对角格<span lang=EN-US>12</span>格），以此类推。这是通用规则中“倍率计算叠加而非叠乘”的特例情形。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>最小移动速度</span></h6>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>无论你在移动速度上承受了多少减值，你至少都能以一个整轮动作向任何方向移动<span
+lang=EN-US>5</span>尺（<span lang=EN-US>1</span>格），包括对角格。不过这无法让你穿过原本无法穿越的地形，或移入禁止一切移动的区域。这种移动方式不被视为进行<span
+lang=EN-US>5</span>尺快步，会正常导致藉机攻击（除非具有合适程度的掩蔽）。</p>
+
+</div>
+
+<span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection2 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

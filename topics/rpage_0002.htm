@@ -1,0 +1,674 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+<head>
+<title>战斗中的数据计算（Combat Statistics）</title>
+
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:等线;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Roboto Regular";
+	panose-1:2 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:微软雅黑;
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"\@微软雅黑";
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:等线;}
+h4
+	{mso-style-link:"标题 4 字符";
+	margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:7.5pt;
+	margin-left:2.5pt;
+	text-indent:-2.5pt;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:#8C008C;}
+h5
+	{mso-style-link:"标题 5 字符";
+	margin-top:7.5pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:2.5pt;
+	text-indent:-2.5pt;
+	page-break-after:avoid;
+	layout-grid-mode:char;
+	background:#E9F0FB;
+	border:none;
+	padding:0cm;
+	font-size:15.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:#008C00;}
+h6
+	{mso-style-link:"标题 6 字符";
+	margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:1.5pt;
+	margin-left:2.5pt;
+	text-indent:-2.5pt;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:#005BEE;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:5.5pt;
+	text-indent:-5.5pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	font-weight:bold;}
+span.4
+	{mso-style-name:"标题 4 字符";
+	mso-style-link:"标题 4";
+	font-family:"微软雅黑",sans-serif;
+	color:#8C008C;
+	font-weight:bold;}
+span.5
+	{mso-style-name:"标题 5 字符";
+	mso-style-link:"标题 5";
+	font-family:"微软雅黑",sans-serif;
+	color:#008C00;
+	background:#E9F0FB;
+	font-weight:bold;}
+span.6
+	{mso-style-name:"标题 6 字符";
+	mso-style-link:"标题 6";
+	font-family:"微软雅黑",sans-serif;
+	color:#005BEE;
+	font-weight:bold;}
+span.Char
+	{mso-style-name:"特性 Char";
+	mso-style-link:特性;
+	font-family:"微软雅黑",sans-serif;
+	background:#F1F1F1;}
+p.a, li.a, div.a
+	{mso-style-name:特性;
+	mso-style-link:"特性 Char";
+	margin-top:0cm;
+	margin-right:2.5pt;
+	margin-bottom:0cm;
+	margin-left:7.5pt;
+	text-indent:-5.0pt;
+	background:#F1F1F1;
+	border:none;
+	padding:0cm;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;}
+span.Char0
+	{mso-style-name:"表格文字 Char";
+	mso-style-link:表格文字;
+	font-family:"微软雅黑",sans-serif;}
+p.a0, li.a0, div.a0
+	{mso-style-name:表格文字;
+	mso-style-link:"表格文字 Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;}
+span.Char1
+	{mso-style-name:"首行缩进 Char";
+	mso-style-link:首行缩进;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a1, li.a1, div.a1
+	{mso-style-name:首行缩进;
+	mso-style-link:"首行缩进 Char";
+	margin-top:1.5pt;
+	margin-right:0cm;
+	margin-bottom:1.5pt;
+	margin-left:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a1CxSpFirst, li.a1CxSpFirst, div.a1CxSpFirst
+	{mso-style-name:首行缩进CxSpFirst;
+	mso-style-link:"首行缩进 Char";
+	margin-top:1.5pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a1CxSpMiddle, li.a1CxSpMiddle, div.a1CxSpMiddle
+	{mso-style-name:首行缩进CxSpMiddle;
+	mso-style-link:"首行缩进 Char";
+	margin:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a1CxSpLast, li.a1CxSpLast, div.a1CxSpLast
+	{mso-style-name:首行缩进CxSpLast;
+	mso-style-link:"首行缩进 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:1.5pt;
+	margin-left:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a2, li.a2, div.a2
+	{mso-style-name:规则;
+	mso-style-link:"规则 字符";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:5.5pt;
+	text-indent:-5.5pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;}
+span.a3
+	{mso-style-name:"规则 字符";
+	mso-style-link:规则;
+	font-family:"微软雅黑",sans-serif;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection2
+	{page:WordSection2;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN style='word-wrap:break-word;text-justify-trim:punctuation'><script language="JavaScript" type="text/JavaScript">
+function syn(){
+if(parent.nav.tree){
+ if(parent.nav.tree.loaded){
+  parent.nav.tree.selectNode(16);
+ }else{
+  setTimeout("syn()",500);
+}
+  }else{
+  setTimeout("syn()",500);
+  }}
+if(parent!=self){
+  setTimeout("syn()",100);
+}else{
+  parent.location.href = "../index.htm?page=rpage_0002.htm";
+}
+originalOnload = window.onload;
+if(originalOnload==null){
+window.onload = function(){parent.contentLoaded = true;};
+}else{
+window.onload = function(){originalOnload();parent.contentLoaded = true;};
+}
+</script> 
+
+
+<div class=WordSection1>
+
+<h4 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:
+8.0pt;text-indent:-8.0pt'>战斗中的数据计算（<span lang=EN-US>Combat Statistics</span>）</h4>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>本节总结了一些在战斗中会用到以及决定战斗胜负的数据，以及如何运用这些数据进行计算。</p>
+
+<div style='border-top:none;border-left:solid #E9F0FB 1.0pt;border-bottom:none;
+border-right:solid #E9F0FB 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;background:#E9F0FB'>
+
+<h5 style='margin-top:18.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+7.5pt;text-indent:-7.5pt;background:#E9F0FB'>攻击检定（<span lang=EN-US>Attack Roll</span>）</h5>
+
+</div>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>攻击检定代表了你在战斗中为命中对手所发动的攻击尝试。当你发动攻击时，骰一次<span
+lang=EN-US>d20</span>并给结果加上你的攻击加值（以及其他影响攻击检定的修正数据）。如果你的攻击检定结果等于或超过了攻击目标的<span
+lang=EN-US>AC</span>，那么你成功地命中目标并可以造成伤害。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>自动失手和命中</span></h6>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>如果你在攻击检定中自然投骰为<span lang=EN-US>1</span>（即<span
+lang=EN-US>d20</span>投骰结果为<span lang=EN-US>1</span>），那么你的攻击一定失手；如果你在攻击检定自然投骰为<span
+lang=EN-US>20</span>（即<span lang=EN-US>d20</span>投骰结果为<span lang=EN-US>20</span>），那么你的攻击一定命中并可以产生重击威胁——可能对目标造成重击（见下文“攻击动作”）。</p>
+
+<div style='border-top:none;border-left:solid #E9F0FB 1.0pt;border-bottom:none;
+border-right:solid #E9F0FB 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;background:#E9F0FB'>
+
+<h5 style='margin-top:18.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+7.5pt;text-indent:-7.5pt;background:#E9F0FB'>攻击加值（<span lang=EN-US>Attack Bonus</span>）</h5>
+
+</div>
+
+<p class=a1CxSpFirst style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>如果使用近战武器发动攻击，你的攻击加值通常为：</p>
+
+<p class=a1CxSpMiddle align=center style='margin-top:3.6pt;margin-right:0cm;
+margin-bottom:3.6pt;margin-left:0cm;text-align:center;text-indent:22.0pt'><b><span
+lang=EN-US style='color:#0033CC'>BAB+</span></b><b><span style='color:#0033CC'>力量修正<span
+lang=EN-US>+</span>体型修正</span></b></p>
+
+<p class=a1CxSpMiddle style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>如果使用远程武器发动攻击，你的攻击加值通常为：</p>
+
+<p class=a1CxSpLast align=center style='margin-top:3.6pt;margin-right:0cm;
+margin-bottom:3.6pt;margin-left:0cm;text-align:center;text-indent:22.0pt'><b><span
+lang=EN-US style='color:#0033CC'>BAB+</span></b><b><span style='color:#0033CC'>敏捷修正<span
+lang=EN-US>+</span>体型修正<span lang=EN-US>+</span>射程减值</span></b></p>
+
+<div style='border-top:none;border-left:solid #E9F0FB 1.0pt;border-bottom:none;
+border-right:solid #E9F0FB 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;background:#E9F0FB'>
+
+<h5 style='margin-top:18.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+7.5pt;text-indent:-7.5pt;background:#E9F0FB'>防御等级（<span lang=EN-US>Armor Class</span>）</h5>
+
+</div>
+
+<p class=a1CxSpFirst style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>你的防御等级（<span lang=EN-US>AC, Armor
+Class</span>）代表了你的对手在战斗中击中你和造成伤害的难度。这个数值将用来对抗对手试图击中你所投出的攻击检定。你的<span
+lang=EN-US>AC</span>通常为：</p>
+
+<p class=a1CxSpMiddle align=center style='margin-top:3.6pt;margin-right:0cm;
+margin-bottom:3.6pt;margin-left:0cm;text-align:center;text-indent:22.0pt'><b><span
+lang=EN-US style='color:#0033CC'>10+</span></b><b><span style='color:#0033CC'>护甲加值<span
+lang=EN-US>+</span>盾牌加值<span lang=EN-US>+</span>敏捷修正<span lang=EN-US>+</span>其他加值</span></b></p>
+
+<p class=a1CxSpLast style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>要注意的是，有些护甲装备会限制你在<span lang=EN-US>AC</span>上获得的敏捷加值。如果你装备护甲，那么你可能无法将所有的敏捷修正应用到自己的<span
+lang=EN-US>AC</span>上（见装备章节中的防具部分）。有时候你会失去<span lang=EN-US>AC</span>中的敏捷加值（如果你的敏捷修正为正值）。如果你无法对袭来的攻击做出反应，那么你也无法在<span
+lang=EN-US>AC</span>上获得敏捷加值。如果你没有任何敏捷加值，你的<span lang=EN-US>AC</span>也不会受到影响。【编注：此处意为，如果你敏捷属性为<span
+lang=EN-US>8</span>、正常<span lang=EN-US>AC</span>是<span lang=EN-US>9</span>，那么措手不及时并不会因为“失去”数值为<span
+lang=EN-US>-1</span>的敏捷修正，从而令<span lang=EN-US>AC</span>反增至<span lang=EN-US>10</span>。】</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>其他修正</span></h6>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>以下是一些会影响你<span lang=EN-US>AC</span>的数值。</p>
+
+<p class=a2><b><span style='color:#996600'>增强加值（<span lang=EN-US>Enhancement
+Bonus</span>）</span></b>：你装备防具所具有的增强加值，会提升防具所给予的护甲和盾牌加值。</p>
+
+<p class=a2><b><span style='color:#996600'>偏斜加值（<span lang=EN-US>Deflection
+Bonus</span>，又译卸劲加值）</span></b>：一些魔法手段可以阻隔对你发动的攻击，增强你的<span lang=EN-US>AC</span>。</p>
+
+<p class=a2><b><span style='color:#996600'>天生护甲加值（<span lang=EN-US>Natural
+Armor</span>，又译天防加值）</span></b>：如果你角色的种族拥有坚硬的外皮、鳞片或厚实的皮肤，这些条件会增强你的<span
+lang=EN-US>AC</span>。</p>
+
+<p class=a2><b><span style='color:#996600'>闪避加值（<span lang=EN-US>Dodge Bonuses</span>）</span></b>：闪避加值代表了你的人物通过闪躲回避攻击的能力，通常情况下，当你的<span
+lang=EN-US>AC</span>失去敏捷加值时，你也会同时失去<span lang=EN-US>AC</span>上的闪避加值（不过因为装备护甲所降低的敏捷加值，并不会影响闪避加值）。和大多数加值不同，你在<span
+lang=EN-US>AC</span>上获得的闪避加值可以叠加使用。</p>
+
+<p class=a2><b><span style='color:#996600'>体型修正（<span lang=EN-US>Size Modifier</span>）</span></b>：你会因为体型的大小不同而在<span
+lang=EN-US>AC</span>上获得一定的加值或减值，具体见下表。</p>
+
+<p class=MsoCaption style='page-break-after:avoid'>表：体型修正</p>
+
+<table class=DND border=0 cellspacing=0 cellpadding=0 style='border-collapse:
+ collapse'>
+ <tr style='height:17.0pt'>
+  <td style='border:none;border-bottom:solid white 1.5pt;background:#D25F12;
+  padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+  <p class=a0><b><span style='color:white'>体型</span></b></p>
+  </td>
+  <td style='border:none;border-bottom:solid white 1.5pt;background:#D25F12;
+  padding:0cm 5.4pt 0cm 5.4pt;height:17.0pt'>
+  <p class=a0><b><span style='color:white'>体型修正</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a0><b><span style='color:black'>超巨型（<span lang=EN-US>Colossal</span>）</span></b></p>
+  </td>
+  <td style='background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a0><span lang=EN-US style='font-family:"Roboto Regular";color:black'>–</span><span
+  lang=EN-US style='color:black'>8</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='background:#ECF1F9;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a0><b><span style='color:black'>巨型（<span lang=EN-US>Gargantuan</span>）</span></b></p>
+  </td>
+  <td style='background:#ECF1F9;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a0><span lang=EN-US style='font-family:"Roboto Regular";color:black'>–</span><span
+  lang=EN-US style='color:black'>4</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a0><b><span style='color:black'>超大型（<span lang=EN-US>Huge</span>）</span></b></p>
+  </td>
+  <td style='background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a0><span lang=EN-US style='font-family:"Roboto Regular";color:black'>–</span><span
+  lang=EN-US style='color:black'>2</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='background:#ECF1F9;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a0><b><span style='color:black'>大型（<span lang=EN-US>Large</span>）</span></b></p>
+  </td>
+  <td style='background:#ECF1F9;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a0><span lang=EN-US style='font-family:"Roboto Regular";color:black'>–</span><span
+  lang=EN-US style='color:black'>1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a0><b><span style='color:black'>中型（<span lang=EN-US>Medium</span>）</span></b></p>
+  </td>
+  <td style='background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a0><span lang=EN-US style='color:black'>+0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='background:#ECF1F9;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a0><b><span style='color:black'>小型（<span lang=EN-US>Small</span>）</span></b></p>
+  </td>
+  <td style='background:#ECF1F9;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a0><span lang=EN-US style='color:black'>+1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a0><b><span style='color:black'>超小型（<span lang=EN-US>Tiny</span>）</span></b></p>
+  </td>
+  <td style='background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a0><span lang=EN-US style='color:black'>+2</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style='background:#ECF1F9;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a0><b><span style='color:black'>微型（<span lang=EN-US>Diminutive</span>）</span></b></p>
+  </td>
+  <td style='background:#ECF1F9;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=a0><span lang=EN-US style='color:black'>+4</span></p>
+  </td>
+ </tr>
+ <tr style='height:3.05pt'>
+  <td style='background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt;height:3.05pt'>
+  <p class=a0><b><span style='color:black'>超微型（<span lang=EN-US>Fine</span>）</span></b></p>
+  </td>
+  <td style='background:#D9E2F3;padding:0cm 5.4pt 0cm 5.4pt;height:3.05pt'>
+  <p class=a0><span lang=EN-US style='color:black'>+8</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>接触攻击（<span lang=EN-US>Touch
+Attacks</span>）</span></h6>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>有一些类型的攻击足以完全忽视护甲、盾牌和天生护甲的防御——它们只需要“接触”到攻击目标就可以传递伤害，这些攻击方式称为接触攻击（包括近战接触攻击和远程接触攻击）。如果你是接触攻击的目标，那么这次攻击会忽视你在<span
+lang=EN-US>AC</span>上的任何护甲加值、盾牌加值或天生护甲加值。其他类型的<span lang=EN-US>AC</span>加值，如体型修正、敏捷修正、偏斜加值（如果有）正常生效。<span
+lang=EN-US><br clear=all>
+</span>有一些生物的攻击方式是虚体接触攻击，它们的攻击可以穿透固体障碍如护甲和盾牌。虚体接触攻击的运作方式和接触攻击相同，不过它同时还忽视目标通过掩蔽所获得的防御加值。不过，虚体接触攻击无法忽视由力场效果形成的<span
+lang=EN-US>AC</span>护甲加值，如‘法师护甲（<span lang=EN-US>Mage armor</span>）’法术和＜防御护腕（<span
+lang=EN-US>Bracers of Armor</span>）＞。</p>
+
+<div style='border-top:none;border-left:solid #E9F0FB 1.0pt;border-bottom:none;
+border-right:solid #E9F0FB 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;background:#E9F0FB'>
+
+<h5 style='margin-top:18.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+7.5pt;text-indent:-7.5pt;background:#E9F0FB'>伤害（<span lang=EN-US>Damage</span>）</h5>
+
+</div>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>如果你的攻击成功命中攻击目标，那么你可以对它造成伤害。你造成伤害的数量取决于你使用的是何种武器。伤害会削减受攻击目标的<span
+lang=EN-US>HP</span>。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>伤害底限</span></h6>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>如果一次伤害因为减值的原因而降低到<span lang=EN-US>1</span>以下，这次攻击会对目标造成<span
+lang=EN-US>1</span>点非致命伤害。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>力量加值</span></h6>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>当你以近战武器或投掷武器（包括投石索）攻击命中目标时，将你的力量修正加至造成的伤害上（无论其正负）。如果你使用弓进行攻击且你的力量修正为负值，它也会记入伤害中。</p>
+
+<p class=a2><b><span style='color:#996600'>副手武器</span></b>：如果你的副手也持有武器并用来攻击，它的伤害只能获得力量修正一半的加值。如果你的力量修正为减值，则要将全部减值计入伤害中。</p>
+
+<p class=a2><b><span style='color:#996600'>双手持握武器</span></b>：如果你用两只手同时持握一把武器攻击且命中，这次伤害可以应用你力量修正<span
+lang=EN-US>1.5</span>倍的加值（力量减值不会因此增加）。不过，如果你双手持用轻型武器攻击，则无额外的力量加值。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>倍数伤害（<span lang=EN-US>Multiplying
+Damage</span>）</span></h6>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>一些特殊条件可以让你造成的伤害翻倍，比如成功确认的重击。在此情况下，你需要多次伤害检定（加上所有的修正）并将结果汇总以计算伤害。</p>
+
+<p class=a2><b><span style='color:#996600'>注意</span></b>：当你同时应用多项倍数伤害时，每一项对初始伤害分别生效并叠加，而非依次生效并叠乘。</p>
+
+<div style='border-top:none;border-left:solid #F2F2F2 1.0pt;border-bottom:none;
+border-right:solid #F2F2F2 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;background:#F1F1F1;
+margin-left:5.25pt;margin-right:5.25pt'>
+
+<p class=a style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:
+11.0pt;margin-bottom:.0001pt;text-indent:-11.0pt;background:#F1F1F1'><span
+style='color:black'>【速查】<b>倍率（<span lang=EN-US>Multiplying</span>）</b>：当你的某次投骰出现超过一种的倍率时，注意倍率之间并非叠乘，而是叠加为单一倍率——每个额外的倍率将会减<span
+lang=EN-US>1</span>后加至总倍率。举例而言，若你需要添加</span><span lang=EN-US style='font-family:
+等线;color:black'>×</span><span lang=EN-US style='color:black'>2</span><span
+style='color:black'>倍率两次，合并后的倍率将为</span><span lang=EN-US style='font-family:
+等线;color:black'>×</span><span lang=EN-US style='color:black'>3</span><span
+style='color:black'>，而非</span><span lang=EN-US style='font-family:等线;
+color:black'>×</span><span lang=EN-US style='color:black'>4</span><span
+style='color:black'>。【译注：补充举例——拥有“奋力冲锋”专长的角色在使用长枪并骑乘冲锋时造成的伤害为三倍，那么该角色在使用长枪骑乘冲锋并造成重击时（骑乘冲锋造成三倍伤害，武器重击倍率</span><span
+lang=EN-US style='font-family:等线;color:black'>×</span><span lang=EN-US
+style='color:black'>3</span><span style='color:black'>），计入的倍率分别为</span><span
+lang=EN-US style='font-family:等线;color:black'>×</span><span lang=EN-US
+style='color:black'>3</span><span style='color:black'>和</span><span lang=EN-US
+style='font-family:等线;color:black'>×</span><span lang=EN-US style='color:black'>3</span><span
+style='color:black'>，而实际叠加后的单一倍率为</span><span lang=EN-US style='font-family:
+等线;color:black'>×</span><span lang=EN-US style='color:black'>5</span><span
+style='color:black'>。】</span></p>
+
+</div>
+
+<p class=a2><b><span style='color:#996600'>例外</span></b>：武器正常伤害之外的额外伤害骰，永不会因倍数伤害而翻倍。【编注：简言之，“伤害<span
+lang=EN-US>+2</span>”等定值可以因倍数伤害而翻倍，但“伤害<span lang=EN-US>+2d6</span>”等变量则不能翻倍。后者典型的例子就是偷袭的额外伤害。】</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>属性伤害（<span lang=EN-US>Ability
+Damage</span>）</span></h6>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>有一些生物和魔法效果会对角色的属性造成临时或永久性的伤害（降低特定的属性值）。</p>
+
+<div style='border-top:none;border-left:solid #E9F0FB 1.0pt;border-bottom:none;
+border-right:solid #E9F0FB 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;background:#E9F0FB'>
+
+<h5 style='margin-top:18.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+7.5pt;text-indent:-7.5pt;background:#E9F0FB'>生命值（<span lang=EN-US>Hit Points,
+HP</span>）</h5>
+
+</div>
+
+<p class=a1CxSpFirst style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>当你的<span lang=EN-US>HP</span>降至<span
+lang=EN-US>0</span>，你将陷入瘫痪。当你的<span lang=EN-US>HP</span>降至<span lang=EN-US>-1</span>，你将陷入濒死状态。<span
+style='color:red'>当你的<span lang=EN-US>HP</span>达到你的体质属性值的负数，你将死亡。</span>更多信息详见下文伤害和死亡部分。</p>
+
+<p class=a1CxSpLast style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>【编注：在<span lang=EN-US>DND 3R</span>中，角色死亡阈值为<span
+lang=EN-US>HP</span>达到<span lang=EN-US>-10</span>这一定值，而<span lang=EN-US>PF</span>规则中则依赖于体质属性质。】</p>
+
+<div style='border-top:none;border-left:solid #E9F0FB 1.0pt;border-bottom:none;
+border-right:solid #E9F0FB 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;background:#E9F0FB'>
+
+<h5 style='margin-top:18.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+7.5pt;text-indent:-7.5pt;background:#E9F0FB'>藉机攻击（<span lang=EN-US>Attacks of
+Opportunity</span>）</h5>
+
+</div>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>在一些情况下，一个战斗者会在近身格斗中露出破绽或进行无谋的行动。这时，其他的战斗者可以获得一次突破他的防御的额外攻击机会，这些额外攻击被称为藉机攻击。见下图来了解藉机攻击的作用原理。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>威胁范围（<span lang=EN-US>Threatened
+Squares</span>）</span></h6>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>你所以可以通过近战攻击触及的方格视为你的威胁范围，即使并不在你的回合也是一样。一般来说，你的威胁范围是你的邻接方格（包括斜向对角方格）。在你的威胁范围内，你敌对目标的一些行动可能会导致你获得对他藉机攻击。如果你使用徒手攻击，你无法对任何方格进行藉机攻击。【编注：徒手攻击没有威胁范围，因而无法发动藉机攻击。当你习得“精通徒手打击”专长后则不再受此限制。】</p>
+
+<p class=a2><b><span style='color:#996600'>长触及武器（<span lang=EN-US>Reach Weapons</span>）</span></b>：大多数中型和小型的生物只有<span
+lang=EN-US>5</span>尺触及范围，这表示他们的近战攻击也最多只能打击到距离他们<span lang=EN-US>5</span>尺（<span
+lang=EN-US>1</span>格）范围内的对手。不过，如果该生物使用具有长武（<span lang=EN-US>Reach</span>）特性的武器，那么他就获得额外<span
+lang=EN-US>1</span>格的威胁范围。大多数体型大于中型的生物都拥有<span lang=EN-US>10</span>尺触及范围。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>引发藉机攻击</span></h6>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>有两种情况通常会导致你受到藉机攻击——离开对方的威胁范围，或是在对方的威胁范围内进行一些特定的动作。</p>
+
+<p class=a2><b><span style='color:#996600'>移动</span></b>：从对方的威胁范围内移开通常会给予对方藉机攻击你的机会。不过也有两种移动方法可以避免此藉机攻击——进行<span
+lang=EN-US>5</span>尺快步或是使用撤退动作。</p>
+
+<p class=a2><b><span style='color:#996600'>分心的行动</span></b>：在对方的威胁范围内进行一些让你无法专心防卫自己的动作，也会给予对方藉机攻击你的机会。见表：战斗动作来了解何种动作会引发藉机攻击。切记，即使是通常会引发藉机攻击的动作，在某些情况下也会出现不被藉机攻击的例外。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>进行藉机攻击</span></h6>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>藉机攻击是一次单次的近战攻击，大多数角色每轮只能藉机攻击<span
+lang=EN-US>1</span>次。如果你不想对当前目标发动藉机攻击，你也可以选择不发动藉机攻击。在藉机攻击时，你使用你的正常攻击加值，即使你这轮已经进行过了攻击动作。<span
+lang=EN-US><br clear=all>
+</span>进行藉机攻击会暂时“中断”正常的行动轮。如果任何行为会引发藉机攻击，请立刻进行藉机攻击并结算结果，然后进行接下来其他角色的行动轮（如果在某个角色当前的行动轮内，那么就是完成当前轮）。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>战斗反射和额外的藉机攻击次数</span></h6>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>如果你拥有“战斗反射”专长，那么你每轮可以进行的藉机攻击次数将增加为你的敏捷修正次。你无法通过此专长在一次藉机攻击机会中，对一个目标进行多次攻击；但是如果它对你提供了两次藉机攻击机会，你也就相应的可以发动两次藉机攻击（因为它提供了多于一次的单独藉机攻击机会）。如果目标在同一轮从你的威胁方格移出<span
+lang=EN-US>1</span>次以上，那么这不能重复记为会引发藉机攻击的动作。所有的藉机攻击都使用你的完整攻击加值。【编注：举例而言，对方通过一次移动近身绕着威胁范围<span
+lang=EN-US>5</span>尺的你走了一整圈，也只会触发<span lang=EN-US>1</span>次藉机攻击。但如果他绕完圈后在你的身边施法，那么将会触发另<span
+lang=EN-US>1</span>次藉机攻击。】</p>
+
+<div style='border-top:none;border-left:solid #E9F0FB 1.0pt;border-bottom:none;
+border-right:solid #E9F0FB 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;background:#E9F0FB'>
+
+<h5 style='margin-top:18.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+7.5pt;text-indent:-7.5pt;background:#E9F0FB'>速度（<span lang=EN-US>Speed</span>）</h5>
+
+</div>
+
+<p class=a1CxSpFirst style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>你的速度显示了你在一轮中移动多远以后还可以进行其他动作，比如攻击和施法。你的速度取决于你的体型和装备的护甲类型。</p>
+
+<p class=a1CxSpMiddle style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>矮人、侏儒和半身人角色的基本速度为<span lang=EN-US>20</span>尺（<span
+lang=EN-US>4</span>格），在穿中型、重型盔甲时为<span lang=EN-US>15</span>尺（<span lang=EN-US>3</span>格；例外为矮人不会因为装备护甲而降低速度，在装备任何护甲时都为<span
+lang=EN-US>20</span>尺）。人类、精灵半精灵和半兽人角色，以及大多数类人怪物的基本速度都是<span lang=EN-US>30</span>尺（<span
+lang=EN-US>6</span>格），在穿中型、重型盔甲时为<span lang=EN-US>20</span>尺（<span lang=EN-US>4</span>格）。</p>
+
+<p class=a1CxSpLast style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>如果你在一轮内使用两个移动动作（有时候称为“双倍移动”动作），你移动的距离最多可以达到速度的<span
+lang=EN-US>2</span>倍。如果你进行奔跑这项整轮动作，那么你移动的距离最多可以达到速度的<span lang=EN-US>4</span>倍（在穿重型盔甲时为<span
+lang=EN-US>3</span>倍）。</p>
+
+<div style='border-top:none;border-left:solid #E9F0FB 1.0pt;border-bottom:none;
+border-right:solid #E9F0FB 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;background:#E9F0FB'>
+
+<h5 style='margin-top:18.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+7.5pt;text-indent:-7.5pt;background:#E9F0FB'>豁免检定（<span lang=EN-US>Saving
+Throws</span>）</h5>
+
+</div>
+
+<p class=a1CxSpFirst style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>在大多数情况下，当你成为一次特殊或魔法攻击的目标时，你都可以进行一次豁免检定来免除或是降低因此所受的损害。和攻击检定类似，豁免检定也是一次<span
+lang=EN-US>d20</span>投骰加上你的相应职业加值（见各职业部分）以及相关的属性修正。你的豁免检定加值通常为：</p>
+
+<p class=a1CxSpLast align=center style='margin-top:3.6pt;margin-right:0cm;
+margin-bottom:3.6pt;margin-left:0cm;text-align:center;text-indent:22.0pt'><b><span
+style='color:#0033CC'>基本豁免加值<span lang=EN-US>+</span>属性修正</span></b></p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>强韧（<span lang=EN-US>Fortitude</span>）</span></h6>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>强韧豁免代表了你在抵抗物理损伤、或是直接针对你的健康状况进行攻击时，你对其的承受力。强韧豁免加值应用你的体质修正。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>反射（<span lang=EN-US>Reflex</span>）</span></h6>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>反射豁免代表了你依靠技巧躲闪范围攻击、或是对于突发状况的反应能力。反射豁免加值应用你的敏捷修正。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>意志（<span lang=EN-US>Will</span>）</span></h6>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>意志豁免代表了你对抗精神攻击、以及其他影响你心灵效果的能力。意志豁免加值应用你的感知修正。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>豁免<span lang=EN-US>DC</span></span></h6>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>豁免检定的难度（<span lang=EN-US>DC</span>）会在引发它的效果上标出。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>豁免的自动成功和失败</span></h6>
+
+<p class=a1 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>在豁免检定中自然投骰为<span lang=EN-US>1</span>（即<span
+lang=EN-US>d20</span>投骰结果为<span lang=EN-US>1</span>），那么你的豁免检定自动失败（并可能会使你身上携带的物品暴露在伤害下）；在豁免检定中自然投骰为<span
+lang=EN-US>20</span>（即<span lang=EN-US>d20</span>投骰结果为<span lang=EN-US>20</span>），那么你的豁免检定自动成功。</p>
+
+</div>
+
+<span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection2 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

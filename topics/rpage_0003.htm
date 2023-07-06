@@ -1,0 +1,1332 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><head>
+<title>战斗中的动作（Actions In Combat）</title>
+
+<META content="text/html; charset=UTF-8" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001">
+<STYLE>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:等线;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Roboto Regular";
+	panose-1:2 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:微软雅黑;
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"\@微软雅黑";
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:等线;}
+h4
+	{mso-style-link:"标题 4 字符";
+	margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:7.5pt;
+	margin-left:2.5pt;
+	text-indent:-2.5pt;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:#8C008C;}
+h5
+	{mso-style-link:"标题 5 字符";
+	margin-top:7.5pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:2.5pt;
+	text-indent:-2.5pt;
+	page-break-after:avoid;
+	layout-grid-mode:char;
+	background:#E9F0FB;
+	border:none;
+	padding:0cm;
+	font-size:15.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:#008C00;}
+h6
+	{mso-style-link:"标题 6 字符";
+	margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:1.5pt;
+	margin-left:2.5pt;
+	text-indent:-2.5pt;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:#005BEE;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:5.5pt;
+	text-indent:-5.5pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	font-weight:bold;}
+span.4
+	{mso-style-name:"标题 4 字符";
+	mso-style-link:"标题 4";
+	font-family:"微软雅黑",sans-serif;
+	color:#8C008C;
+	font-weight:bold;}
+span.5
+	{mso-style-name:"标题 5 字符";
+	mso-style-link:"标题 5";
+	font-family:"微软雅黑",sans-serif;
+	color:#008C00;
+	background:#E9F0FB;
+	font-weight:bold;}
+span.6
+	{mso-style-name:"标题 6 字符";
+	mso-style-link:"标题 6";
+	font-family:"微软雅黑",sans-serif;
+	color:#005BEE;
+	font-weight:bold;}
+span.Char
+	{mso-style-name:"特性 Char";
+	mso-style-link:特性;
+	font-family:"微软雅黑",sans-serif;
+	background:#F1F1F1;}
+p.a, li.a, div.a
+	{mso-style-name:特性;
+	mso-style-link:"特性 Char";
+	margin-top:0cm;
+	margin-right:2.5pt;
+	margin-bottom:0cm;
+	margin-left:7.5pt;
+	text-indent:-5.0pt;
+	background:#F1F1F1;
+	border:none;
+	padding:0cm;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;}
+span.Char0
+	{mso-style-name:"表格文字 Char";
+	mso-style-link:表格文字;
+	font-family:"微软雅黑",sans-serif;}
+p.a0, li.a0, div.a0
+	{mso-style-name:表格文字;
+	mso-style-link:"表格文字 Char";
+	margin:0cm;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;}
+span.Char1
+	{mso-style-name:"首行缩进 Char";
+	mso-style-link:首行缩进;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a1, li.a1, div.a1
+	{mso-style-name:首行缩进;
+	mso-style-link:"首行缩进 Char";
+	margin-top:1.5pt;
+	margin-right:0cm;
+	margin-bottom:1.5pt;
+	margin-left:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a1CxSpFirst, li.a1CxSpFirst, div.a1CxSpFirst
+	{mso-style-name:首行缩进CxSpFirst;
+	mso-style-link:"首行缩进 Char";
+	margin-top:1.5pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a1CxSpMiddle, li.a1CxSpMiddle, div.a1CxSpMiddle
+	{mso-style-name:首行缩进CxSpMiddle;
+	mso-style-link:"首行缩进 Char";
+	margin:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a1CxSpLast, li.a1CxSpLast, div.a1CxSpLast
+	{mso-style-name:首行缩进CxSpLast;
+	mso-style-link:"首行缩进 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:1.5pt;
+	margin-left:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+span.bbcsize
+	{mso-style-name:bbcsize;}
+p.a2, li.a2, div.a2
+	{mso-style-name:规则;
+	mso-style-link:"规则 字符";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:5.5pt;
+	text-indent:-5.5pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;}
+span.a3
+	{mso-style-name:"规则 字符";
+	mso-style-link:规则;
+	font-family:"微软雅黑",sans-serif;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection2
+	{page:WordSection2;}
+-->
+</STYLE>
+</HEAD>
+<body lang=ZH-CN style="TEXT-JUSTIFY-TRIM: punctuation; WORD-WRAP: break-word"><script language="JavaScript" type="text/JavaScript">
+function syn(){
+if(parent.nav.tree){
+ if(parent.nav.tree.loaded){
+  parent.nav.tree.selectNode(17);
+ }else{
+  setTimeout("syn()",500);
+}
+  }else{
+  setTimeout("syn()",500);
+  }}
+if(parent!=self){
+  setTimeout("syn()",100);
+}else{
+  parent.location.href = "../index.htm?page=rpage_0003.htm";
+}
+originalOnload = window.onload;
+if(originalOnload==null){
+window.onload = function(){parent.contentLoaded = true;};
+}else{
+window.onload = function(){originalOnload();parent.contentLoaded = true;};
+}
+</script> 
+
+<DIV class=WordSection1>
+<H4 style="MARGIN: 12pt 0cm 18pt 8pt; TEXT-INDENT: -8pt">战斗中的动作（<SPAN 
+lang=EN-US>Actions In Combat</SPAN>）</H4>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">在你的回合中，你的角色可以进很多种不同的动作，从挥舞长剑到吟唱法术。</P>
+<P class=MsoCaption style="PAGE-BREAK-AFTER: avoid">表：战斗动作</P>
+<TABLE class=DND style="WIDTH: 394.3pt; BORDER-COLLAPSE: collapse" cellSpacing=0 
+cellPadding=0 width=526 border=0>
+  <TBODY>
+  <TR style="HEIGHT: 17pt">
+    <TD 
+    style="BORDER-TOP: medium none; HEIGHT: 17pt; BORDER-RIGHT: medium none; BACKGROUND: #d25f12; BORDER-BOTTOM: white 1.5pt solid; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt">
+      <P class=a0><B><SPAN style="COLOR: white">动作</SPAN></B></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; HEIGHT: 17pt; BORDER-RIGHT: medium none; BACKGROUND: #d25f12; BORDER-BOTTOM: white 1.5pt solid; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt">
+      <P class=a0><B><SPAN style="COLOR: white">是否触发</SPAN></B></P>
+      <P class=a0><B><SPAN style="COLOR: white">藉机攻击（※<SPAN 
+      lang=EN-US>1</SPAN>）</SPAN></B></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; HEIGHT: 17pt; BORDER-RIGHT: medium none; BACKGROUND: #d25f12; BORDER-BOTTOM: white 1.5pt solid; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt">
+      <P class=a0><B><SPAN style="COLOR: white">动作</SPAN></B></P></TD>
+    <TD 
+    style="BORDER-TOP: medium none; HEIGHT: 17pt; BORDER-RIGHT: medium none; BACKGROUND: #d25f12; BORDER-BOTTOM: white 1.5pt solid; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; BORDER-LEFT: medium none; PADDING-RIGHT: 5.4pt">
+      <P class=a0><B><SPAN style="COLOR: white">是否触发</SPAN></B></P>
+      <P class=a0><B><SPAN style="COLOR: white">藉机攻击（※<SPAN 
+      lang=EN-US>1</SPAN>）</SPAN></B></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><B><SPAN style="COLOR: black">标准动作</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><STRONG><SPAN 
+      style='FONT-FAMILY: "微软雅黑",sans-serif; COLOR: black'>整轮动作</SPAN></STRONG></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">近战攻击</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">全力攻击</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">远程攻击</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">冲锋（※<SPAN 
+      lang=EN-US>4</SPAN>）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">徒手攻击</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">致命一击</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">使用<SPAN 
+      lang=EN-US>1</SPAN>件药剂和油以外的魔法物品</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">从捕网中挣脱</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">援助他人</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">可能是（※<SPAN 
+      lang=EN-US>2</SPAN>）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">熄灭火焰</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">施法（施法时间为一个标准动作的法术）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">点燃火把</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">引导能量</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">装填重弩或连发弩</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">专注以维持<SPAN 
+      lang=EN-US>1</SPAN>个正在生效的法术</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">在带锁铁手套上将武器装定<SPAN 
+      lang=EN-US>/</SPAN>解锁</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">解消法术</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">准备<SPAN 
+      lang=EN-US>1</SPAN>件溅射武器</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">拔出<SPAN 
+      lang=EN-US>1</SPAN>件隐藏的武器</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">奔跑</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">使用药剂或油</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">使用需要<SPAN 
+      lang=EN-US>1</SPAN>轮的技能</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">通常是</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">挣脱擒抱</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">使用接触法术触碰最多<SPAN 
+      lang=EN-US>6</SPAN>个同伴</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">发动虚招</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">撤退动作（※<SPAN 
+      lang=EN-US>4</SPAN>）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">用火绒点燃火把</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">降低自己的法术抗力</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><STRONG><SPAN 
+      style='FONT-FAMILY: "微软雅黑",sans-serif; COLOR: black'>自由动作</SPAN></STRONG></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">使用卷轴</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">终止对法术的专注</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">准备动作（触发另一个标准动作）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">扔下物品</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">稳定濒死同伴的伤势（使用医疗技能）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">卧倒</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">全防御</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">准备法术的施法材料（※<SPAN 
+      lang=EN-US>5</SPAN>）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">使用特异能力</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">交谈</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">使用需要动作的技能</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">通常是</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">使用类法术能力</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><STRONG><SPAN 
+      style='FONT-FAMILY: "微软雅黑",sans-serif; COLOR: black'>迅捷动作</SPAN></STRONG></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">使用超自然能力</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">施放<SPAN 
+      lang=EN-US>1</SPAN>个瞬发法术</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><B><SPAN lang=EN-US 
+    style="COLOR: black"></SPAN></B>&nbsp;</P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><B><SPAN style="COLOR: black">移动动作</SPAN></B></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN class=bbcsize><B><SPAN 
+      style="COLOR: black">直觉动作</SPAN></B></SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">移动</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">施放‘羽落术’</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">控制住受惊的坐骑</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">导向或重新导向<SPAN 
+      lang=EN-US>1</SPAN>个法术</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><STRONG><SPAN 
+      style='FONT-FAMILY: "微软雅黑",sans-serif; COLOR: black'>无需动作</SPAN></STRONG></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">拔出武器（※<SPAN 
+      lang=EN-US>3</SPAN>）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">延迟先攻位</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">装填手弩或轻弩</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black">5</SPAN><SPAN 
+      style="COLOR: black">尺快步</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">开<SPAN 
+      lang=EN-US>/</SPAN>关门</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">上下坐骑</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><STRONG><SPAN 
+      style='FONT-FAMILY: "微软雅黑",sans-serif; COLOR: black'>可变情况</SPAN></STRONG></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">挪动<SPAN 
+      lang=EN-US>1</SPAN>个重物</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">使用战技（※<SPAN 
+      lang=EN-US>6</SPAN>）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">捡起<SPAN 
+      lang=EN-US>1</SPAN>件物品</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">使用专长（※<SPAN 
+      lang=EN-US>7</SPAN>）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">可变</SPAN></P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">将武器收回</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">从俯卧状态站起身</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">准备或卸下盾牌（※<SPAN 
+      lang=EN-US>3</SPAN>）</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">否</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD>
+    <TD 
+    style="BACKGROUND: #ecf1f9; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD></TR>
+  <TR>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">拿出<SPAN 
+      lang=EN-US>1</SPAN>件携带的物品</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN style="COLOR: black">是</SPAN></P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD>
+    <TD 
+    style="BACKGROUND: #d9e2f3; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt">
+      <P class=a0><SPAN lang=EN-US style="COLOR: black"></SPAN>&nbsp;</P></TD></TR>
+  <TR style="HEIGHT: 17pt">
+    <TD 
+    style="HEIGHT: 17pt; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt" 
+    colSpan=4>
+      <P class=a2><SPAN style="COLOR: black">※<SPAN 
+      lang=EN-US>1</SPAN>无论是何种动作，只要你尝试立刻一个威胁着你的敌人的威胁范围，你就会引发藉机攻击。</SPAN></P>
+      <P class=a2><B><SPAN style="COLOR: black">※<SPAN 
+      lang=EN-US>1</SPAN>这里只列出一个行动本身是否会引发藉机攻击。</SPAN></B></P>
+      <P class=a2><B><SPAN style="COLOR: black">※<SPAN 
+      lang=EN-US>2</SPAN>如果你援助对象的动作会导致藉机攻击，那么你的援助动作也会引发藉机攻击。</SPAN></B></P>
+      <P class=a2><B><SPAN style="COLOR: black">※<SPAN 
+      lang=EN-US>3</SPAN>如果你拥有<SPAN 
+      lang=EN-US>+1</SPAN>或更高的基础攻击加值，你可以在进行一次移动时，同时以一个自由动作拔出武器。</SPAN></B></P>
+      <P class=a2><B><SPAN style="COLOR: black">※<SPAN 
+      lang=EN-US>1</SPAN>如果你拥有“双武器格斗”专长，你可以以一个拔出武器的动作同时拔出两把轻型单手武器</SPAN></B></P>
+      <P class=a2><B><SPAN style="COLOR: black">※<SPAN 
+      lang=EN-US>4</SPAN>如果你在该轮内被限制只能进行一个动作，那么这个动作是标准动作。</SPAN></B></P>
+      <P class=a2><B><SPAN style="COLOR: black">※<SPAN 
+      lang=EN-US>5</SPAN>除非该材料极其笨重或无法手持。</SPAN></B></P>
+      <P class=a2><B><SPAN style="COLOR: black">※<SPAN 
+      lang=EN-US>6</SPAN>有一些战技将取代近战攻击动作。所以，这些战技使用攻击动作或在冲锋后发动，也可以在整轮攻击中发动一次或几次甚至是作为藉机攻击的一部分。其他的战技视为一个单独的动作。</SPAN></B></P>
+      <P class=a2><B><SPAN style="COLOR: black">※<SPAN 
+      lang=EN-US>7</SPAN>根据各专长描述而定。</SPAN></B></P></TD></TR></TBODY></TABLE>
+<P class=a1 style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt"><SPAN 
+lang=EN-US></SPAN>&nbsp;</P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: #e9f0fb 1pt solid; BACKGROUND: #e9f0fb; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 2pt; BORDER-LEFT: #e9f0fb 1pt solid; PADDING-RIGHT: 2pt">
+<H5 
+style="BACKGROUND: #e9f0fb; MARGIN: 18pt 0cm 12pt 7.5pt; TEXT-INDENT: -7.5pt">动作类型（<SPAN 
+lang=EN-US>Action Types</SPAN>）</H5></DIV>
+<P class=a1CxSpFirst 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">动作类型一般代表了该动作将需要多长时间来进行（在<SPAN 
+lang=EN-US>1</SPAN>轮约等于<SPAN lang=EN-US>6</SPAN>秒的基本框架内），并且它的基本运作方法。以下列出了<SPAN 
+lang=EN-US>6</SPAN>种动作类型：标准动作、移动动作、整轮动作、迅捷动作、直觉动作和自由动作。</P>
+<P class=a1CxSpLast 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">在一个正常轮中，你可以进行一个标准动作和一个移动动作，或是一个整轮动作；除此之外你还可以进行一个迅捷动作和任意个自由动作。你可以随意将标准动作替换为移动动作。在某些情况下（比如突袭轮中），你只能做一个移动动作或是标准动作。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">标准动作（<SPAN lang=EN-US>Standard Action</SPAN>）</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">你可以用一个标准动作来做些事情，最常见的就是发动攻击和施放法术。见上表来了解其他标准动作可以进行的行动。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">移动动作（<SPAN lang=EN-US>Move Action</SPAN>）</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">你可以用一个移动动作移动最多等同于你速度的距离，或是进行一些花费类似时间的行为。见上表来了解其他移动动作可以进行的行动。你可以进行一个移动动作，来替代本轮的一个标准动作。如果你本轮使用了移动动作，但并未做距离移动（比如你以移动动作进行了其他的行为），你可以在该动作的前、后或者同时进行<SPAN 
+lang=EN-US>5</SPAN>尺快步。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">整轮动作（<SPAN lang=EN-US>Full-Round 
+Action</SPAN>）</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">进行整轮动作会使用你在一个行动轮里所有的时间。如果你在一轮中进行整轮动作，那么你唯一可以进行的移动将是<SPAN 
+lang=EN-US>5</SPAN>尺快步（可以在整轮动作的前、后或中间移动）。另外，你也可以使用迅捷动作和自由动作。见上表来了解其他整轮动作可以进行的行动。<SPAN 
+lang=EN-US><BR clear=all></SPAN>注意，有一些整轮动作不允许你在同轮中<SPAN 
+lang=EN-US>5</SPAN>尺快步。有一些整轮动作能以标准动作的形式来进行，前提是你本轮被限制只能进行一个标准动作。这些整轮动作的描述中有标注关于此类动作的规则。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">自由动作（<SPAN lang=EN-US>Free Action</SPAN>）</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">进行自由动作只需要花费极少的时间。你可以在进行其他动作的同时进行一个或多个自由动作。不过，关于一个动作确实“自由”与否，则需要由<SPAN 
+lang=EN-US>GM</SPAN>裁决。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">迅捷动作（<SPAN lang=EN-US>Swift Action</SPAN>）</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">进行迅捷动作也只需要花费极少的时间，不过相对于自由动作来说还是略多。你每轮只能进行一个迅捷动作。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">直觉动作（<SPAN lang=EN-US>Immediate 
+Action</SPAN>，又译即时动作）</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">直觉动作与迅捷动作类似，不过你可以在任何时间进行它——即使是在你的回合之外。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">无需动作</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">有些动作的花费是如此之少，以至于它们不能完全算是一个“动作”。你可以在任何时候随意将这些动作融入其他动作的一部分发动，比如张弓搭箭。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">特殊限制</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">在一些情况下，你可能无法在一个整轮内进行所有的动作，比如你可能被限制进行一个标准动作或是一个移动动作（不过通常可以正常地进行迅捷和自由动作）。在此状态下，你无法进行整轮动作（但是你可以通过一个标准动作来开始或是结束一个整轮动作，详见下文）。</P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: #e9f0fb 1pt solid; BACKGROUND: #e9f0fb; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 2pt; BORDER-LEFT: #e9f0fb 1pt solid; PADDING-RIGHT: 2pt">
+<H5 
+style="BACKGROUND: #e9f0fb; MARGIN: 18pt 0cm 12pt 7.5pt; TEXT-INDENT: -7.5pt">标准动作（<SPAN 
+lang=EN-US>Standard Actions</SPAN>）</H5></DIV>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">大多数普通的行动都使用标准动作，囊括了除了移动以外的大多数行动。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">攻击（<SPAN lang=EN-US>Attack</SPAN>）</SPAN></H6>
+<P class=a1 style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">进行攻击通常是一个标准动作。</P>
+<P class=a2><B><SPAN style="COLOR: #996600">近战攻击（<SPAN lang=EN-US>Melee 
+Attack</SPAN>）</SPAN></B>：你可以用一把普通近战武器攻击距你<SPAN lang=EN-US>5</SPAN>尺内的敌人（距你<SPAN 
+lang=EN-US>5</SPAN>尺内的敌人视为邻接你）。有一些拥有长武特性的武器可以用来对距你<SPAN 
+lang=EN-US>10</SPAN>尺的敌人发动近战攻击，但是与此同时你也无法用它攻击邻接的敌人。</P>
+<P class=a2><B><SPAN style="COLOR: #996600">徒手攻击（<SPAN lang=EN-US>Unarmed 
+Attacks</SPAN>）</SPAN></B>：和使用武器进行近战攻击一样，你可以通过拳击、脚踢、头槌等方式向对手发动近战攻击。不过要注意以下几点：</P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: #f2f2f2 1pt solid; BACKGROUND: #f1f1f1; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 2pt; MARGIN-LEFT: 5.25pt; BORDER-LEFT: #f2f2f2 1pt solid; PADDING-RIGHT: 2pt; MARGIN-RIGHT: 5.25pt">
+<P class=a 
+style="BACKGROUND: #f1f1f1; MARGIN: 0cm 0cm 0pt 11pt; TEXT-INDENT: -11pt"><SPAN 
+style="COLOR: black">●</SPAN><SPAN lang=EN-US 
+style="FONT-FAMILY: 等线; COLOR: black">&nbsp;</SPAN><SPAN lang=EN-US 
+style="COLOR: black"> </SPAN><SPAN 
+style="COLOR: black">藉机攻击：徒手攻击装备有武器的对手会触发对方的藉机攻击，并且这次藉机攻击会在你发动本次攻击之前进行。除了你攻击的对手外，其他的敌人不会因此获得藉机攻击的机会，徒手的目标也无法以此法向你进行藉机攻击。使用徒手攻击的角色也同样无法进行任何藉机攻击（例外见下文“武装”徒手攻击）。【编注：事实上，如果没有能力、专长支持，徒手者并不具有威胁范围。】</SPAN></P>
+<P class=a 
+style="BACKGROUND: #f1f1f1; MARGIN: 0cm 0cm 0pt 11pt; TEXT-INDENT: -11pt"><SPAN 
+style="COLOR: black">●</SPAN><SPAN lang=EN-US 
+style="FONT-FAMILY: 等线; COLOR: black">&nbsp;</SPAN><SPAN lang=EN-US 
+style="COLOR: black"> </SPAN><SPAN style="COLOR: black">“武装”徒手攻击（</SPAN><SPAN 
+lang=EN-US style="FONT-FAMILY: 等线; COLOR: black">”</SPAN><SPAN lang=EN-US 
+style="COLOR: black">Armed</SPAN><SPAN lang=EN-US 
+style="FONT-FAMILY: 等线; COLOR: black">”</SPAN><SPAN lang=EN-US 
+style="COLOR: black"> Unarmed Attacks</SPAN><SPAN 
+style="COLOR: black">）：有一些角色的徒手攻击被视为使用武器攻击，如武僧职业能力、拥有“精通徒手打击”专长、施法者通过近战接触攻击传递法术、或是拥有天生武器，他们的徒手攻击视为已经武装有武器（见下文“天武攻击”）。在视为武装的情况下，你拥有威胁范围，因此你的攻击将不再触发对手的藉机攻击，同时你也可以对敌人发动藉机攻击。</SPAN></P>
+<P class=a 
+style="BACKGROUND: #f1f1f1; MARGIN: 0cm 0cm 0pt 11pt; TEXT-INDENT: -11pt"><SPAN 
+style="COLOR: black">●</SPAN><SPAN lang=EN-US 
+style="FONT-FAMILY: 等线; COLOR: black">&nbsp;</SPAN><SPAN lang=EN-US 
+style="COLOR: black"> </SPAN><SPAN 
+style="COLOR: black">徒手打击伤害：中型体型角色的徒手攻击造成<SPAN 
+lang=EN-US>1d3</SPAN>点钝击伤害（像普通的近战攻击一样加上你的力量修正），小型角色为<SPAN 
+lang=EN-US>1d2</SPAN>点，大型角色为<SPAN 
+lang=EN-US>1d4</SPAN>点。所有徒手打击造成非致命伤害。在计算攻击减值（如双武器战斗）时，徒手攻击视为轻型武器。</SPAN></P>
+<P class=a 
+style="BACKGROUND: #f1f1f1; MARGIN: 0cm 0cm 0pt 11pt; TEXT-INDENT: -11pt"><SPAN 
+style="COLOR: black">●</SPAN><SPAN lang=EN-US 
+style="FONT-FAMILY: 等线; COLOR: black">&nbsp;</SPAN><SPAN lang=EN-US 
+style="COLOR: black"> </SPAN><SPAN 
+style="COLOR: black">造成致命伤害：在进行徒手攻击检定前，你可以声明将造成致命伤害，不过这会使你在攻击检定上承受<SPAN 
+lang=EN-US>-4</SPAN>减值。如果你拥有“精通徒手打击”专长则不必承受减值就在徒手攻击时造成致命伤害。</SPAN></P></DIV>
+<P class=a2><B><SPAN style="COLOR: #996600">远程攻击（<SPAN lang=EN-US>Ranged 
+Attack</SPAN>）</SPAN></B>：你可以使用一把投射或是投掷武器，远程攻击一个在你视野中的敌人目标。一把远程投掷武器的最大射程是它基础射程增量的<SPAN 
+lang=EN-US>5</SPAN>倍，而投射武器则是<SPAN 
+lang=EN-US>10</SPAN>倍。一些远程武器的最大射程较短，它们会在武器描述中标出。</P>
+<P class=a2><B><SPAN style="COLOR: #996600">天武攻击（<SPAN lang=EN-US>Natural 
+Attack</SPAN>）</SPAN></B>：角色使用自己的天生武器，比如爪和牙攻击在触及范围内（通常是<SPAN 
+lang=EN-US>5</SPAN>尺）的对手视为天武攻击。天武攻击使用你的全部<SPAN 
+lang=EN-US>BAB</SPAN>，并且造成对应类型和数量的伤害（当然，记得加上你的力量修正）。你不会因为高<SPAN 
+lang=EN-US>BAB</SPAN>而获得额外的天武攻击次数，但是你可以通过额外的肢体而获得额外的天生武器数量（在角色种族和能力中有注明）。如果你只拥有一种天生武器（比如<SPAN 
+lang=EN-US>1</SPAN>次啮咬——<SPAN lang=EN-US>2</SPAN>爪抓这样的不算），你可以将力量修正的<SPAN 
+lang=EN-US>1.5</SPAN>倍加在它的伤害检定上。</P>
+<P class=a2>有一些天生武器视为次要天生武器，比如尾扫和翼击。在进行次要天武攻击时采用你的<SPAN 
+lang=EN-US>BAB-5</SPAN>，并且造成对应类型和数量的伤害。不过，你只能在伤害检定上加上力量修正的一半。</P>
+<P 
+class=a2>你可以将近战武器、徒手打击和天生武器结合起来进行攻击，前提是你需要有足够数量的肢体来进行这些攻击，比如说你无法用一只已经握住长剑的手发动爪抓攻击。如果以这种方式进行额外的攻击，你所有的天生武器都被视为次要天生武器，采用<SPAN 
+lang=EN-US>BAB-5</SPAN>并在伤害上只能获得一半的力量加值。在计算战斗减值时，你的天武攻击视为轻型武器，这些减值可以通过“双武器战斗（<SPAN 
+lang=EN-US>Two-Weapons Fighting</SPAN>）”或“多重攻击（<SPAN lang=EN-US>Multiattack, 
+<U>B1</U></SPAN>）”专长来弥补。</P>
+<P class=a2>【编注：举例而言，譬如你的<SPAN lang=EN-US>BAB</SPAN>为<SPAN 
+lang=EN-US>+6</SPAN>，拥有<SPAN lang=EN-US>2</SPAN>爪抓（主要天武），其中<SPAN 
+lang=EN-US>1</SPAN>只爪握着匕首并打算结合两者展开全力攻击。如果你以匕首做主要攻击，那么匕首攻击<SPAN 
+lang=EN-US>+6/+1</SPAN>，爪抓攻击<SPAN 
+lang=EN-US>+1</SPAN>且伤害的力量修正减半（视为次要天武）；这时你可以通过“多重攻击”来将爪抓的攻击提高到<SPAN 
+lang=EN-US>+4</SPAN>。如果你以爪抓做主要攻击，那么爪抓攻击<SPAN lang=EN-US>+2</SPAN>，匕首攻击<SPAN 
+lang=EN-US>-2</SPAN>且伤害的力量修正减半（双武器减值很凶恶）；这时你可以通过“双武器格斗”来将爪抓和匕首的攻击都提高到<SPAN 
+lang=EN-US>+4</SPAN>。】</P>
+<P class=a2><B><SPAN style="COLOR: #996600">多次攻击（<SPAN lang=EN-US>Multiple 
+Attacks</SPAN>）</SPAN></B>：如果角色要在<SPAN lang=EN-US>1</SPAN>轮内作出多于<SPAN 
+lang=EN-US>1</SPAN>次的攻击动作，他必须通过全力攻击（见下文：整轮动作）来进行多次攻击。</P>
+<P class=a2><B><SPAN 
+style="COLOR: #996600">向近战中的目标进行远程攻击</SPAN></B>：如果你以远程武器攻击正在和你的同伴近战交战中的目标，你需要在攻击检定上承受<SPAN 
+lang=EN-US>-4</SPAN>减值。这里的“交战”是指这两个角色互为对手，且需有一方威胁到对方（失去意识或行动不能的角色除非受到直接攻击，否则通常不被视作“交战中”）。</P>
+<P class=a1CxSpFirst 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">如果目标（或是你向某个目标瞄准它的一部分身体部位——若目标足够大）距离你的同伴至少<SPAN 
+lang=EN-US>10</SPAN>尺，你可以避免此减值——即使它正在和你的同伴进行交战。如果目标比交战对象的体型大两级，你的远程攻击受到的减值降低为<SPAN 
+lang=EN-US>-2</SPAN>。如果目标比交战对象的体型至少大三级，你不需要在远程攻击时承受减值。</P>
+<P class=a1CxSpLast 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">如果你拥有“精确射击（<SPAN lang=EN-US>Precise 
+Shot</SPAN>）”专长，你不需要在向近战中的目标进行远程攻击时承受减值。</P>
+<P class=a2><B><SPAN 
+style="COLOR: #996600">以标准动作进行防御式战斗</SPAN></B>：你可以在发动攻击时采取较为保守的姿势，这会使你下轮开始前攻击检定<SPAN 
+lang=EN-US>-4</SPAN>，而<SPAN lang=EN-US>AC</SPAN>获得<SPAN 
+lang=EN-US>+2</SPAN>闪避加值。</P>
+<P class=a2><B><SPAN style="COLOR: #996600">重击（<SPAN lang=EN-US>Critical 
+Hit</SPAN>）</SPAN></B>：当你在攻击检定中自然骰出<SPAN lang=EN-US>20</SPAN>（即<SPAN 
+lang=EN-US>d20</SPAN>投骰结果为<SPAN lang=EN-US>20</SPAN>），你的攻击检定结果将无视目标的<SPAN 
+lang=EN-US>AC</SPAN>，自动命中对方。同时，你的本次检定视为对目标构成“重击威胁”，即可能造成重击。如果要确定你是否造成重击，你需要再进行一次攻击检定（应用你造成重击威胁的这次攻击检定所应用的所有加值）来确认你的重击结果。如果你的确认检定仍然不低于目标的<SPAN 
+lang=EN-US>AC</SPAN>（不必自然骰出另一个<SPAN 
+lang=EN-US>20</SPAN>，成功命中即可），那么你成功对目标造成重击。如果确认检定的结果未能达到目标<SPAN 
+lang=EN-US>AC</SPAN>，那么你无法造成重击，本次攻击只能对目标造成正常命中。</P>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">成功的重击可以让你的单次攻击伤害骰，包括它所应用的所有伤害加值翻倍。除非另有说明，否则你的重击范围永远为在攻击时投出自然骰<SPAN 
+lang=EN-US>20</SPAN>，伤害结果检定<SPAN lang=EN-US>x2</SPAN>。</P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: #f2f2f2 1pt solid; BACKGROUND: #f1f1f1; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 2pt; MARGIN-LEFT: 5.25pt; BORDER-LEFT: #f2f2f2 1pt solid; PADDING-RIGHT: 2pt; MARGIN-RIGHT: 5.25pt">
+<P class=a 
+style="BACKGROUND: #f1f1f1; MARGIN: 0cm 0cm 0pt 11pt; TEXT-INDENT: -11pt"><SPAN 
+style="FONT-FAMILY: 宋体; COLOR: black">●</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 7pt; FONT-FAMILY: 等线; COLOR: black">&nbsp;</SPAN><SPAN 
+lang=EN-US style="FONT-SIZE: 7pt; COLOR: black"> </SPAN><B><SPAN 
+style="COLOR: black">例外</SPAN></B><SPAN 
+style="COLOR: black">：基于精准攻击造成的伤害（比如盗贼的【偷袭】能力）和特殊的武器附魔所带来的伤害（比如〈炽焰〉武器）并不会因为攻击造成重击而获得翻倍伤害。</SPAN></P>
+<P class=a 
+style="BACKGROUND: #f1f1f1; MARGIN: 0cm 0cm 0pt 11pt; TEXT-INDENT: -11pt"><SPAN 
+style="FONT-FAMILY: 宋体; COLOR: black">●</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 7pt; FONT-FAMILY: 等线; COLOR: black">&nbsp;</SPAN><SPAN 
+lang=EN-US style="FONT-SIZE: 7pt; COLOR: black"> </SPAN><B><SPAN 
+style="COLOR: black">额外重击范围</SPAN></B><SPAN style="COLOR: black">：有时你可以获得超过<SPAN 
+lang=EN-US>20</SPAN>的重击威胁范围，它们能扩展你造成重击威胁的自然骰数值。不过，你仍然只有在自然骰出<SPAN 
+lang=EN-US>20</SPAN>时才能获得自动命中，如果你的攻击检定无法成功命中目标，那么它永远无法造成重击威胁。</SPAN></P>
+<P class=a 
+style="BACKGROUND: #f1f1f1; MARGIN: 0cm 0cm 0pt 11pt; TEXT-INDENT: -11pt"><SPAN 
+style="FONT-FAMILY: 宋体; COLOR: black">●</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 7pt; FONT-FAMILY: 等线; COLOR: black">&nbsp;</SPAN><SPAN 
+lang=EN-US style="FONT-SIZE: 7pt; COLOR: black"> </SPAN><B><SPAN 
+style="COLOR: black">额外重击倍率</SPAN></B><SPAN 
+style="COLOR: black">：一些武器可以给予你的重击伤害更高翻倍。</SPAN></P>
+<P class=a 
+style="BACKGROUND: #f1f1f1; MARGIN: 0cm 0cm 0pt 11pt; TEXT-INDENT: -11pt"><SPAN 
+style="FONT-FAMILY: 宋体; COLOR: black">●</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 7pt; FONT-FAMILY: 等线; COLOR: black">&nbsp;</SPAN><SPAN 
+lang=EN-US style="FONT-SIZE: 7pt; COLOR: black"> </SPAN><B><SPAN 
+style="COLOR: black">法术和重击</SPAN></B><SPAN 
+style="COLOR: black">：如果一个法术需要你进行攻击检定，那么它的伤害可以造成重击。不需要攻击检定的法术无法造成重击。如果法术造成属性伤害或属性吸取效果，那么它在造成重击时同样会使属性伤害或属性吸取翻倍。</SPAN></P></DIV>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">使用魔法物品（<SPAN lang=EN-US>Activate Magic 
+Item</SPAN>）</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">很多魔法物品无需手动启动即可正常工作，但另外一些则必须手动操作，比如药剂、卷轴、魔杖、权杖和法杖。除非特别说明，否则使用魔法物品通常是一个标准动作。</P>
+<P class=a2><B><SPAN style="COLOR: #996600">法术完成型物品（<SPAN lang=EN-US>Spell 
+Completion 
+Items</SPAN>）</SPAN></B>：启动一个法术完成型物品等同于施放一个法术，所以它会要求你保持专注并会引发藉机攻击。你会因为被打断专注而丧失该法术的效果，不过你也可以像正常施放法术一样，以防御式施法动作使用这些物品。</P>
+<P class=a2><B><SPAN style="COLOR: #996600">法术触发型、口令型或使用激活型物品（<SPAN 
+lang=EN-US>Spell Trigger, Command Word, or Use-Acitived 
+Items</SPAN>）</SPAN></B>：使用这些魔法物品无需专注，也不会引发藉机攻击。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">施放法术（<SPAN lang=EN-US>Cast a Spell</SPAN>）</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">大多数法术都需要一个标准动作来施放它们。你可以在你的回合中进行移动之前或移动之后的任意时段施放法术。注意，在施放法术时，你在<SPAN 
+lang=EN-US>AC</SPAN>上仍然保有你的敏捷加值。</P>
+<P class=a2><B><SPAN style="COLOR: #996600">法术成分（<SPAN lang=EN-US>Spell 
+Components</SPAN>）</SPAN></B>：如果你要施放一个含有语言（<SPAN 
+lang=EN-US>V</SPAN>）成分的法术，你的角色必须能清晰地发音。如果你的角色无法正常发音或处于“沉默术（<SPAN 
+lang=EN-US>Silence</SPAN>）”的影响范围内，你无法施放含有语言成分的法术。处于耳聋状态的角色在每次施放含有语言成分的法术时，有<SPAN 
+lang=EN-US>20%</SPAN>的机率施法失败。<SPAN lang=EN-US><BR 
+clear=all></SPAN>如果你要施放一个含有姿势（<SPAN 
+lang=EN-US>S</SPAN>）成分的法术，你必须保持身体自由并至少空出一只手。如果你被束缚、正在擒抱他人或处在类似的动作受限情况下，你无法施放含有姿势成分的法术。<SPAN 
+lang=EN-US><BR clear=all></SPAN>如果你要施放一个含有材料（<SPAN lang=EN-US>M</SPAN>）、器材（<SPAN 
+lang=EN-US>F</SPAN>）或法器（<SPAN 
+lang=EN-US>DF</SPAN>）的法术，你必须携带有如法术描述所述的施法材料。除非施法材料十分复杂，否则你只需要一个自由动作就可以准备这些材料。使用材料和法器的法术会在法术描述中叙述它们的价格。如果材料部分未列出价格，那么只要携带有施法材料包（<SPAN 
+lang=EN-US>Spell Component Pouch</SPAN>），你就视为拥有这些材料。</P>
+<P class=a2><B><SPAN style="COLOR: #996600">专注（<SPAN 
+lang=EN-US>Concentration</SPAN>）</SPAN></B>：你必须在施法时保持全神贯注，一旦你分心，你也就无法施放法术。如果你在施法途中遭遇到了可能使你无法专心的状况，你必须通过专注检定否则将失去此法术。专注检定的<SPAN 
+lang=EN-US>DC</SPAN>因不同的状况而异（见魔法和法术章节），如果你在专注检定中失败，你的法术将消散而无法生效。如果你是准备施法者，该法术将从准备好的法术中失去。如果你是自发施法者，它将计入你的每日法术位消耗。</P>
+<P class=a2><B><SPAN 
+style="COLOR: #996600">专注以维持法术</SPAN></B>：有些法术要求你一直保持专注以维持其运作，专注以维持法术是一个不会引发藉机攻击的标准动作。任何导致专注施法状态被打断的效果都会终止你对法术的维持，如果你的专注被打断，则法术立刻结束。</P>
+<P class=a2><B><SPAN 
+style="COLOR: #996600">施法时间</SPAN></B>：绝大多数法术的施法时间都是一个标准动作，在付出相应施法时间以后，法术会立刻生效。</P>
+<P class=a2><B><SPAN 
+style="COLOR: #996600">藉机攻击</SPAN></B>：通常情况下，施放法术会导致你触发威胁你的敌人的藉机攻击。如果你因为此藉机攻击而受到伤害，你必须进行<SPAN 
+lang=EN-US>DC</SPAN>为“<SPAN lang=EN-US>10+</SPAN>法术环级<SPAN 
+lang=EN-US>+</SPAN>受到伤害”的专注检定，否则将失去此法术。施法时间为直觉动作的法术不会引发藉机攻击。</P>
+<P class=a2><B><SPAN style="COLOR: #996600">防御式施法（<SPAN lang=EN-US>Casting on 
+Defensive</SPAN>）</SPAN></B>：以防御的姿势施法不会引发藉机攻击，不过进行防御式施法会要求你通过<SPAN 
+lang=EN-US>DC</SPAN>为“<SPAN lang=EN-US>15+</SPAN>法术环级<SPAN lang=EN-US 
+style='FONT-FAMILY: "Roboto Regular"'>×</SPAN><SPAN 
+lang=EN-US>2</SPAN>”的专注检定来成功施法。如果检定失败，你失去此法术。</P>
+<P class=a2><B><SPAN 
+style="COLOR: #996600">在战斗中使用接触法术</SPAN></B>：很多法术都有接触目标的要求。为了施放这些法术，你需要施法，然后接触目标。如果你在本轮内施放了一个接触法术，你能以一个自由动作在本轮内尝试接触目标（或者准备接触目标）。在施放法术和接触目标前、中或后，你可以移动。对于同伴和你自己，你的接触法术自动成功。但是如果法术目标是一个敌对目标，那么你必须成功进行攻击检定。</P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: #f2f2f2 1pt solid; BACKGROUND: #f1f1f1; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 2pt; MARGIN-LEFT: 5.25pt; BORDER-LEFT: #f2f2f2 1pt solid; PADDING-RIGHT: 2pt; MARGIN-RIGHT: 5.25pt">
+<P class=a 
+style="BACKGROUND: #f1f1f1; MARGIN: 0cm 0cm 0pt 11pt; TEXT-INDENT: -11pt"><SPAN 
+style="FONT-FAMILY: 宋体; COLOR: black">●</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 7pt; FONT-FAMILY: 等线; COLOR: black">&nbsp;</SPAN><SPAN 
+lang=EN-US style="FONT-SIZE: 7pt; COLOR: black"> </SPAN><B><SPAN 
+style="COLOR: black">接触攻击（<SPAN lang=EN-US>Touch Attack</SPAN>）</SPAN></B><SPAN 
+style="COLOR: black">：通过接触攻击以传递法术被视为使用武器攻击，并且不会引发藉机攻击。但是，施放一个用来接触的法术则会引发藉机攻击。接触法术分为两大类：近战接触和远程接触。当你以此两种方式发动接触攻击以传递法术时，你的攻击可以造成重击威胁。你的目标在对抗此类接触攻击时，在他们的<SPAN 
+lang=EN-US>AC</SPAN>上失去护甲加值、盾牌加值和天生护甲加值，不过他们的体型修正、敏捷修正和偏斜加值（如果有）会正常生效。</SPAN></P>
+<P class=a 
+style="BACKGROUND: #f1f1f1; MARGIN: 0cm 0cm 0pt 11pt; TEXT-INDENT: -11pt"><SPAN 
+style="FONT-FAMILY: 宋体; COLOR: black">●</SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 7pt; FONT-FAMILY: 等线; COLOR: black">&nbsp;</SPAN><SPAN 
+lang=EN-US style="FONT-SIZE: 7pt; COLOR: black"> </SPAN><B><SPAN 
+style="COLOR: black">维持能量（<SPAN lang=EN-US>Holding the 
+charge</SPAN>）</SPAN></B><SPAN 
+style="COLOR: black">：如果你在同一轮内施放接触法术，但并不施放其能量，你也可以暂时将它维持住。你可以在下一轮再尝试接触目标以传递法术效果，但在你维持能量的途中如果接触了任何事物（即使是因为无心而为），能量将散失。如果你尝试施放另一个法术，维持中的法术能量也会散失。你可以在维持能量的期间，以一个标准动作接触一个同伴，或是以一个整轮动作接触最多<SPAN 
+lang=EN-US>6</SPAN>个同伴。另外，你也可以在维持能量的同时进行徒手攻击或是天武攻击，不过这不会使你的徒手攻击视为已武装；如果你的徒手攻击或天武攻击本来就不会引发藉机攻击，那么在维持法术时，进行徒手攻击或是天武攻击也不会引发藉机攻击。如果本次攻击命中，你可以成功造成徒手打击或是天武攻击伤害，而法术消散。如果你的攻击失手，则法术能量继续维持。</SPAN></P></DIV>
+<P class=a2><B><SPAN 
+style="COLOR: #996600">在战斗中使用远程接触法术</SPAN></B>：一些法术要求你进行远程接触攻击作为施放法术的一部分。此远程接触攻击作为施法的一部分，而非分开的动作。施放远程接触法术会引发藉机攻击，即使是施法者采取防御式施法也会受到此规则限制。除非特别提及，否则远程接触法术无法像普通接触法术一样维持能量到下一轮。【编注：防御式施法本身不会触发藉机攻击，但是远程攻击会。如前文所述，在拥有“战斗反射”专长的敌人威胁范围内使用远程接触法术，将会分别由于施法和远程攻击而总计触发<SPAN 
+lang=EN-US>2</SPAN>次藉机攻击。】</P>
+<P class=a2><B><SPAN style="COLOR: #996600">解消法术（<SPAN lang=EN-US>Dismiss a 
+spell</SPAN>）</SPAN></B>：解消一个已施放的法术效果，是一个不会引发藉机攻击的标准动作。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">开始<SPAN lang=EN-US>/</SPAN>完成一个整轮动作</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">以一个标准动作，你可以“开始”进行一个整轮动作，并在下轮中以另一个标准动作“完成”它。但是，你不能用这个动作来进行全力攻击、冲锋、奔跑或撤退动作。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">全防御（<SPAN lang=EN-US>Total Defense</SPAN>）</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">以一个标准动作，你可以保持完全的防卫姿势，并在<SPAN 
+lang=EN-US>1</SPAN>轮内令<SPAN lang=EN-US>AC</SPAN>获得<SPAN 
+lang=EN-US>+4</SPAN>闪避加值。你无法在全防御的同时进行防御式攻击，或者从“寓守于攻”专长中获益。同时，你无法在全防御的同时进行藉机攻击。</P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: #f2f2f2 1pt solid; BACKGROUND: #f1f1f1; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 2pt; MARGIN-LEFT: 5.25pt; BORDER-LEFT: #f2f2f2 1pt solid; PADDING-RIGHT: 2pt; MARGIN-RIGHT: 5.25pt">
+<P class=a 
+style="BACKGROUND: #f1f1f1; MARGIN: 0cm 0cm 0pt 11pt; TEXT-INDENT: -11pt"><SPAN 
+style="COLOR: black">【速查】<B>寓守于攻（<SPAN lang=EN-US>Combat 
+Expertise</SPAN>）</B>：以攻击加值换取<SPAN lang=EN-US>AC</SPAN>加值，其数值会随<SPAN 
+lang=EN-US>BAB</SPAN>提高而上升。</SPAN></P></DIV>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">使用特殊能力</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">使用特殊能力通常需要一个标准动作，不过根据具体能力的不同，它也可以是一个整轮动作、甚至并非动作。</P>
+<P class=a2><B><SPAN style="COLOR: #996600">类法术能力（<SPAN lang=EN-US>Spell-Like 
+Abilities, 
+Sp</SPAN>）</SPAN></B>：和施放法术非常相似，使用类法术能力需要你保持专注并会引发藉机攻击。类法术能力是可以被打断的，如果你在专注检定上失败，你的类法术能力失败，并且将失去正在施放的类法术能力。如果没有特别说明，否则使用类法术能力通常是一个标准动作。</P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: #f2f2f2 1pt solid; BACKGROUND: #f1f1f1; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 2pt; MARGIN-LEFT: 5.25pt; BORDER-LEFT: #f2f2f2 1pt solid; PADDING-RIGHT: 2pt; MARGIN-RIGHT: 5.25pt">
+<P class=a 
+style="BACKGROUND: #f1f1f1; MARGIN: 0cm 0cm 0pt 11pt; TEXT-INDENT: -11pt"><B><SPAN 
+style="COLOR: black">防御式使用类法术能力</SPAN></B><SPAN 
+style="COLOR: black">：和施放法术一样，你也能以偏向防御的姿势使用类法术能力。如果你未能通过<SPAN 
+lang=EN-US>DC</SPAN>为“<SPAN lang=EN-US>15+</SPAN>法术环级</SPAN><SPAN lang=EN-US 
+style="FONT-FAMILY: 等线; COLOR: black">×</SPAN><SPAN lang=EN-US 
+style="COLOR: black">2</SPAN><SPAN 
+style="COLOR: black">”的专注检定，该能力将失败，且你失去此类法术能力。</SPAN></P></DIV>
+<P class=a2><B><SPAN style="COLOR: #996600">超自然能力（<SPAN lang=EN-US>Supernatural 
+Abilities, 
+Su</SPAN>）</SPAN></B>：使用超自然能力通常是一个标准动作（除非在能力描述中另有提及）。使用超自然能力不会被打断、不需要专注、也不会引发藉机攻击。</P>
+<P class=a2><B><SPAN style="COLOR: #996600">特异能力（<SPAN lang=EN-US>Extraordinary 
+Abilities, 
+Ex</SPAN>）</SPAN></B>：使用特异能力一般无需动作——因为大部分的特异能力会以反应性的方式自动发生。如果需要动作，使用特异能力通常是一个标准动作且不会被打断、不需要专注、也不会引发藉机攻击。</P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: #e9f0fb 1pt solid; BACKGROUND: #e9f0fb; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 2pt; BORDER-LEFT: #e9f0fb 1pt solid; PADDING-RIGHT: 2pt">
+<H5 
+style="BACKGROUND: #e9f0fb; MARGIN: 18pt 0cm 12pt 7.5pt; TEXT-INDENT: -7.5pt">移动动作（<SPAN 
+lang=EN-US>Move Actions</SPAN>）</H5></DIV>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">除了少数需要移动动作的特殊技能外，大多数移动动作不需要进行检定。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">移动</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">最简单的移动动作可以让你移动相当于自身速度的距离。如果你在本轮内已经进行了移动，你无法再进行<SPAN 
+lang=EN-US>5</SPAN>尺快步。很多其他类型的移动都使用移动动作，比如攀爬和游泳（最快为你的速度的<SPAN 
+lang=EN-US>1/4</SPAN>）。</P>
+<P class=a2><B><SPAN 
+style="COLOR: #996600">加速攀爬</SPAN></B>：你能以速度的一半进行攀爬，不过会使攀爬技能检定承受<SPAN 
+lang=EN-US>-5</SPAN>减值。</P>
+<P class=a2><B><SPAN style="COLOR: #996600">匍匐前进</SPAN></B>：你能以一个移动动作匍匐爬行<SPAN 
+lang=EN-US>5</SPAN>尺。匍匐前进会引发任何威胁你的目标发动藉机攻击。匍匐前进中的目标视为处于俯卧（<SPAN 
+lang=EN-US>Prone</SPAN>）状态，他需要通过另一个移动动作起身（也会引发藉机攻击）。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">导向或重新导向法术</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">有一些法术在施放后，允许你将其效果重新定向至另一片区域中。重新导向法术是一个不需要专注、且不会引发藉机攻击的移动动作。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">拔出或收回一件武器</SPAN></H6>
+<P class=a1CxSpFirst 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">你需要拔剑在手才能加入战斗，或将其收入鞘中来获得空闲的手去进行其他行动。该动作同样用于拿出其他一些易于拿取的类武器物品，比如抽出魔杖。如果你的武器或类似的物品并不直接带在身上、而是在背包或类似的不易取出的地方，该动作将视为拿出一件携带的物品。</P>
+<P class=a1CxSpMiddle style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">如果你的<SPAN 
+lang=EN-US>BAB</SPAN>为<SPAN 
+lang=EN-US>+1</SPAN>或更高，你可以在进行移动的同时以一个自由动作拔出武器。如果你拥有“双武器格斗（<SPAN 
+lang=EN-US>Two-Weapon Fighting</SPAN>）”专长，你能在上述时间里同时拔出两把轻型或单手武器。</P>
+<P class=a1CxSpLast 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">使用远程武器时取用弹药（比如弓箭、弩矢、弹丸或手里剑）是一个自由动作。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">操作一件物品</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">挪动或操作一件物品通常是一个移动动作。这包括从存放它的地方取出一件物品、捡起一件武器、挪动一件重物和开<SPAN 
+lang=EN-US>/</SPAN>关门。关于这些动作是否引发藉机攻击，参见上文表格。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">上<SPAN lang=EN-US>/</SPAN>下坐骑</SPAN></H6>
+<P class=a1 style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">上<SPAN 
+lang=EN-US>/</SPAN>下一匹坐骑通常是一个移动动作。</P>
+<P class=a2><B><SPAN style="COLOR: #996600">快速上<SPAN 
+lang=EN-US>/</SPAN>下坐骑</SPAN></B>：你可以通过<SPAN lang=EN-US>DC 
+20</SPAN>的骑术检定尝试快速上<SPAN lang=EN-US>/</SPAN>下一匹坐骑。如果你的检定失败，那么你必须通过一个移动动作上<SPAN 
+lang=EN-US>/</SPAN>下坐骑。如果你在本轮内已经没有移动动作用来上<SPAN 
+lang=EN-US>/</SPAN>下坐骑，那么你也不能尝试快速如此施为。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">准备或卸下盾牌</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">将盾牌在你的前臂上装紧握住，你才能获得盾牌给予的<SPAN 
+lang=EN-US>AC</SPAN>加值，你也可以将盾牌卸下抛掉，以空出一只手来进行其他行动。如果你的<SPAN 
+lang=EN-US>BAB</SPAN>为<SPAN 
+lang=EN-US>+1</SPAN>或更高，你也可以在进行移动的同时以一个自由动作准备或卸下盾牌。取下（但不装备）盾牌是一个自由动作。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">站起</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">从俯卧状态站起身来是一个会引发藉机攻击的移动动作。</P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: #e9f0fb 1pt solid; BACKGROUND: #e9f0fb; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 2pt; BORDER-LEFT: #e9f0fb 1pt solid; PADDING-RIGHT: 2pt">
+<H5 
+style="BACKGROUND: #e9f0fb; MARGIN: 18pt 0cm 12pt 7.5pt; TEXT-INDENT: -7.5pt">整轮动作（<SPAN 
+lang=EN-US>Full-Round Actions</SPAN>）</H5></DIV>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">有一些动作需要你使用一个整轮的时间来完成。所以，这些动作无法和另一个标准动作或移动动作处于同一轮内。虽然进行整轮动作会使你无法移动，不过你还是可以在该轮内进行<SPAN 
+lang=EN-US>5</SPAN>尺快步。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">全力攻击（<SPAN lang=EN-US>Full Attack</SPAN>）</SPAN></H6>
+<P class=a1 style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">如果你拥有足够高的<SPAN 
+lang=EN-US>BAB</SPAN>，可以在一轮内发动多次攻击（见各职业的<SPAN 
+lang=EN-US>BAB</SPAN>）；又或是你使用双武器或双头武器战斗，那么你需要发动全力攻击来获得这些额外的攻击次数。你无需在一开始指定好每次攻击的目标。在你进行下一次攻击前，你也可以得到上一击是否命中的结果。<SPAN 
+lang=EN-US><BR clear=all></SPAN>在全力攻击期间，你唯一可以进行的移动是<SPAN 
+lang=EN-US>5</SPAN>尺快步。你可以在攻击之前、之间或是之后进行<SPAN lang=EN-US>5</SPAN>尺快步。<SPAN 
+lang=EN-US><BR clear=all></SPAN>如果你是因为足够高的<SPAN 
+lang=EN-US>BAB</SPAN>而获得多次攻击，那么你必须由这些<SPAN 
+lang=EN-US>BAB</SPAN>从高到低的顺序来发动每一次攻击。如果你使用双武器战斗，那么你可以自由决定由哪一把武器先攻击。如果你使用双头武器战斗，你也可以自由决定用哪一头先攻击。</P>
+<P class=a2><B><SPAN 
+style="COLOR: #996600">决定你的攻击行动</SPAN></B>：当你发动第一次攻击后，你可以决定是转而进行移动动作，还是继续这次全力攻击接下来的部分。如果你在本轮已经进行过<SPAN 
+lang=EN-US>5</SPAN>尺快步，那么你无法通过移动动作进行移动，不过你还是可以用此移动动作进行其他动作。</P>
+<P class=a2><B><SPAN 
+style="COLOR: #996600">防御式全力攻击</SPAN></B>：你能发动防御式全力攻击。如果你以此方式战斗，那么你的每一次攻击检定受到<SPAN 
+lang=EN-US>-4</SPAN>减值，而<SPAN lang=EN-US>AC</SPAN>在下一轮开始前获得<SPAN 
+lang=EN-US>+2</SPAN>闪避加值。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">施放法术（<SPAN lang=EN-US>Cast a Spell</SPAN>）</SPAN></H6>
+<P class=a1 style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">施放需要施法时间为<SPAN 
+lang=EN-US>1</SPAN>轮的法术是一个整轮动作。法术的效果在你施放此法术的下一轮开始时生效。在你法术完成之后，你即可正常行动。如果一个法术的施法时间是<SPAN 
+lang=EN-US>1</SPAN>分钟，那么这个法术的效果同样要在<SPAN lang=EN-US>1</SPAN>分钟后才能生效（通常是<SPAN 
+lang=EN-US>10</SPAN>轮时间，并且你的施法动作是每轮一个整轮动作）。这些动作必须保持连续而不能中断，否则法术将自动失败。<SPAN 
+lang=EN-US><BR 
+clear=all></SPAN>你只有在开始施法时才会引发藉机攻击，即使你将持续施法一整轮也不会导致更多藉机攻击的机会。当保持施法时，你无法对任何方格造成威胁。除此之外，施放法术的其他元素和以标准动作施放法术相同。</P>
+<P class=a2><B><SPAN style="COLOR: #996600">施放超魔法术（<SPAN lang=EN-US>Casting a 
+Metamagic 
+Spell</SPAN>）</SPAN></B>：术士和吟游诗人必须使用更多时间来进行法术超魔（使用超魔专长）而不是正常的施法时间。术士和吟游诗人需要一个整轮动作来施放超魔法术（除非使用“法术瞬发”超魔，瞬发法术只需一个迅捷动作）。注意，超魔法术并非需要<SPAN 
+lang=EN-US>1</SPAN>轮施法时间，整轮动作的超魔法术会在开始施法的同轮而非下一轮生效，所以你也不需要保持施法动作直至下一轮。如果你要超魔的法术原本施法时间更长，那么你的超魔法术将需要一个额外的整轮动作来施放。<SPAN 
+lang=EN-US><BR clear=all></SPAN>牧师和德鲁伊同样需要更多的时间，来自发施放超魔版本的治疗<SPAN 
+lang=EN-US>/</SPAN>伤害法术或召唤法术。自发施放施法时间为一个标准动作的法术，需要一个整轮动作来进行超魔；同样如果你要超魔的法术原本施法时间更长，那么你的超魔法术将需要一个额外的整轮动作来施放。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">在困难地形中移动<SPAN lang=EN-US>5</SPAN>尺</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">在某些情况下，你的移动会被严重阻碍，以至于你必须费很大力气才能移动<SPAN 
+lang=EN-US>5</SPAN>尺（<SPAN 
+lang=EN-US>1</SPAN>格）。这种情况下你能以一个整轮动作，向包括对角的任意方向移动<SPAN 
+lang=EN-US>5</SPAN>尺（<SPAN lang=EN-US>1</SPAN>格）。虽然这种移动和<SPAN 
+lang=EN-US>5</SPAN>尺快步类似，但是它依然会引发藉机攻击。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">奔跑（<SPAN lang=EN-US>Run</SPAN>）</SPAN></H6>
+<P class=a1CxSpFirst 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">你能以一个整轮动作奔跑。如果你这样做，你将不能在本轮内进行<SPAN 
+lang=EN-US>5</SPAN>尺移动。当你奔跑时，你能以<SPAN 
+lang=EN-US>4</SPAN>倍基础速度进行直线移动（在穿着重型盔甲时为三倍）。如果你没有“飞跑（<SPAN 
+lang=EN-US>Run</SPAN>）”专长，你会在奔跑时失去<SPAN lang=EN-US>AC</SPAN>的敏捷加值。</P>
+<P class=a1CxSpMiddle 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">你可以保持奔跑的轮数等于你的体质属性。如果奔跑更久，你需要每轮进行<SPAN 
+lang=EN-US>DC</SPAN>为<SPAN lang=EN-US>10</SPAN>的体质属性检定。每持续奔跑一轮，该检定<SPAN 
+lang=EN-US>DC+1</SPAN>。如果检定失败，那么你必须停止奔跑。因为此情况而停止奔跑的角色，必须在其后休息一分钟时间（<SPAN 
+lang=EN-US>10</SPAN>轮）才能继续奔跑。在休息状态下，角色无法比正常速度更快移动。</P>
+<P class=a1CxSpMiddle 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">你无法在困难地形中奔跑，也无法向你看不见的目的地奔跑。</P>
+<P class=a1CxSpLast 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">对于没有负重的人类而言，保持奔跑可以让他在<SPAN 
+lang=EN-US>1</SPAN>小时内移动<SPAN lang=EN-US>13</SPAN>英里。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">使用特殊能力</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">大部分特殊能力需要一个标准动作，不过有些特殊能力需要整轮动作来进行。具体见能力描述。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">撤退动作（<SPAN lang=EN-US>Withdraw</SPAN>）</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">从近战中撤退是一个整轮动作，撤退时你能以双倍速度移动。你撤退的起始方格不会被视为受到任何对手威胁，所以你从此方格移出时不会受到任何可见对手的藉机攻击。不过，隐形的对手仍然可以对你发动藉机攻击。你无法在目盲的情况下撤退，也无法在撤退的同轮内进行<SPAN 
+lang=EN-US>5</SPAN>尺快步。<SPAN lang=EN-US><BR 
+clear=all></SPAN>如果在撤退的过程中，你从另一个受到敌人威胁的方格中离开（除了你开始撤退的那格之外），你仍然会正常受到藉机攻击。<SPAN 
+lang=EN-US><BR clear=all></SPAN>你无法通过你不具有速度的移动方式撤退。<SPAN lang=EN-US><BR 
+clear=all></SPAN>注意，虽然被称为撤退，但是你无法以此动作完全从战斗中逃脱。</P>
+<P class=a2><B><SPAN 
+style="COLOR: #996600">受限撤退</SPAN></B>：如果你在一轮中受限只能进行一个标准动作，那么你也可以用标准动作撤退，但是最多只能移动相当于你正常速度的距离。</P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: #e9f0fb 1pt solid; BACKGROUND: #e9f0fb; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 2pt; BORDER-LEFT: #e9f0fb 1pt solid; PADDING-RIGHT: 2pt">
+<H5 
+style="BACKGROUND: #e9f0fb; MARGIN: 18pt 0cm 12pt 7.5pt; TEXT-INDENT: -7.5pt">自由动作（<SPAN 
+lang=EN-US>Free Actions</SPAN>）</H5></DIV>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">自由动作几乎不需要花时间去进行，不过你每轮可以进行的自由动作次数是有限的。自由动作很难引发藉机攻击，以下是一些常见的自由动作。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">停止法术专注</SPAN></H6>
+<P class=a1 style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">停止专注维持一个法术是一个自由动作。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">扔下物品</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">将一件物品扔在你的方格、或扔在邻接方格是一个自由动作。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">卧倒</SPAN></H6>
+<P class=a1 style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">在你的方格卧倒是一个自由动作。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">交谈</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">进行交谈通常是一个自由动作（即使在你的行动轮之外）。不过，交谈超过数句话的长篇大论通常会超过一个自由动作。</P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: #e9f0fb 1pt solid; BACKGROUND: #e9f0fb; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 2pt; BORDER-LEFT: #e9f0fb 1pt solid; PADDING-RIGHT: 2pt">
+<H5 
+style="BACKGROUND: #e9f0fb; MARGIN: 18pt 0cm 12pt 7.5pt; TEXT-INDENT: -7.5pt">迅捷动作（<SPAN 
+lang=EN-US>Swift Actions</SPAN>）</H5></DIV>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">进行迅捷动作只会花费极少量的时间，不过能够让你做出比自由动作丰富很多的行动。你每轮只能进行一个迅捷动作，而不影响你在本轮内进行其他动作。迅捷动作和自由动作非常类似，区别在于你每轮只能进行一个迅捷动作，无论你在这一轮做了其他任何事情。你可以在任何能进行自由动作的时刻使用迅捷动作。迅捷动作通常用来施放特殊法术、启动专长或启动魔法物品。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">施放瞬发法术（<SPAN lang=EN-US>Cast a Quicken 
+Spell</SPAN>）</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">你能以迅捷动作施放一个瞬发法术（见“法术瞬发”专长），或一个施法时间为自由<SPAN 
+lang=EN-US>/</SPAN>迅捷动作的法术。你每轮只能施放一个此类法术，以此方式施放的法术不计入你每轮只能施放一个法术的限制。以迅捷动作施法不会触发藉机攻击。</P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: #e9f0fb 1pt solid; BACKGROUND: #e9f0fb; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 2pt; BORDER-LEFT: #e9f0fb 1pt solid; PADDING-RIGHT: 2pt">
+<H5 
+style="BACKGROUND: #e9f0fb; MARGIN: 18pt 0cm 12pt 7.5pt; TEXT-INDENT: -7.5pt">直觉动作（<SPAN 
+lang=EN-US>Immediate Actions</SPAN>）</H5></DIV>
+<P class=a1CxSpFirst 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">和迅捷动作类似，直觉动作也只需要极少的时间来做出比自由动作更多的动作。不过和迅捷动作有所不同的是，你可以在任何时候进行直觉动作——即使是在你的行动轮之外。施放“羽落术（<SPAN 
+lang=EN-US>Feather Fall</SPAN>）”就是一个直觉动作，可以在任何时候施放。</P>
+<P class=a1CxSpLast 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">在你的行动轮内，使用直觉动作将占用你本轮的迅捷动作使用次数。如果你在自己的行动轮外使用了直觉动作，你无法在你的下一轮结束前使用迅捷动作或直觉动作（换句话说，在你的行动轮前使用直觉动作，等于你预支了下轮的迅捷动作）。你无法在措手不及的状态下使用直觉动作。</P>
+<DIV 
+style="BORDER-TOP: medium none; BORDER-RIGHT: #e9f0fb 1pt solid; BACKGROUND: #e9f0fb; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0cm; PADDING-TOP: 0cm; PADDING-LEFT: 2pt; BORDER-LEFT: #e9f0fb 1pt solid; PADDING-RIGHT: 2pt">
+<H5 
+style="BACKGROUND: #e9f0fb; MARGIN: 18pt 0cm 12pt 7.5pt; TEXT-INDENT: -7.5pt">其他动作（<SPAN 
+lang=EN-US>Miscellaneous Actions</SPAN>）</H5></DIV>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">以下这些行动消耗的时间归在以上动作之外。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN lang=EN-US 
+style="COLOR: #0033cc">5</SPAN><SPAN style="COLOR: #0033cc">尺快步（<SPAN 
+lang=EN-US>Take 5 Foot Step</SPAN>）</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">如果你在一轮内没有进行过其他任何移动，那么你可以在本轮的任何时候进行<SPAN 
+lang=EN-US>5</SPAN>尺快步。进行<SPAN lang=EN-US>5</SPAN>尺快步不会引发藉机攻击。你在一轮内只能进行一个<SPAN 
+lang=EN-US>5</SPAN>尺快步，你也不能在同轮内移动任意距离后再进行<SPAN lang=EN-US>5</SPAN>尺快步。<SPAN 
+lang=EN-US><BR clear=all></SPAN>你可以在一轮内进行一个动作的前、中、后任何时段进行<SPAN 
+lang=EN-US>5</SPAN>尺快步。<SPAN lang=EN-US><BR 
+clear=all></SPAN>只有在困难地形或黑暗环境不影响你移动的情况下才能进行<SPAN 
+lang=EN-US>5</SPAN>尺快步。任何移动速度不高于<SPAN lang=EN-US>5</SPAN>尺的生物也无法进行<SPAN 
+lang=EN-US>5</SPAN>尺快步——对于这些生物来说，他们缓慢的速度使它们只有付出移动动作才能移动<SPAN 
+lang=EN-US>5</SPAN>尺。<SPAN lang=EN-US><BR 
+clear=all></SPAN>你无法通过你不具有速度的移动方式进行<SPAN lang=EN-US>5</SPAN>尺快步。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">使用专长（<SPAN lang=EN-US>Use Feat</SPAN>）</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">有一些专长需要特定的动作来在战斗中使用它们，另一些专长则不需要特定的动作，而是在你进行其他行动的时候自动给予你以加值。而另一些专长则完全不能被放进战斗中。关于一个专长需要的动作，你通常可以在它们的描述中找到。</P>
+<H6 style="MARGIN: 12pt 0cm 3.6pt 6.5pt; TEXT-INDENT: -6.5pt"><SPAN 
+style="COLOR: #0033cc">使用技能（<SPAN lang=EN-US>Use Skill</SPAN>）</SPAN></H6>
+<P class=a1 
+style="MARGIN: 3.6pt 0cm; TEXT-INDENT: 22pt">大多数技能都需要标准动作来进行，而另外一些可能需要移动动作或是整轮动作，甚至是自由动作。还有一些需要完全不一样的时间段来进行。你可以在技能相关章节找到某个技能所需的具体时间。</P></DIV><SPAN 
+lang=EN-US style='FONT-SIZE: 11pt; FONT-FAMILY: "微软雅黑",sans-serif'><BR 
+style="PAGE-BREAK-BEFORE: always" clear=all></SPAN>
+<DIV class=WordSection2 style="LAYOUT-GRID:  15.6pt none">
+<P class=MsoNormal><SPAN lang=EN-US></SPAN>&nbsp;</P></DIV></BODY></HTML>

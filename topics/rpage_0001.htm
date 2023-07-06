@@ -1,0 +1,343 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+<html>
+
+<head>
+<title>如何进行战斗（How Combat Works）</title>
+
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:等线;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Roboto Regular";
+	panose-1:2 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:微软雅黑;
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"\@微软雅黑";
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:等线;}
+h4
+	{mso-style-link:"标题 4 字符";
+	margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:7.5pt;
+	margin-left:2.5pt;
+	text-indent:-2.5pt;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:#8C008C;}
+h5
+	{mso-style-link:"标题 5 字符";
+	margin-top:7.5pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:2.5pt;
+	text-indent:-2.5pt;
+	page-break-after:avoid;
+	layout-grid-mode:char;
+	background:#E9F0FB;
+	border:none;
+	padding:0cm;
+	font-size:15.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:#008C00;}
+h6
+	{mso-style-link:"标题 6 字符";
+	margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:1.5pt;
+	margin-left:2.5pt;
+	text-indent:-2.5pt;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:#005BEE;}
+span.4
+	{mso-style-name:"标题 4 字符";
+	mso-style-link:"标题 4";
+	font-family:"微软雅黑",sans-serif;
+	color:#8C008C;
+	font-weight:bold;}
+span.5
+	{mso-style-name:"标题 5 字符";
+	mso-style-link:"标题 5";
+	font-family:"微软雅黑",sans-serif;
+	color:#008C00;
+	background:#E9F0FB;
+	font-weight:bold;}
+span.6
+	{mso-style-name:"标题 6 字符";
+	mso-style-link:"标题 6";
+	font-family:"微软雅黑",sans-serif;
+	color:#005BEE;
+	font-weight:bold;}
+span.Char
+	{mso-style-name:"特性 Char";
+	mso-style-link:特性;
+	font-family:"微软雅黑",sans-serif;
+	background:#F1F1F1;}
+p.a, li.a, div.a
+	{mso-style-name:特性;
+	mso-style-link:"特性 Char";
+	margin-top:0cm;
+	margin-right:2.5pt;
+	margin-bottom:0cm;
+	margin-left:7.5pt;
+	text-indent:-5.0pt;
+	background:#F1F1F1;
+	border:none;
+	padding:0cm;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;}
+span.Char0
+	{mso-style-name:"首行缩进 Char";
+	mso-style-link:首行缩进;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a0, li.a0, div.a0
+	{mso-style-name:首行缩进;
+	mso-style-link:"首行缩进 Char";
+	margin-top:1.5pt;
+	margin-right:0cm;
+	margin-bottom:1.5pt;
+	margin-left:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a0CxSpFirst, li.a0CxSpFirst, div.a0CxSpFirst
+	{mso-style-name:首行缩进CxSpFirst;
+	mso-style-link:"首行缩进 Char";
+	margin-top:1.5pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a0CxSpMiddle, li.a0CxSpMiddle, div.a0CxSpMiddle
+	{mso-style-name:首行缩进CxSpMiddle;
+	mso-style-link:"首行缩进 Char";
+	margin:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a0CxSpLast, li.a0CxSpLast, div.a0CxSpLast
+	{mso-style-name:首行缩进CxSpLast;
+	mso-style-link:"首行缩进 Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:1.5pt;
+	margin-left:0cm;
+	text-indent:10.0pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;
+	color:black;}
+p.a1, li.a1, div.a1
+	{mso-style-name:规则;
+	mso-style-link:"规则 字符";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:5.5pt;
+	text-indent:-5.5pt;
+	font-size:11.0pt;
+	font-family:"微软雅黑",sans-serif;}
+span.a2
+	{mso-style-name:"规则 字符";
+	mso-style-link:规则;
+	font-family:"微软雅黑",sans-serif;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection2
+	{page:WordSection2;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN style='word-wrap:break-word;text-justify-trim:punctuation'><script language="JavaScript" type="text/JavaScript">
+function syn(){
+if(parent.nav.tree){
+ if(parent.nav.tree.loaded){
+  parent.nav.tree.selectNode(15);
+ }else{
+  setTimeout("syn()",500);
+}
+  }else{
+  setTimeout("syn()",500);
+  }}
+if(parent!=self){
+  setTimeout("syn()",100);
+}else{
+  parent.location.href = "../index.htm?page=rpage_0001.htm";
+}
+originalOnload = window.onload;
+if(originalOnload==null){
+window.onload = function(){parent.contentLoaded = true;};
+}else{
+window.onload = function(){originalOnload();parent.contentLoaded = true;};
+}
+</script> 
+
+
+<div class=WordSection1>
+
+<h4 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:18.0pt;margin-left:
+8.0pt;text-indent:-8.0pt'>如何进行战斗（<span lang=EN-US>How Combat Works</span>）</h4>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>在游戏中进行的战斗是循环回合制的；每一个角色在回合中都有属于自己的特定行动轮来执行动作。若要进行战斗，应遵循以下步骤：</p>
+
+<p class=a1><span lang=EN-US>1.</span><span lang=EN-US style='font-size:7.0pt;
+font-family:"Roboto Regular"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.0pt'> </span>在战斗开始时，所有参与者进行先攻检定。</p>
+
+<p class=a1><span lang=EN-US>2.</span><span lang=EN-US style='font-size:7.0pt;
+font-family:"Roboto Regular"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.0pt'> </span>判定哪些角色率先意识到了对手的存在，这些角色可以在突袭轮行动。如果所有的角色都发现了自己的敌人，那么就按正常战斗轮决定行动。关于这一阶段的更多信息见下文“突袭轮”部分。</p>
+
+<p class=a1><span lang=EN-US>3.</span><span lang=EN-US style='font-size:7.0pt;
+font-family:"Roboto Regular"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.0pt'> </span>在突袭轮（如果有）结束后，所有的参与者准备第一个正常的战斗轮。</p>
+
+<p class=a1><span lang=EN-US>4.</span><span lang=EN-US style='font-size:7.0pt;
+font-family:"Roboto Regular"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.0pt'> </span>战斗参与者按照先攻检定的结果依顺序行动（从高到低）。</p>
+
+<p class=a1><span lang=EN-US>5.</span><span lang=EN-US style='font-size:7.0pt;
+font-family:"Roboto Regular"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+lang=EN-US style='font-size:7.0pt'> </span>如果每个参与者都结束了自己的行动轮，那么从先攻检定结果最高的角色开始进行下一回合的行动，如此重复步骤<span
+lang=EN-US>4</span>和<span lang=EN-US>5</span>。</p>
+
+<div style='border-top:none;border-left:solid #E9F0FB 1.0pt;border-bottom:none;
+border-right:solid #E9F0FB 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;background:#E9F0FB'>
+
+<h5 style='margin-top:18.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+7.5pt;text-indent:-7.5pt;background:#E9F0FB'>战斗轮（<span lang=EN-US>The Combat
+Round</span>）</h5>
+
+</div>
+
+<p class=a0CxSpFirst style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>每一个“轮”（<span lang=EN-US>Round</span>）大约可以换算为现实世界的<span
+lang=EN-US>6</span>秒钟时间；在战斗中，每<span lang=EN-US>10</span>轮通常记为<span lang=EN-US>1</span>分钟。在他们的战斗轮内，每个角色可以进行自己的战斗动作。在每一轮中，先攻检定结果最高的角色会先开始他们的行动，然后是检定结果较低者依次行动。当轮到一个角色的先攻位时，他就可以开始进行动作（例外的行动是进行藉机攻击和部分特殊的先攻动作，具体见下）。</p>
+
+<p class=a0CxSpLast style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>在以下的规则中所述的“一轮”（<span lang=EN-US>Full
+Round</span>）时间，指的是从效果发生这一轮的先攻位开始，到下一轮的同一先攻位的这段时间。如果一个效果持续的时间是以“轮”计算，那么它的结束时间总是在它发生的某一先攻位再次开始行动之前。</p>
+
+<div style='border-top:none;border-left:solid #E9F0FB 1.0pt;border-bottom:none;
+border-right:solid #E9F0FB 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;background:#E9F0FB'>
+
+<h5 style='margin-top:18.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+7.5pt;text-indent:-7.5pt;background:#E9F0FB'>先攻（<span lang=EN-US>Initiative</span>）</h5>
+
+</div>
+
+<p class=a0CxSpFirst style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>在战斗开始前，每一个战斗的参与者都需要进行一次先攻检定。先攻检定等同于敏捷属性检定，每一个角色都可以在自己的投骰结果中加上自己的专长、法术或其他效果所带来的修正。在战斗轮中，每个角色的行动顺序由先攻检定的结果从高到低决定，并且接下来的每一轮中角色们都需要按照此顺序进行行动（除非某个角色进行了会影响自己先攻位的行动，具体见下文的“特殊的先攻动作”）。</p>
+
+<p class=a0CxSpLast style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>如果有两个或更多的战斗参与者在先攻检定时得到了相同结果，那么他们的先攻顺序按照先攻检定加值排列（从高到低）。如果结果仍然持平，那么持平者再进行一次先攻检定来决定顺序。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>措手不及（<span lang=EN-US>Flat-Footed</span>）</span></h6>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>在战斗开始，你有机会进行行动（一般来说，也就是一直到在你的第一个普通战斗轮中你的先攻位）前，你处于措手不及状态。在此状态下你无法将自己的敏捷修正（如果有）加至<span
+lang=EN-US>AC</span>上。拥有特殊能力、足够高等级的野蛮人和盗贼不会处于措手不及，拥有这些能力的角色在他们的第一个战斗轮中行动之前，仍然能进行藉机攻击并在<span
+lang=EN-US>AC</span>上应用自己的敏捷修正。除非拥有“战斗反射”专长，否则措手不及的角色无法进行藉机攻击。</p>
+
+<div style='border-top:none;border-left:solid #F2F2F2 1.0pt;border-bottom:none;
+border-right:solid #F2F2F2 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;background:#F1F1F1;
+margin-left:5.25pt;margin-right:5.25pt'>
+
+<p class=a style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:
+11.0pt;margin-bottom:.0001pt;text-indent:-11.0pt;background:#F1F1F1'><span
+style='color:black'>【速查】<b>战斗反射（<span lang=EN-US>Combat Reflexes</span>）</b>：进行更多的藉机攻击，次数等同于你的敏捷修正。</span></p>
+
+</div>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>行动不能</span></h6>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>即使你被困而无法行动，你在接下来的战斗中仍然使用正常的先攻顺序。</p>
+
+<div style='border-top:none;border-left:solid #E9F0FB 1.0pt;border-bottom:none;
+border-right:solid #E9F0FB 1.0pt;padding:0cm 2.0pt 0cm 2.0pt;background:#E9F0FB'>
+
+<h5 style='margin-top:18.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+7.5pt;text-indent:-7.5pt;background:#E9F0FB'>突袭（<span lang=EN-US>Surprise</span>）</h5>
+
+</div>
+
+<p class=a0CxSpFirst style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>在战斗开始时，如果你并没有意识到对手的存在、但对手已经发现了你，那么你会被突袭。</p>
+
+<p class=a0CxSpLast style='margin-top:3.6pt;margin-right:0cm;margin-bottom:
+3.6pt;margin-left:0cm;text-indent:22.0pt'>有时在战斗开始时，双方都已经意识到了对方的存在；也有些情况下，只有一方或是一方中的一部分成员，又或是双方各有一部分成员会发现自己的对手，而其他人则视为未意识到战斗的展开。如果要决定角色是否意识到了对方的存在，可能需要进行一次察觉技能检定。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>突袭轮（<span lang=EN-US>The
+Surprise Round</span>）</span></h6>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>如果只有一些而非全部战斗参与者意识到了对手的存在，那么在正常的战斗轮开始前会进行一个突袭轮。在突袭轮中，意识到对方的战斗参与者将按照先攻顺序（从高到低），获得一次进行一个标准动作或是移动动作的机会，你也可以在突袭轮中进行自由动作。如果所有人都在战斗开始时意识到了对方，那么突袭轮不会开始。</p>
+
+<h6 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.6pt;margin-left:
+6.5pt;text-indent:-6.5pt'><span style='color:#0033CC'>无意识的战斗者</span></h6>
+
+<p class=a0 style='margin-top:3.6pt;margin-right:0cm;margin-bottom:3.6pt;
+margin-left:0cm;text-indent:22.0pt'>未意识到对方存在的战斗参与者将无法在突袭轮内行动。因为无法行动，无意识的战斗者也会被视为措手不及，在<span
+lang=EN-US>AC</span>上失去自己的敏捷修正。</p>
+
+</div>
+
+<span lang=EN-US style='font-size:11.0pt;font-family:"微软雅黑",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<div class=WordSection2 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
